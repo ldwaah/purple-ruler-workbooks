@@ -211,3 +211,108 @@ export async function supabaseGetSubmissionById(
   const all = await supabaseGetSubmissionsForTeacher(teacherToken);
   return all.find((s) => s.id === submissionId) ?? null;
 }
+
+async function supabaseGetPrimaryClassIdForTeacher(
+  teacherId: string,
+): Promise<string | null> {
+  const sb = getSupabaseAdmin();
+  if (!sb) return null;
+  const { data } = await sb
+    .from("classes")
+    .select("id")
+    .eq("teacher_id", teacherId)
+    .limit(1);
+  return (data?.[0]?.id as string) ?? null;
+}
+
+export async function supabaseGetStudentsForTeacher(
+  teacherToken: string,
+): Promise<StudentRow[]> {
+  const sb = getSupabaseAdmin();
+  if (!sb) return [];
+  const teacher = await supabaseGetTeacherByToken(teacherToken);
+  if (!teacher) return [];
+
+  const { data: classes } = await sb
+    .from("classes")
+    .select("id")
+    .eq("teacher_id", teacher.id);
+  const classIds = (classes ?? []).map((c) => c.id as string);
+  if (!classIds.length) return [];
+
+  const { data: students } = await sb
+    .from("students")
+    .select("id, name, token, class_id")
+    .in("class_id", classIds)
+    .order("name", { ascending: true });
+
+  return (students ?? []) as StudentRow[];
+}
+
+export async function supabaseGetClassIdForTeacher(
+  teacherToken: string,
+): Promise<string | null> {
+  const teacher = await supabaseGetTeacherByToken(teacherToken);
+  if (!teacher) return null;
+  return supabaseGetPrimaryClassIdForTeacher(teacher.id);
+}
+
+export async function supabaseCreateStudent(input: {
+  teacherToken: string;
+  name: string;
+  token: string;
+}): Promise<{ student: StudentRow } | { error: string; status: number }> {
+  const sb = getSupabaseAdmin();
+  if (!sb) {
+    return { error: "Database not configured", status: 500 };
+  }
+
+  const teacher = await supabaseGetTeacherByToken(input.teacherToken);
+  if (!teacher) {
+    return { error: "Unknown teacher link", status: 401 };
+  }
+
+  const classId = await supabaseGetPrimaryClassIdForTeacher(teacher.id);
+  if (!classId) {
+    return { error: "No class found for this teacher", status: 400 };
+  }
+
+  const { data: existingToken } = await sb
+    .from("students")
+    .select("id")
+    .eq("token", input.token)
+    .maybeSingle();
+  if (existingToken) {
+    return { error: "That link slug is already in use", status: 409 };
+  }
+
+  const id = `student-${input.token}`;
+  const { data: existingId } = await sb
+    .from("students")
+    .select("id")
+    .eq("id", id)
+    .maybeSingle();
+  const studentId = existingId ? `${id}-${Date.now()}` : id;
+
+  const { data: created, error: insertErr } = await sb
+    .from("students")
+    .insert({
+      id: studentId,
+      name: input.name,
+      token: input.token,
+      class_id: classId,
+    })
+    .select("id, name, token, class_id")
+    .single();
+
+  if (insertErr || !created) {
+    return { error: "Could not create student", status: 500 };
+  }
+
+  await sb.from("points").upsert({
+    student_id: studentId,
+    total_points: 0,
+  });
+
+  return { student: created as StudentRow };
+}

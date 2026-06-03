@@ -31,6 +31,20 @@ Teacher dashboard: `http://localhost:3000/t/teacher-pilot-token`
 
 Flow: splash → year → hub → workbook → **Submit my work** (+10 points first time per lesson).
 
+## For teachers
+
+**Teacher dashboard:** open `/t/teacher-pilot-token` (replace the host with your deployed URL).
+
+From the dashboard you can:
+
+1. **Copy your teacher link** to bookmark this page.
+2. **Add students** with the "Add student" form (name plus optional slug). A slug of `michael` gives a link like `/s/michael` that shows "Welcome, Michael" on the year screen.
+3. **Copy each student magic link** from the table (`/s/{token}` full URL).
+4. **Review submissions** when students hand in workbooks.
+5. **Class leaderboard** at `/t/teacher-pilot-token/leaderboard` (full list). Students see their own points at `/leaderboard` after opening their magic link.
+
+**Student leaderboard:** students use the **Leaderboard** button in the header or hub after they open their personal `/s/...` link.
+
 ## 5-minute Supabase setup (production persistence)
 
 Without Supabase, Vercel deployments use an **ephemeral in-memory store** — submissions and leaderboard reset across serverless instances.
@@ -79,15 +93,17 @@ Copy [`.env.example`](.env.example) → `.env.local` for local development.
 |------|-------------|
 | `/` | Splash → start |
 | `/year` | Year picker (requires student magic link cookie) |
-| `/hub` | Subject hub + "My points" link |
-| `/leaderboard` | Your points + top 5 class list |
-| `/s/[token]` | Student magic link (sets session, → `/year`) |
-| `/t/[token]` | Teacher submission queue |
+| `/hub` | Subject hub + Leaderboard link |
+| `/leaderboard` | Your points + class top 5 (needs student magic link cookie) |
+| `/s/[token]` | Student magic link (sets session, → `/year`, welcome by name) |
+| `/t/[token]` | Teacher dashboard (links, add students, submissions) |
+| `/t/[token]/leaderboard` | Full class leaderboard (teacher view) |
 | `/need-link` | Gentle message if workbook opened without a link |
 | `/workbook/[lessonId]` | Interactive workbook + submit |
 | `/workbook/[lessonId]/print` | Printable layout |
 | `/api/submissions` | POST hand-in (+10 points first submit per lesson) |
 | `/api/leaderboard` | GET class points (`dbMode` in JSON) |
+| `/api/students` | POST add student (teacher token in body) |
 | `/api/pdf/[lessonId]` | PDF download |
 
 ## Progress and submit

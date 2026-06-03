@@ -4,19 +4,34 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { LogoMark } from "@/components/ui/LogoMark";
+import {
+  getStudentSession,
+  syncStudentSessionFromCookies,
+} from "@/lib/student-session";
 import { getStoredYear, type StoredYear } from "@/lib/year-session";
 
 export function Header() {
   const pathname = usePathname();
   const [year, setYear] = useState<StoredYear | null>(null);
+  const [hasStudentLink, setHasStudentLink] = useState(false);
+  const isTeacherView = pathname.startsWith("/t/");
 
   useEffect(() => {
     setYear(getStoredYear());
+    syncStudentSessionFromCookies();
+    setHasStudentLink(getStudentSession() !== null);
   }, [pathname]);
 
-  const homeHref = year ? "/hub" : "/year";
+  const homeHref = isTeacherView
+    ? pathname.split("/").slice(0, 3).join("/") || "/"
+    : year
+      ? "/hub"
+      : "/year";
   const showYearChrome =
-    year !== null && pathname !== "/year" && pathname !== "/";
+    !isTeacherView &&
+    year !== null &&
+    pathname !== "/year" &&
+    pathname !== "/";
 
   return (
     <header className="no-print sticky top-0 z-40 border-b-2 border-violet-100 bg-white/90 backdrop-blur-md">
@@ -31,22 +46,32 @@ export function Header() {
           </div>
         </Link>
 
-        {showYearChrome ? (
-          <div className="flex items-center gap-2 sm:gap-3">
-            <span
-              className="rounded-full border-2 border-violet-100 bg-violet-50 px-3 py-1 font-display text-xs font-bold text-violet-800"
-              aria-label={`Year ${year} selected`}
-            >
-              Year {year}
-            </span>
+        <div className="flex items-center gap-2 sm:gap-3">
+          {hasStudentLink && !isTeacherView ? (
             <Link
-              href="/year"
-              className="pr-btn-ghost whitespace-nowrap px-3 py-1.5 text-xs"
+              href="/leaderboard"
+              className="pr-btn-primary whitespace-nowrap px-3 py-1.5 text-xs"
             >
-              Change year
+              Leaderboard
             </Link>
-          </div>
-        ) : null}
+          ) : null}
+          {showYearChrome ? (
+            <>
+              <span
+                className="rounded-full border-2 border-violet-100 bg-violet-50 px-3 py-1 font-display text-xs font-bold text-violet-800"
+                aria-label={`Year ${year} selected`}
+              >
+                Year {year}
+              </span>
+              <Link
+                href="/year"
+                className="pr-btn-ghost whitespace-nowrap px-3 py-1.5 text-xs"
+              >
+                Change year
+              </Link>
+            </>
+          ) : null}
+        </div>
       </div>
     </header>
   );

@@ -216,3 +216,63 @@ export async function localGetSubmissionById(
 export async function localSeedDb(seed: LocalDb): Promise<void> {
   await persist(seed);
 }
+
+export async function localGetStudentsForTeacher(
+  teacherToken: string,
+): Promise<StudentRow[]> {
+  const db = await ensureStore();
+  const teacher = db.teachers.find((t) => t.token === teacherToken);
+  if (!teacher) return [];
+  const classIds = db.classes
+    .filter((c) => c.teacher_id === teacher.id)
+    .map((c) => c.id);
+  return db.students
+    .filter((s) => classIds.includes(s.class_id))
+    .sort((a, b) => a.name.localeCompare(b.name));
+}
+
+export async function localGetClassIdForTeacher(
+  teacherToken: string,
+): Promise<string | null> {
+  const db = await ensureStore();
+  const teacher = db.teachers.find((t) => t.token === teacherToken);
+  if (!teacher) return null;
+  return db.classes.find((c) => c.teacher_id === teacher.id)?.id ?? null;
+}
+
+export async function localCreateStudent(input: {
+  teacherToken: string;
+  name: string;
+  token: string;
+}): Promise<{ student: StudentRow } | { error: string; status: number }> {
+  const db = await ensureStore();
+  const teacher = db.teachers.find((t) => t.token === input.teacherToken);
+  if (!teacher) {
+    return { error: "Unknown teacher link", status: 401 };
+  }
+  const classId = db.classes.find((c) => c.teacher_id === teacher.id)?.id;
+  if (!classId) {
+    return { error: "No class found for this teacher", status: 400 };
+  }
+  if (db.students.some((s) => s.token === input.token)) {
+    return { error: "That link slug is already in use", status: 409 };
+  }
+
+  let studentId = `student-${input.token}`;
+  if (db.students.some((s) => s.id === studentId)) {
+    studentId = newId("student");
+  }
+
+  const student: StudentRow = {
+    id: studentId,
+    name: input.name,
+    token: input.token,
+    class_id: classId,
+  };
+  db.students.push(student);
+  if (!db.points.some((p) => p.student_id === studentId)) {
+    db.points.push({ student_id: studentId, total_points: 0 });
+  }
+  await persist(db);
+  return { student };
+}

@@ -89,14 +89,17 @@ function SubjectHubInner({ readyLessonIds }: SubjectHubProps) {
         <p className="mt-2 text-violet-600">
           Year {year} workbooks. Open one block at a time.
         </p>
-        <p className="mt-3">
+        <nav
+          className="mt-4 flex flex-wrap items-center justify-center gap-4 sm:justify-start"
+          aria-label="Quick links"
+        >
           <Link
             href="/leaderboard"
-            className="text-sm font-semibold text-violet-600 underline-offset-2 hover:text-violet-900 hover:underline"
+            className="pr-btn-primary text-sm"
           >
-            My points
+            Leaderboard
           </Link>
-        </p>
+        </nav>
       </header>
 
       <div

@@ -83,3 +83,32 @@ export async function getSubmissionById(
   }
   return local.localGetSubmissionById(submissionId, teacherToken);
 }
+
+export async function getStudentsForTeacher(
+  teacherToken: string,
+): Promise<StudentRow[]> {
+  if (isSupabaseConfigured()) {
+    return supabase.supabaseGetStudentsForTeacher(teacherToken);
+  }
+  return local.localGetStudentsForTeacher(teacherToken);
+}
+
+export async function getClassIdForTeacher(
+  teacherToken: string,
+): Promise<string | null> {
+  if (isSupabaseConfigured()) {
+    return supabase.supabaseGetClassIdForTeacher(teacherToken);
+  }
+  return local.localGetClassIdForTeacher(teacherToken);
+}
+
+export async function createStudent(input: {
+  teacherToken: string;
+  name: string;
+  token: string;
+}): Promise<{ student: StudentRow } | { error: string; status: number }> {
+  if (isSupabaseConfigured()) {
+    return supabase.supabaseCreateStudent(input);
+  }
+  return local.localCreateStudent(input);
+}

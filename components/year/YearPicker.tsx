@@ -1,10 +1,22 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
+import {
+  getStudentSession,
+  syncStudentSessionFromCookies,
+} from "@/lib/student-session";
 import { setStoredYear, type StoredYear } from "@/lib/year-session";
 
 export function YearPicker() {
   const router = useRouter();
+  const [studentName, setStudentName] = useState<string | null>(null);
+
+  useEffect(() => {
+    syncStudentSessionFromCookies();
+    const session = getStudentSession();
+    if (session?.name) setStudentName(session.name);
+  }, []);
 
   function choose(year: StoredYear) {
     setStoredYear(year);
@@ -14,6 +26,11 @@ export function YearPicker() {
   return (
     <div className="mx-auto max-w-lg space-y-10 py-4">
       <header className="text-center">
+        {studentName ? (
+          <p className="font-display text-lg font-semibold text-violet-800">
+            Welcome, {studentName}
+          </p>
+        ) : null}
         <p className="font-display text-sm font-bold text-pink-500">
           One step at a time
         </p>

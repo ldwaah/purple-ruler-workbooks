@@ -70,10 +70,11 @@ export default function LeaderboardPage() {
   return (
     <div className="mx-auto max-w-lg space-y-8">
       <header className="text-center">
-        <p className="font-display text-sm font-bold text-pink-500">My points</p>
+        <p className="font-display text-sm font-bold text-pink-500">Leaderboard</p>
         <h1 className="mt-2 font-display text-3xl font-bold text-violet-900">
           {myPoints}
         </h1>
+        <p className="mt-1 text-sm text-violet-500">Your points</p>
         <p className="mt-2 text-violet-600">
           {studentName}, you earn 10 points each time you submit a new workbook.
         </p>
