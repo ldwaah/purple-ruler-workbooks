@@ -36,23 +36,20 @@ export function SectionView({
 
   return (
     <section
-      className={
-        isActive
-          ? "pr-panel-active p-6 sm:p-8"
-          : "pr-panel p-6 opacity-90 sm:p-8"
-      }
+      className={isActive ? "pr-panel-active p-6 sm:p-8" : "pr-panel p-6 sm:p-8"}
     >
-      <header className="mb-6 flex items-start gap-4 border-b border-white/10 pb-5">
+      <header className="mb-6 flex items-start gap-4 border-b-2 border-violet-50 pb-5">
         <div
-          className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br ${meta.accent} font-display text-sm font-bold text-white shadow-lg`}
+          className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br ${meta.accent} font-display text-sm font-bold text-white`}
+          style={{ boxShadow: "var(--shadow-bubble)" }}
         >
           {meta.short}
         </div>
         <div>
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-violet-400">
-            Sector {sectionIndex + 1}
+          <p className="text-xs font-bold uppercase tracking-wider text-pink-500">
+            Step {sectionIndex + 1}
           </p>
-          <h2 className="font-display text-xl font-bold text-white sm:text-2xl">
+          <h2 className="font-display text-xl font-bold text-violet-900 sm:text-2xl">
             {section.title ?? meta.label}
           </h2>
         </div>

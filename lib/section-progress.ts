@@ -8,31 +8,31 @@ export const SECTION_META: Record<
   connect: {
     label: "Warm-up",
     short: "01",
-    cheer: "Sector clear. Continue when ready.",
+    cheer: "Nice — you are ready for practice.",
     accent: "from-violet-500 to-purple-600",
   },
   practice: {
     label: "Practice",
     short: "02",
-    cheer: "Practice complete. Unlock the next sector.",
+    cheer: "Practice done. Unlock the next step.",
     accent: "from-cyan-500 to-blue-600",
   },
   check: {
     label: "Quick check",
     short: "03",
-    cheer: "Check passed. Proceed to reflection.",
+    cheer: "Great check. Keep going.",
     accent: "from-emerald-500 to-teal-600",
   },
   reflect: {
     label: "Think it over",
     short: "04",
-    cheer: "Reflection logged. Final sector awaits.",
+    cheer: "Thoughtful work. One more step left.",
     accent: "from-amber-500 to-orange-600",
   },
   stretch: {
     label: "Super stretch",
     short: "05",
-    cheer: "Mission complete. Full workbook cleared.",
+    cheer: "You finished the whole workbook.",
     accent: "from-fuchsia-500 to-pink-600",
   },
 };

@@ -1,120 +1,97 @@
 @import "tailwindcss";
 
 :root {
-  --bg-deep: #070612;
-  --bg-mid: #120a24;
-  --foreground: #ede9fe;
-  --muted: #a78bfa;
-  --accent: #c084fc;
-  --accent-hot: #e879f9;
-  --glow: rgba(192, 132, 252, 0.45);
-  --glass: rgba(255, 255, 255, 0.06);
-  --glass-border: rgba(255, 255, 255, 0.12);
+  --pr-purple: #7c3aed;
+  --pr-purple-dark: #5b21b6;
+  --pr-pink: #ec4899;
+  --pr-pink-light: #f9a8d4;
+  --pr-bg: #f5f3ff;
+  --pr-white: #ffffff;
+  --pr-text: #1e1b4b;
+  --pr-muted: #6d28d9;
+  --shadow-bubble: 0 6px 0 rgba(91, 33, 182, 0.15), 0 12px 28px rgba(124, 58, 237, 0.12);
+  --shadow-card: 0 4px 24px rgba(124, 58, 237, 0.08);
 }
 
 @theme inline {
-  --color-background: var(--bg-deep);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-dm-sans);
-  --font-display: var(--font-syne);
+  --color-background: var(--pr-bg);
+  --color-foreground: var(--pr-text);
+  --font-sans: var(--font-nunito);
+  --font-display: var(--font-fredoka);
 }
 
 body {
-  background: var(--bg-deep);
-  color: var(--foreground);
-  font-family: var(--font-dm-sans), system-ui, sans-serif;
+  background: var(--pr-bg);
+  color: var(--pr-text);
+  font-family: var(--font-nunito), system-ui, sans-serif;
   font-size: 16px;
-  line-height: 1.6;
+  line-height: 1.55;
   min-height: 100vh;
 }
 
-.cosmic-bg {
-  position: fixed;
-  inset: 0;
-  z-index: -1;
+.pr-room-bg {
   background:
-    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(124, 58, 237, 0.35), transparent),
-    radial-gradient(ellipse 60% 40% at 100% 50%, rgba(232, 121, 249, 0.15), transparent),
-    radial-gradient(ellipse 50% 30% at 0% 80%, rgba(59, 130, 246, 0.12), transparent),
-    linear-gradient(180deg, #070612 0%, #120a24 50%, #070612 100%);
-}
-
-.cosmic-bg::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image:
-    radial-gradient(1px 1px at 20% 30%, rgba(255, 255, 255, 0.4), transparent),
-    radial-gradient(1px 1px at 60% 70%, rgba(255, 255, 255, 0.3), transparent),
-    radial-gradient(1px 1px at 80% 10%, rgba(255, 255, 255, 0.35), transparent),
-    radial-gradient(1.5px 1.5px at 40% 80%, rgba(255, 255, 255, 0.25), transparent),
-    radial-gradient(1px 1px at 90% 40%, rgba(255, 255, 255, 0.3), transparent);
-  background-size: 100% 100%;
-  opacity: 0.6;
-  pointer-events: none;
-}
-
-.cosmic-bg::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image: linear-gradient(
-    rgba(255, 255, 255, 0.03) 1px,
-    transparent 1px
-  );
-  background-size: 100% 48px;
-  mask-image: linear-gradient(180deg, transparent, black 15%, black 85%, transparent);
-  pointer-events: none;
+    radial-gradient(ellipse 90% 60% at 50% 0%, rgba(167, 139, 250, 0.2), transparent 55%),
+    radial-gradient(ellipse 50% 40% at 100% 100%, rgba(244, 114, 182, 0.12), transparent),
+    linear-gradient(180deg, #faf9ff 0%, var(--pr-bg) 40%, #ede9fe 100%);
 }
 
 .font-display {
-  font-family: var(--font-syne), system-ui, sans-serif;
-  letter-spacing: -0.02em;
+  font-family: var(--font-fredoka), var(--font-nunito), system-ui, sans-serif;
 }
 
 .pr-panel {
-  @apply rounded-2xl border border-[var(--glass-border)] bg-[var(--glass)] backdrop-blur-xl;
-  box-shadow:
-    0 0 0 1px rgba(255, 255, 255, 0.04) inset,
-    0 24px 48px -12px rgba(0, 0, 0, 0.5),
-    0 0 80px -20px var(--glow);
+  @apply rounded-3xl border-2 border-violet-100 bg-white;
+  box-shadow: var(--shadow-card);
 }
 
 .pr-panel-active {
-  @apply rounded-2xl border border-violet-400/40 backdrop-blur-xl;
-  background: linear-gradient(
-    145deg,
-    rgba(124, 58, 237, 0.18) 0%,
-    rgba(255, 255, 255, 0.05) 50%,
-    rgba(232, 121, 249, 0.08) 100%
-  );
+  @apply rounded-3xl border-2 border-violet-200 bg-white;
   box-shadow:
-    0 0 0 1px rgba(192, 132, 252, 0.2) inset,
-    0 0 60px -10px var(--glow),
-    0 32px 64px -16px rgba(0, 0, 0, 0.6);
+    var(--shadow-card),
+    0 0 0 4px rgba(167, 139, 250, 0.15);
 }
 
 .pr-btn-primary {
-  @apply rounded-full px-6 py-2.5 font-display text-sm font-semibold tracking-wide text-white transition;
-  background: linear-gradient(135deg, #7c3aed 0%, #a855f7 50%, #d946ef 100%);
-  box-shadow: 0 0 24px -4px var(--glow), 0 4px 20px rgba(0, 0, 0, 0.4);
+  @apply rounded-2xl px-6 py-2.5 font-display text-sm font-bold text-white transition;
+  background: linear-gradient(180deg, var(--pr-purple) 0%, #6d28d9 100%);
+  box-shadow: var(--shadow-bubble);
 }
 
 .pr-btn-primary:hover {
-  filter: brightness(1.1);
-  box-shadow: 0 0 32px -2px var(--glow), 0 6px 24px rgba(0, 0, 0, 0.45);
+  filter: brightness(1.05);
+  transform: translateY(-1px);
+}
+
+.pr-btn-primary:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 0 rgba(91, 33, 182, 0.2);
 }
 
 .pr-btn-ghost {
-  @apply rounded-full border border-[var(--glass-border)] bg-white/5 px-5 py-2 font-display text-sm font-semibold text-violet-100 transition hover:border-violet-400/50 hover:bg-white/10;
+  @apply rounded-2xl border-2 border-violet-200 bg-white px-5 py-2 font-display text-sm font-bold text-violet-800 transition;
+  box-shadow: 0 3px 0 rgba(167, 139, 250, 0.25);
+}
+
+.pr-btn-ghost:hover {
+  @apply border-violet-300 bg-violet-50;
 }
 
 .pr-input {
-  @apply w-full rounded-xl border border-[var(--glass-border)] bg-black/30 px-4 py-2.5 text-violet-50 placeholder:text-violet-400/50 focus:border-violet-400/60 focus:outline-none focus:ring-2 focus:ring-violet-500/30;
+  @apply w-full rounded-2xl border-2 border-violet-100 bg-violet-50/50 px-4 py-2.5 text-violet-950 placeholder:text-violet-400 focus:border-violet-400 focus:bg-white focus:outline-none focus:ring-4 focus:ring-violet-200;
 }
 
 .pr-badge {
-  @apply rounded-full border border-[var(--glass-border)] bg-white/5 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-violet-200;
+  @apply rounded-full border-2 border-violet-100 bg-violet-50 px-3 py-1 text-xs font-bold text-violet-800;
+}
+
+.pr-heading-outline {
+  text-shadow:
+    2px 2px 0 white,
+    -2px -2px 0 white,
+    2px -2px 0 white,
+    -2px 2px 0 white,
+    0 4px 12px rgba(124, 58, 237, 0.2);
 }
 
 @media print {
@@ -122,7 +99,7 @@ body {
     background: white;
     color: black;
   }
-  .cosmic-bg,
+  .pr-room-bg,
   .no-print {
     display: none !important;
   }

@@ -18,7 +18,7 @@ export default async function WorkbookPage({ params }: Props) {
         href={subjectHref}
         className="no-print mb-6 inline-block pr-btn-ghost text-sm"
       >
-        Back to {lesson.subject === "english" ? "English" : "Maths"}
+        Back to {lesson.subject === "english" ? "English" : "Maths"} list
       </Link>
       <WorkbookClient lesson={lesson} />
     </div>

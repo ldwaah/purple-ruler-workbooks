@@ -27,8 +27,8 @@ export function SectionStepper({ sections, unlockedIndex }: Props) {
             <li key={section.type} className="relative flex gap-4 pb-6 last:pb-0">
               {i < sections.length - 1 && (
                 <span
-                  className={`absolute left-[1.125rem] top-10 bottom-0 w-px ${
-                    done ? "bg-violet-400/60" : "bg-white/10"
+                  className={`absolute left-[1.125rem] top-10 bottom-0 w-0.5 ${
+                    done ? "bg-violet-400" : "bg-violet-100"
                   }`}
                   aria-hidden
                 />
@@ -36,11 +36,14 @@ export function SectionStepper({ sections, unlockedIndex }: Props) {
               <div
                 className={`relative z-10 flex h-9 w-9 shrink-0 items-center justify-center rounded-full border-2 font-display text-xs font-bold transition-all ${
                   current
-                    ? `border-violet-300 bg-gradient-to-br ${meta.accent} text-white shadow-[0_0_24px_-4px_rgba(192,132,252,0.8)]`
+                    ? `border-violet-300 bg-gradient-to-br ${meta.accent} text-white`
                     : done
-                      ? "border-violet-400/50 bg-violet-900/80 text-violet-200"
-                      : "border-white/10 bg-black/40 text-violet-500/60"
+                      ? "border-violet-200 bg-violet-100 text-violet-700"
+                      : "border-violet-100 bg-white text-violet-300"
                 }`}
+                style={
+                  current ? { boxShadow: "var(--shadow-bubble)" } : undefined
+                }
               >
                 {done ? (
                   <svg
@@ -57,30 +60,30 @@ export function SectionStepper({ sections, unlockedIndex }: Props) {
                     />
                   </svg>
                 ) : locked ? (
-                  <span className="text-[10px] uppercase tracking-widest opacity-60">
-                    ··
-                  </span>
+                  <span className="text-[10px] uppercase tracking-widest">··</span>
                 ) : (
                   meta.short
                 )}
               </div>
               <div className="min-w-0 pt-1">
                 <p
-                  className={`font-display text-sm font-semibold ${
+                  className={`font-display text-sm font-bold ${
                     current
-                      ? "text-white"
+                      ? "text-violet-900"
                       : done
-                        ? "text-violet-300"
-                        : "text-violet-500/50"
+                        ? "text-violet-600"
+                        : "text-violet-300"
                   }`}
                 >
                   {meta.label}
                 </p>
                 {current && (
-                  <p className="mt-0.5 text-xs text-violet-300/80">Active now</p>
+                  <p className="mt-0.5 text-xs font-semibold text-pink-500">
+                    Active now
+                  </p>
                 )}
                 {locked && (
-                  <p className="mt-0.5 text-xs text-violet-500/40">Locked</p>
+                  <p className="mt-0.5 text-xs text-violet-300">Locked</p>
                 )}
               </div>
             </li>

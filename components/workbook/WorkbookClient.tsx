@@ -142,8 +142,8 @@ export function WorkbookClient({ lesson }: { lesson: Lesson }) {
   if (!progress) {
     return (
       <div className="flex items-center justify-center py-24">
-        <p className="font-display text-lg text-violet-300 animate-pulse">
-          Initialising workbook…
+        <p className="font-display text-lg text-violet-500 animate-pulse">
+          Loading workbook…
         </p>
       </div>
     );
@@ -228,37 +228,37 @@ export function WorkbookClient({ lesson }: { lesson: Lesson }) {
 
         {needsAck && (
           <div className="pr-panel flex flex-col items-center gap-4 p-8 text-center">
-            <p className="font-display text-lg text-violet-100">
-              Continue when you have read the warm-up.
+            <p className="font-display text-lg text-violet-800">
+              Read the warm-up, then continue.
             </p>
             <button
               type="button"
               onClick={acknowledgeAndContinue}
               className="pr-btn-primary"
             >
-              Enter practice sector
+              Start practice
             </button>
           </div>
         )}
 
         {canUnlock && (
           <div className="pr-panel flex flex-col items-center gap-4 p-8 text-center">
-            <p className="max-w-md font-display text-lg text-violet-100">
+            <p className="max-w-md font-display text-lg text-violet-800">
               {meta?.cheer}
             </p>
             <button type="button" onClick={unlockNext} className="pr-btn-primary">
-              Unlock next sector
+              Next step
             </button>
           </div>
         )}
 
         {isCurrent && complete && isLastSection && (
           <div className="pr-panel-active flex flex-col items-center gap-3 p-10 text-center">
-            <p className="font-display text-2xl font-bold text-white">
+            <p className="font-display text-2xl font-bold text-violet-900">
               Workbook complete
             </p>
-            <p className="max-w-sm text-sm text-violet-200/90">
-              Every sector cleared. See you at your next Purple Ruler lesson.
+            <p className="max-w-sm text-sm text-violet-700">
+              You finished every step. See you at your next Purple Ruler lesson.
             </p>
           </div>
         )}
@@ -277,14 +277,14 @@ export function WorkbookClient({ lesson }: { lesson: Lesson }) {
           className="pointer-events-none absolute -bottom-16 -left-16 h-48 w-48 rounded-full bg-violet-600/25 blur-3xl"
           aria-hidden
         />
-        <p className="font-display text-xs font-semibold uppercase tracking-[0.2em] text-violet-300">
-          Workbook transmission
+        <p className="font-display text-xs font-bold uppercase tracking-[0.15em] text-pink-500">
+          Your workbook
         </p>
-        <h1 className="mt-2 font-display text-3xl font-bold text-white sm:text-4xl">
+        <h1 className="mt-2 font-display text-3xl font-bold text-violet-900 sm:text-4xl pr-heading-outline">
           {lesson.title}
         </h1>
         <LessonMeta lesson={lesson} />
-        <p className="mt-4 max-w-2xl text-sm leading-relaxed text-violet-200/85">
+        <p className="mt-4 max-w-2xl text-sm leading-relaxed text-violet-700">
           {lesson.unitAim}
         </p>
       </div>
@@ -295,8 +295,8 @@ export function WorkbookClient({ lesson }: { lesson: Lesson }) {
         <aside className="lg:sticky lg:top-8 lg:self-start">
           <div className="pr-panel space-y-6 p-5">
             <div>
-              <p className="font-display text-xs font-semibold uppercase tracking-[0.15em] text-violet-400">
-                Flight path
+              <p className="font-display text-xs font-bold uppercase tracking-[0.15em] text-violet-500">
+                Your steps
               </p>
               <SectionStepper
                 sections={lesson.sections}
@@ -304,21 +304,21 @@ export function WorkbookClient({ lesson }: { lesson: Lesson }) {
               />
             </div>
             <div>
-              <div className="flex justify-between text-xs text-violet-300">
-                <span>Sector progress</span>
+              <div className="flex justify-between text-xs font-semibold text-violet-600">
+                <span>Progress</span>
                 <span>{sectorPercent}%</span>
               </div>
-              <div className="mt-2 h-1.5 overflow-hidden rounded-full bg-white/10">
+              <div className="mt-2 h-3 overflow-hidden rounded-full border-2 border-violet-100 bg-violet-50">
                 <div
-                  className="h-full rounded-full bg-gradient-to-r from-violet-500 via-fuchsia-500 to-violet-400 transition-all duration-700"
+                  className="h-full rounded-full bg-gradient-to-r from-violet-500 to-pink-500 transition-all duration-700"
                   style={{ width: `${sectorPercent}%` }}
                 />
               </div>
-              <p className="mt-2 text-xs text-violet-400/80">
+              <p className="mt-2 text-xs text-violet-500">
                 {percent}% of questions started
               </p>
             </div>
-            <div className="flex flex-col gap-2 border-t border-white/10 pt-4">
+            <div className="flex flex-col gap-2 border-t-2 border-violet-50 pt-4">
               <Link
                 href={`/workbook/${lesson.id}/print`}
                 className="pr-btn-ghost text-center text-xs"
@@ -338,9 +338,9 @@ export function WorkbookClient({ lesson }: { lesson: Lesson }) {
         <div className="min-w-0 space-y-6">
           <div className="space-y-6">{activeSections}</div>
           {lockedSections.length > 0 && (
-            <div className="space-y-3 border-t border-white/10 pt-8">
-              <p className="font-display text-xs font-semibold uppercase tracking-[0.2em] text-violet-500">
-                Upcoming sectors
+            <div className="space-y-3 border-t-2 border-violet-100 pt-8">
+              <p className="font-display text-xs font-bold uppercase tracking-[0.15em] text-violet-400">
+                Coming up
               </p>
               {lockedSections}
             </div>
@@ -349,8 +349,8 @@ export function WorkbookClient({ lesson }: { lesson: Lesson }) {
       </div>
 
       {allComplete && unlockedIndex === lesson.sections.length - 1 && (
-        <p className="text-center text-xs text-violet-400/70">
-          Scroll up anytime to review completed sectors.
+        <p className="text-center text-xs text-violet-500">
+          Scroll up anytime to review completed steps.
         </p>
       )}
     </div>

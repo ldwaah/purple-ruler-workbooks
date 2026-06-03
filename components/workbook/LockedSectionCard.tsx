@@ -17,17 +17,17 @@ export function LockedSectionCard({
 
   return (
     <div
-      className="flex items-center gap-4 rounded-2xl border border-dashed border-white/10 bg-black/20 px-5 py-4"
+      className="flex items-center gap-4 rounded-2xl border-2 border-dashed border-violet-200 bg-violet-50/50 px-5 py-4"
       aria-hidden
     >
-      <span className="font-display text-lg font-bold text-violet-600/40">
+      <span className="font-display text-lg font-bold text-violet-300">
         {meta.short}
       </span>
       <div>
-        <p className="font-display text-xs font-semibold uppercase tracking-widest text-violet-500/50">
-          Sector {index + 1} — locked
+        <p className="font-display text-xs font-bold uppercase tracking-wider text-violet-400">
+          Step {index + 1} — locked
         </p>
-        <p className="font-display text-base text-violet-400/60">
+        <p className="font-display text-base text-violet-500">
           {section.title ?? meta.label}
         </p>
       </div>

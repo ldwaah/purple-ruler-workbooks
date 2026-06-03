@@ -29,13 +29,9 @@ export function ItemView({
 
   if (item.type === "info") {
     return (
-      <div className="rounded-xl border border-white/10 bg-black/25 p-5">
-        <p className="font-display text-sm font-semibold text-violet-200">
-          {item.prompt}
-        </p>
-        <p className="mt-2 text-sm leading-relaxed text-violet-100/90 whitespace-pre-wrap">
-          {item.content}
-        </p>
+      <div className="rounded-2xl border-2 border-violet-100 bg-violet-50/80 p-5">
+        <p className="font-display font-bold text-violet-900">{item.prompt}</p>
+        <p className="mt-2 text-violet-800 whitespace-pre-wrap">{item.content}</p>
       </div>
     );
   }
@@ -49,12 +45,12 @@ export function ItemView({
   };
 
   return (
-    <fieldset className="rounded-xl border border-white/10 bg-black/20 p-5">
-      <legend className="font-display px-1 text-base font-semibold text-violet-50">
-        <span className="text-violet-400">Q{index}.</span> {item.prompt}
+    <fieldset className="rounded-2xl border-2 border-violet-100 bg-white p-5 shadow-sm">
+      <legend className="font-display px-1 text-base font-bold text-violet-900">
+        <span className="text-pink-500">Q{index}.</span> {item.prompt}
       </legend>
       {item.scaffold && (
-        <p className="mt-3 rounded-lg border border-violet-500/20 bg-violet-950/50 px-3 py-2 text-sm text-violet-200/90">
+        <p className="mt-3 rounded-xl border-2 border-pink-100 bg-pink-50 px-3 py-2 text-sm text-violet-800">
           {item.scaffold}
         </p>
       )}
@@ -85,18 +81,17 @@ export function ItemView({
 
       {marked && revealed && (
         <p
-          className={`mt-4 rounded-xl px-4 py-3 text-sm ${
+          className={`mt-4 rounded-2xl px-4 py-3 text-sm font-semibold ${
             correct
-              ? "border border-emerald-500/30 bg-emerald-950/40 text-emerald-200"
-              : "border border-amber-500/30 bg-amber-950/40 text-amber-200"
+              ? "border-2 border-emerald-200 bg-emerald-50 text-emerald-800"
+              : "border-2 border-amber-200 bg-amber-50 text-amber-900"
           }`}
           role="status"
         >
-          {correct ? "Correct — well done." : "Not quite — review and try again."}
+          {correct ? "Correct — well done!" : "Not quite — try again."}
           {"exemplar" in item && item.exemplar && revealed && (
-            <span className="mt-2 block font-normal text-violet-200/90">
-              <strong className="text-violet-100">Model answer:</strong>{" "}
-              {item.exemplar}
+            <span className="mt-2 block font-normal text-violet-700">
+              <strong>Model answer:</strong> {item.exemplar}
             </span>
           )}
           {item.type === "long_text" && (
@@ -120,7 +115,7 @@ function renderInput(
 ) {
   const disabled = readOnly;
   const optionClass =
-    "flex cursor-pointer items-center gap-3 rounded-xl border border-white/10 bg-black/30 px-4 py-3 transition hover:border-violet-400/40 hover:bg-violet-950/40 has-checked:border-violet-400/60 has-checked:bg-violet-900/30";
+    "flex cursor-pointer items-center gap-3 rounded-2xl border-2 border-violet-100 bg-violet-50/60 px-4 py-3 transition hover:border-violet-300 hover:bg-violet-50 has-checked:border-violet-400 has-checked:bg-violet-100";
 
   switch (item.type) {
     case "mcq":
@@ -135,9 +130,9 @@ function renderInput(
                 checked={value === opt}
                 disabled={disabled}
                 onChange={() => onChange(item.id, opt)}
-                className="h-4 w-4 border-violet-400 text-violet-500 focus:ring-violet-500"
+                className="h-4 w-4 text-violet-600"
               />
-              <span className="text-sm text-violet-100">{opt}</span>
+              <span className="text-sm text-violet-900">{opt}</span>
             </label>
           ))}
         </div>
@@ -160,9 +155,9 @@ function renderInput(
                       : [...selected, opt];
                     onChange(item.id, next);
                   }}
-                  className="h-4 w-4 rounded border-violet-400 text-violet-500"
+                  className="h-4 w-4 rounded text-violet-600"
                 />
-                <span className="text-sm text-violet-100">{opt}</span>
+                <span className="text-sm text-violet-900">{opt}</span>
               </label>
             );
           })}
@@ -187,12 +182,15 @@ function renderInput(
           {order.map((opt, i) => (
             <li
               key={opt}
-              className="flex items-center gap-3 rounded-xl border border-white/10 bg-black/30 px-3 py-2"
+              className="flex items-center gap-3 rounded-2xl border-2 border-violet-100 bg-violet-50/80 px-3 py-2"
             >
-              <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-violet-600/80 font-display text-xs font-bold text-white">
+              <span
+                className="flex h-8 w-8 items-center justify-center rounded-xl bg-violet-600 font-display text-xs font-bold text-white"
+                style={{ boxShadow: "0 2px 0 rgba(91,33,182,0.3)" }}
+              >
                 {i + 1}
               </span>
-              <span className="flex-1 text-sm text-violet-100">{opt}</span>
+              <span className="flex-1 text-sm text-violet-900">{opt}</span>
               {!disabled && (
                 <span className="flex gap-1">
                   <button

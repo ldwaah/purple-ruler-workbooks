@@ -3,15 +3,15 @@ import { LogoMark } from "@/components/ui/LogoMark";
 
 export function Header() {
   return (
-    <header className="no-print sticky top-0 z-50 border-b border-white/10 bg-[#070612]/80 backdrop-blur-xl">
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 sm:px-6">
-        <Link href="/" className="flex items-center gap-3">
+    <header className="no-print sticky top-0 z-40 border-b-2 border-violet-100 bg-white/90 backdrop-blur-md">
+      <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6">
+        <Link href="/start" className="flex items-center gap-3">
           <LogoMark size={40} priority />
           <div>
-            <p className="font-display text-base font-bold tracking-tight text-white">
+            <p className="font-display text-base font-bold text-violet-900">
               Purple Ruler
             </p>
-            <p className="text-xs text-violet-400">KS4 Workbooks</p>
+            <p className="text-xs font-semibold text-pink-500">KS4 Workbooks</p>
           </div>
         </Link>
         <nav className="flex gap-2">

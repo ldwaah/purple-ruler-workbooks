@@ -7,14 +7,14 @@ export default function EnglishPage() {
 
   return (
     <div className="space-y-8">
-      <header>
-        <p className="font-display text-xs font-semibold uppercase tracking-[0.2em] text-violet-400">
+      <header className="pr-panel p-8">
+        <p className="font-display text-xs font-bold uppercase tracking-wider text-pink-500">
           {meta.examBoard}
         </p>
-        <h1 className="mt-2 font-display text-3xl font-bold text-white">
+        <h1 className="mt-2 font-display text-3xl font-bold text-violet-900">
           {meta.label}
         </h1>
-        <p className="mt-2 text-sm text-violet-300/80">
+        <p className="mt-2 text-violet-600">
           {meta.lessonsPerWeek} lessons per week
         </p>
       </header>
@@ -24,26 +24,26 @@ export default function EnglishPage() {
           <li key={lesson.id}>
             <Link
               href={`/workbook/${lesson.id}`}
-              className="group flex items-center justify-between gap-4 rounded-2xl pr-panel px-6 py-5 transition hover:border-violet-400/35"
+              className="pr-panel group flex items-center justify-between gap-4 px-6 py-5 transition hover:-translate-y-0.5"
             >
               <div className="flex items-start gap-4">
-                <span className="font-display text-2xl font-bold text-violet-500/50">
+                <span className="font-display text-2xl font-bold text-violet-300">
                   {String(i + 1).padStart(2, "0")}
                 </span>
                 <div>
-                  <p className="font-display text-lg font-semibold text-white group-hover:text-violet-100">
+                  <p className="font-display text-lg font-bold text-violet-900">
                     {lesson.title}
                   </p>
-                  <p className="mt-1 text-sm text-violet-400/80">
+                  <p className="mt-1 text-sm text-violet-600">
                     Lesson {lesson.lessonUnits} · {lesson.blockTitle}
                   </p>
                 </div>
               </div>
               <span
-                className={`shrink-0 rounded-full px-4 py-1.5 font-display text-xs font-semibold ${
+                className={`shrink-0 rounded-2xl px-4 py-2 font-display text-xs font-bold ${
                   lessonExists(lesson.id)
-                    ? "bg-violet-600/80 text-white"
-                    : "bg-white/5 text-violet-500"
+                    ? "pr-btn-primary"
+                    : "border-2 border-violet-100 text-violet-400"
                 }`}
               >
                 {lessonExists(lesson.id) ? "Open" : "Soon"}
@@ -53,7 +53,7 @@ export default function EnglishPage() {
         ))}
       </ul>
 
-      <Link href="/" className="pr-btn-ghost inline-block text-sm">
+      <Link href="/start" className="pr-btn-ghost inline-block text-sm">
         Back
       </Link>
     </div>
