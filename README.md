@@ -126,15 +126,23 @@ vercel --prod
 
 Set `NEXT_PUBLIC_APP_URL=https://purpleruler.vercel.app` in Vercel (or run `./scripts/sync-vercel-env.sh production` after adding it to `.env.local`).
 
-### Custom domain `purpleruler.vercel.app`
+### Production URL `purpleruler.vercel.app`
 
-Vercel project **Settings → Domains**: add `purpleruler.vercel.app` and assign it to this deployment. If the hostname already belongs to another Vercel project, remove it there first or use **Settings → Domains → Edit** to point it at this app.
+Add the hostname to the **purpleruler** Vercel project (not only a deployment alias), or SSO may block public access:
 
-CLI (from this repo, linked to the correct project):
+```bash
+vercel domains add purpleruler.vercel.app
+```
+
+Or **Settings → Domains → Add** `purpleruler.vercel.app`. If the name is on another project, remove it there first.
+
+Optional CLI alias after deploy:
 
 ```bash
 vercel alias set <deployment-url> purpleruler.vercel.app
 ```
+
+The default `purple-ruler-workbooks.vercel.app` hostname still works until you rely only on `purpleruler.vercel.app`.
 
 Add Supabase env vars (see **5-minute Supabase setup** above) for persistent submissions across serverless instances.
 
