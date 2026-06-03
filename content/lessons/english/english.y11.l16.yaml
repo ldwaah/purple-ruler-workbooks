@@ -1,137 +1,136 @@
 id: english.y11.l16
 subject: english
 year: 11
-block: language-paper2
-blockTitle: A Christmas Carol and Paper 2 Skills
+block: christmas-carol
+blockTitle: 'A Christmas Carol and Language: Paper 2 Skills'
 lessonUnits: '16'
 examBoard: AQA
-title: Paper 2 Skills Overview
+title: Contextual Understanding
 lessonsPerWeek: 3
-unitAim: Develop skills for Language Paper 2.
+unitAim: Apply understanding of Victorian context to analysis of A Christmas Carol.
 objectives:
-  - Understand Paper 2 demands
-  - Practise comprehension
-  - Build analytical vocabulary
+  - Explain how Victorian conditions enhance reading of the text
+  - Support points with examples from the text
+  - Link context to themes and character development
 sections:
   - type: connect
     title: Connect to your lesson
     items:
       - type: info
-        id: en1116-c1
+        id: en1106-c1
         prompt: What we covered in your Purple Ruler lesson
         content: >-
-          Lessons 16 focus on Paper 2 Skills Overview. Develop skills for Language Paper 2. Use this workbook after your
-          live lesson to consolidate that learning.
+          Lesson 16 focused on contextual understanding. You explored key ideas from A Christmas
+          Carol and Language: Paper 2 Skills and built skills linked to your GCSE English
+          objectives. Use this workbook after your live lesson to consolidate that learning.
   - type: practice
     title: Practice
     items:
       - type: mcq
-        id: en1116-p1
-        prompt: Which statement best matches the focus of "Paper 2 Skills Overview"?
+        id: en1106-p1
+        prompt: Which objective best matches Lesson 16?
         options:
-          - Understand Paper 2 demands
-          - Memorising quotations without analysis
-          - Ignoring historical and social context
-          - Writing without planning or evidence
-        answer: Understand Paper 2 demands
-        scaffold: Think back to your lesson objectives and key terminology.
+          - Explain how Victorian conditions enhance reading of the text
+          - Memorise dates only without analysis
+          - Ignore context when writing about texts
+          - Skip planning before extended writing
+        answer: Explain how Victorian conditions enhance reading of the text
+        scaffold: Choose the aim that matches what you practised in the live lesson.
       - type: short_text
-        id: en1116-p2
-        prompt: In one or two sentences, explain a key idea from Paper 2 Skills Overview.
+        id: en1106-p2
+        prompt: In one or two sentences, explain a key idea from "Contextual Understanding".
         keywords:
-          - paper
-          - skills
-          - overview
-        scaffold: A key idea from Paper 2 Skills Overview is...
-        exemplar: Understand Paper 2 demands. This helps you analyse the text with clear, supported ideas.
-      - type: mcq
-        id: en1116-p3
-        prompt: Which skill is most important for GCSE English success in this unit?
-        options:
-          - Using evidence and subject terminology
-          - Copying the plot with no analysis
-          - Avoiding context completely
-          - Writing without checking accuracy
-        answer: Using evidence and subject terminology
+          - understand
+          - analyse
+          - explain
+          - context
+          - theme
+          - character
+          - language
+          - structure
+        exemplar: Explain how Victorian conditions enhance reading of the text
       - type: ordering
-        id: en1116-p4
-        prompt: 'Put these steps for a strong analytical paragraph in the best order:'
+        id: en1106-p3
+        prompt: 'Order these study skills from first step to final step:'
         options:
-          - State a clear point linked to the question
-          - Select a relevant quotation or reference
-          - Explain the writer's method and effect
-          - Link back to the question or theme
+          - Review the lesson objective
+          - Collect evidence or examples
+          - Plan your response
+          - Write and check your answer
         answer:
-          - State a clear point linked to the question
-          - Select a relevant quotation or reference
-          - Explain the writer's method and effect
-          - Link back to the question or theme
+          - Review the lesson objective
+          - Collect evidence or examples
+          - Plan your response
+          - Write and check your answer
+      - type: mcq
+        id: en1106-p4
+        prompt: Which skill is most important for A work in this unit?
+        options:
+          - Using evidence to support ideas
+          - Ignoring the question focus
+          - Copying text without comment
+          - Avoiding subject terminology
+        answer: Using evidence to support ideas
   - type: check
     title: Check your understanding
     items:
       - type: multi_select
-        id: en1116-ch1
-        prompt: 'Select ALL objectives linked to Paper 2 Skills Overview:'
+        id: en1106-ch1
+        prompt: 'Select ALL habits that strengthen GCSE English responses:'
         options:
-          - Understand Paper 2 demands
-          - Practise comprehension
-          - Build analytical vocabulary
-          - Ignore audience and purpose
-          - Skip planning entirely
+          - Clear topic sentences
+          - Evidence from the text
+          - Ignoring the question
+          - Checking for accurate terminology
         answer:
-          - Understand Paper 2 demands
-          - Practise comprehension
-          - Build analytical vocabulary
+          - Clear topic sentences
+          - Evidence from the text
+          - Checking for accurate terminology
       - type: short_text
-        id: en1116-ch2
+        id: en1106-ch2
         prompt: Name one subject term you should use when writing about this unit.
         keywords:
           - context
           - theme
-          - method
           - structure
           - language
           - audience
           - purpose
           - character
-        exemplar: Use terms such as context, theme, structure, or writer's methods with precise evidence.
+          - analysis
+        exemplar: Use precise terminology such as context, theme, or structure.
       - type: mcq
-        id: en1116-ch3
-        prompt: 'After your live lesson, this workbook helps you to:'
+        id: en1106-ch3
+        prompt: What should you do first when answering an extended question?
         options:
-          - Consolidate and practise what you learned
-          - Replace all reading of the set texts
-          - Skip reflection on your work
-          - Avoid using feedback from teachers
-        answer: Consolidate and practise what you learned
+          - Plan your main points
+          - Write the conclusion first
+          - Copy the question as your answer
+          - Skip reading the text
+        answer: Plan your main points
   - type: reflect
     title: Reflect
     items:
       - type: long_text
-        id: en1116-rf1
-        prompt: >-
-          Write about 40-60 words: what did you learn in Paper 2 Skills Overview, and what do you still need to
-          practise?
-        scaffold: In Paper 2 Skills Overview, I learned... I still need to practise...
+        id: en1106-rf1
+        prompt: Write a short paragraph (about 40-60 words) explaining what you learned in Lesson 16.
+        scaffold: In Lesson 16, I learned that...
         checklist:
-          - I named a specific skill or idea from the lesson
-          - I gave an example from the text or task
-          - I identified one next step for improvement
+          - I stated the main idea from the lesson
+          - I used at least one piece of subject terminology
+          - I linked my learning to the unit aim
+        exemplar: Apply understanding of Victorian context to analysis of A Christmas Carol.
         minWords: 30
-        exemplar: >-
-          In Paper 2 Skills Overview, I learned how to link context to the writer's purpose. I still need to practise
-          selecting shorter, sharper quotations and explaining their effect in more detail.
   - type: stretch
     title: Stretch
     items:
       - type: long_text
-        id: en1116-st1
-        prompt: 'Stretch: write 50-80 words comparing two ideas from Paper 2 Skills Overview. Which is more convincing and why?'
+        id: en1106-st1
+        prompt: >-
+          Evaluate how confident you feel about "Contextual Understanding" and what you will revise
+          next. (50-70 words)
         checklist:
-          - Clear comparison between two ideas
-          - Evidence or example from the unit
-          - Evaluative judgement with justification
-        minWords: 45
-        exemplar: >-
-          Both ideas are important, but linking context to theme is more convincing because it shows why the writer made
-          choices for a real audience, not only what happens in the plot.
+          - I identified one strength
+          - I identified one area to improve
+          - I suggested a specific next step
+        minWords: 40

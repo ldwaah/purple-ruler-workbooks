@@ -1,139 +1,136 @@
 id: english.y10.l81-83
 subject: english
 year: 10
-block: lit-review
+block: year-review
 blockTitle: Literature and Language Review
 lessonUnits: 81-83
 examBoard: AQA
-title: Timed Essay Exam Practice
+title: Paper 1 and Paper 2 Writing Skills
 lessonsPerWeek: 3
-unitAim: Improve exam technique through timed essay practice.
+unitAim: Develop advanced writing skills for Paper 1 and Paper 2 Question 5.
 objectives:
-  - Plan under time pressure
-  - Write cohesive arguments
-  - Use feedback to improve
+  - Practise descriptive and viewpoint writing
+  - Use evaluative language and literary devices
+  - Structure extended writing responses effectively
 sections:
   - type: connect
     title: Connect to your lesson
     items:
       - type: info
-        id: en108183-c1
+        id: en1048-c1
         prompt: What we covered in your Purple Ruler lesson
         content: >-
-          Lessons 81-83 focus on Timed Essay Exam Practice. Improve exam technique through timed essay practice. Use
-          this workbook after your live lesson to consolidate that learning.
+          Lesson 81-83 focused on paper 1 and paper 2 writing skills. You explored key ideas from
+          Literature and Language Review and built skills linked to your GCSE English objectives.
+          Use this workbook after your live lesson to consolidate that learning.
   - type: practice
     title: Practice
     items:
       - type: mcq
-        id: en108183-p1
-        prompt: Which statement best matches the focus of "Timed Essay Exam Practice"?
+        id: en1048-p1
+        prompt: Which objective best matches Lesson 81-83?
         options:
-          - Plan under time pressure
-          - Memorising quotations without analysis
-          - Ignoring historical and social context
-          - Writing without planning or evidence
-        answer: Plan under time pressure
-        scaffold: Think back to your lesson objectives and key terminology.
+          - Practise descriptive and viewpoint writing
+          - Memorise dates only without analysis
+          - Ignore context when writing about texts
+          - Skip planning before extended writing
+        answer: Practise descriptive and viewpoint writing
+        scaffold: Choose the aim that matches what you practised in the live lesson.
       - type: short_text
-        id: en108183-p2
-        prompt: In one or two sentences, explain a key idea from Timed Essay Exam Practice.
+        id: en1048-p2
+        prompt: In one or two sentences, explain a key idea from "Paper 1 and Paper 2 Writing Skills".
         keywords:
-          - timed
-          - essay
-          - practice
-        scaffold: A key idea from Timed Essay Exam Practice is...
-        exemplar: Plan under time pressure. This helps you analyse the text with clear, supported ideas.
-      - type: mcq
-        id: en108183-p3
-        prompt: Which skill is most important for GCSE English success in this unit?
-        options:
-          - Using evidence and subject terminology
-          - Copying the plot with no analysis
-          - Avoiding context completely
-          - Writing without checking accuracy
-        answer: Using evidence and subject terminology
+          - understand
+          - analyse
+          - explain
+          - context
+          - theme
+          - character
+          - language
+          - structure
+        exemplar: Practise descriptive and viewpoint writing
       - type: ordering
-        id: en108183-p4
-        prompt: 'Put these steps for a strong analytical paragraph in the best order:'
+        id: en1048-p3
+        prompt: 'Order these study skills from first step to final step:'
         options:
-          - State a clear point linked to the question
-          - Select a relevant quotation or reference
-          - Explain the writer's method and effect
-          - Link back to the question or theme
+          - Review the lesson objective
+          - Collect evidence or examples
+          - Plan your response
+          - Write and check your answer
         answer:
-          - State a clear point linked to the question
-          - Select a relevant quotation or reference
-          - Explain the writer's method and effect
-          - Link back to the question or theme
+          - Review the lesson objective
+          - Collect evidence or examples
+          - Plan your response
+          - Write and check your answer
+      - type: mcq
+        id: en1048-p4
+        prompt: Which skill is most important for Literature work in this unit?
+        options:
+          - Using evidence to support ideas
+          - Ignoring the question focus
+          - Copying text without comment
+          - Avoiding subject terminology
+        answer: Using evidence to support ideas
   - type: check
     title: Check your understanding
     items:
       - type: multi_select
-        id: en108183-ch1
-        prompt: 'Select ALL objectives linked to Timed Essay Exam Practice:'
+        id: en1048-ch1
+        prompt: 'Select ALL habits that strengthen GCSE English responses:'
         options:
-          - Plan under time pressure
-          - Write cohesive arguments
-          - Use feedback to improve
-          - Ignore audience and purpose
-          - Skip planning entirely
+          - Clear topic sentences
+          - Evidence from the text
+          - Ignoring the question
+          - Checking for accurate terminology
         answer:
-          - Plan under time pressure
-          - Write cohesive arguments
-          - Use feedback to improve
+          - Clear topic sentences
+          - Evidence from the text
+          - Checking for accurate terminology
       - type: short_text
-        id: en108183-ch2
+        id: en1048-ch2
         prompt: Name one subject term you should use when writing about this unit.
         keywords:
           - context
           - theme
-          - method
           - structure
           - language
           - audience
           - purpose
           - character
-        exemplar: Use terms such as context, theme, structure, or writer's methods with precise evidence.
+          - analysis
+        exemplar: Use precise terminology such as context, theme, or structure.
       - type: mcq
-        id: en108183-ch3
-        prompt: 'After your live lesson, this workbook helps you to:'
+        id: en1048-ch3
+        prompt: What should you do first when answering an extended question?
         options:
-          - Consolidate and practise what you learned
-          - Replace all reading of the set texts
-          - Skip reflection on your work
-          - Avoid using feedback from teachers
-        answer: Consolidate and practise what you learned
+          - Plan your main points
+          - Write the conclusion first
+          - Copy the question as your answer
+          - Skip reading the text
+        answer: Plan your main points
   - type: reflect
     title: Reflect
     items:
       - type: long_text
-        id: en108183-rf1
-        prompt: >-
-          Write about 40-60 words: what did you learn in Timed Essay Exam Practice, and what do you still need to
-          practise?
-        scaffold: In Timed Essay Exam Practice, I learned... I still need to practise...
+        id: en1048-rf1
+        prompt: Write a short paragraph (about 40-60 words) explaining what you learned in Lesson 81-83.
+        scaffold: In Lesson 81-83, I learned that...
         checklist:
-          - I named a specific skill or idea from the lesson
-          - I gave an example from the text or task
-          - I identified one next step for improvement
+          - I stated the main idea from the lesson
+          - I used at least one piece of subject terminology
+          - I linked my learning to the unit aim
+        exemplar: Develop advanced writing skills for Paper 1 and Paper 2 Question 5.
         minWords: 30
-        exemplar: >-
-          In Timed Essay Exam Practice, I learned how to link context to the writer's purpose. I still need to practise
-          selecting shorter, sharper quotations and explaining their effect in more detail.
   - type: stretch
     title: Stretch
     items:
       - type: long_text
-        id: en108183-st1
+        id: en1048-st1
         prompt: >-
-          Stretch: write 50-80 words comparing two ideas from Timed Essay Exam Practice. Which is more convincing and
-          why?
+          Evaluate how confident you feel about "Paper 1 and Paper 2 Writing Skills" and what you
+          will revise next. (50-70 words)
         checklist:
-          - Clear comparison between two ideas
-          - Evidence or example from the unit
-          - Evaluative judgement with justification
-        minWords: 45
-        exemplar: >-
-          Both ideas are important, but linking context to theme is more convincing because it shows why the writer made
-          choices for a real audience, not only what happens in the plot.
+          - I identified one strength
+          - I identified one area to improve
+          - I suggested a specific next step
+        minWords: 40

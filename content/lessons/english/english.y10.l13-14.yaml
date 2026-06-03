@@ -7,128 +7,130 @@ lessonUnits: 13-14
 examBoard: AQA
 title: Themes and Motifs
 lessonsPerWeek: 3
-unitAim: Identify and analyse main themes and recurring motifs.
+unitAim: Identify and analyse the main themes and recurring motifs in the play.
 objectives:
-  - Identify central themes
-  - Analyse motifs
-  - Link themes to context
+  - Identify main themes such as social responsibility
+  - Analyse recurring motifs in the play
+  - Link themes to historical context of the era
 sections:
   - type: connect
     title: Connect to your lesson
     items:
       - type: info
-        id: en101314-c1
+        id: en1007-c1
         prompt: What we covered in your Purple Ruler lesson
         content: >-
-          Lessons 13-14 focus on Themes and Motifs. Identify and analyse main themes and recurring motifs. Use this
-          workbook after your live lesson to consolidate that learning.
+          Lesson 13-14 focused on themes and motifs. You explored key ideas from An Inspector Calls
+          and Paper 1 Language Skills and built skills linked to your GCSE English objectives. Use
+          this workbook after your live lesson to consolidate that learning.
   - type: practice
     title: Practice
     items:
       - type: mcq
-        id: en101314-p1
-        prompt: Which statement best matches the focus of "Themes and Motifs"?
+        id: en1007-p1
+        prompt: Which objective best matches Lesson 13-14?
         options:
-          - Identify central themes
-          - Memorising quotations without analysis
-          - Ignoring historical and social context
-          - Writing without planning or evidence
-        answer: Identify central themes
-        scaffold: Think back to your lesson objectives and key terminology.
+          - Identify main themes such as social responsibility
+          - Memorise dates only without analysis
+          - Ignore context when writing about texts
+          - Skip planning before extended writing
+        answer: Identify main themes such as social responsibility
+        scaffold: Choose the aim that matches what you practised in the live lesson.
       - type: short_text
-        id: en101314-p2
-        prompt: In one or two sentences, explain a key idea from Themes and Motifs.
+        id: en1007-p2
+        prompt: In one or two sentences, explain a key idea from "Themes and Motifs".
         keywords:
-          - themes
-          - motifs
-        scaffold: A key idea from Themes and Motifs is...
-        exemplar: Identify central themes. This helps you analyse the text with clear, supported ideas.
-      - type: mcq
-        id: en101314-p3
-        prompt: Which skill is most important for GCSE English success in this unit?
-        options:
-          - Using evidence and subject terminology
-          - Copying the plot with no analysis
-          - Avoiding context completely
-          - Writing without checking accuracy
-        answer: Using evidence and subject terminology
+          - understand
+          - analyse
+          - explain
+          - context
+          - theme
+          - character
+          - language
+          - structure
+        exemplar: Identify main themes such as social responsibility
       - type: ordering
-        id: en101314-p4
-        prompt: 'Put these steps for a strong analytical paragraph in the best order:'
+        id: en1007-p3
+        prompt: 'Order these study skills from first step to final step:'
         options:
-          - State a clear point linked to the question
-          - Select a relevant quotation or reference
-          - Explain the writer's method and effect
-          - Link back to the question or theme
+          - Review the lesson objective
+          - Collect evidence or examples
+          - Plan your response
+          - Write and check your answer
         answer:
-          - State a clear point linked to the question
-          - Select a relevant quotation or reference
-          - Explain the writer's method and effect
-          - Link back to the question or theme
+          - Review the lesson objective
+          - Collect evidence or examples
+          - Plan your response
+          - Write and check your answer
+      - type: mcq
+        id: en1007-p4
+        prompt: Which skill is most important for An work in this unit?
+        options:
+          - Using evidence to support ideas
+          - Ignoring the question focus
+          - Copying text without comment
+          - Avoiding subject terminology
+        answer: Using evidence to support ideas
   - type: check
     title: Check your understanding
     items:
       - type: multi_select
-        id: en101314-ch1
-        prompt: 'Select ALL objectives linked to Themes and Motifs:'
+        id: en1007-ch1
+        prompt: 'Select ALL habits that strengthen GCSE English responses:'
         options:
-          - Identify central themes
-          - Analyse motifs
-          - Link themes to context
-          - Ignore audience and purpose
-          - Skip planning entirely
+          - Clear topic sentences
+          - Evidence from the text
+          - Ignoring the question
+          - Checking for accurate terminology
         answer:
-          - Identify central themes
-          - Analyse motifs
-          - Link themes to context
+          - Clear topic sentences
+          - Evidence from the text
+          - Checking for accurate terminology
       - type: short_text
-        id: en101314-ch2
+        id: en1007-ch2
         prompt: Name one subject term you should use when writing about this unit.
         keywords:
           - context
           - theme
-          - method
           - structure
           - language
           - audience
           - purpose
           - character
-        exemplar: Use terms such as context, theme, structure, or writer's methods with precise evidence.
+          - analysis
+        exemplar: Use precise terminology such as context, theme, or structure.
       - type: mcq
-        id: en101314-ch3
-        prompt: 'After your live lesson, this workbook helps you to:'
+        id: en1007-ch3
+        prompt: What should you do first when answering an extended question?
         options:
-          - Consolidate and practise what you learned
-          - Replace all reading of the set texts
-          - Skip reflection on your work
-          - Avoid using feedback from teachers
-        answer: Consolidate and practise what you learned
+          - Plan your main points
+          - Write the conclusion first
+          - Copy the question as your answer
+          - Skip reading the text
+        answer: Plan your main points
   - type: reflect
     title: Reflect
     items:
       - type: long_text
-        id: en101314-rf1
-        prompt: 'Write about 40-60 words: what did you learn in Themes and Motifs, and what do you still need to practise?'
-        scaffold: In Themes and Motifs, I learned... I still need to practise...
+        id: en1007-rf1
+        prompt: Write a short paragraph (about 40-60 words) explaining what you learned in Lesson 13-14.
+        scaffold: In Lesson 13-14, I learned that...
         checklist:
-          - I named a specific skill or idea from the lesson
-          - I gave an example from the text or task
-          - I identified one next step for improvement
+          - I stated the main idea from the lesson
+          - I used at least one piece of subject terminology
+          - I linked my learning to the unit aim
+        exemplar: Identify and analyse the main themes and recurring motifs in the play.
         minWords: 30
-        exemplar: >-
-          In Themes and Motifs, I learned how to link context to the writer's purpose. I still need to practise
-          selecting shorter, sharper quotations and explaining their effect in more detail.
   - type: stretch
     title: Stretch
     items:
       - type: long_text
-        id: en101314-st1
-        prompt: 'Stretch: write 50-80 words comparing two ideas from Themes and Motifs. Which is more convincing and why?'
+        id: en1007-st1
+        prompt: >-
+          Evaluate how confident you feel about "Themes and Motifs" and what you will revise next.
+          (50-70 words)
         checklist:
-          - Clear comparison between two ideas
-          - Evidence or example from the unit
-          - Evaluative judgement with justification
-        minWords: 45
-        exemplar: >-
-          Both ideas are important, but linking context to theme is more convincing because it shows why the writer made
-          choices for a real audience, not only what happens in the plot.
+          - I identified one strength
+          - I identified one area to improve
+          - I suggested a specific next step
+        minWords: 40

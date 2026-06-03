@@ -1,102 +1,109 @@
 id: maths.y11.l36
 subject: maths
 year: 11
-block: graphs-algebra
-blockTitle: Graphs and Algebra
+block: algebra-y11
+blockTitle: Algebra
 lessonUnits: '36'
 examBoard: Edexcel
-title: Rearranging Equations
+title: Simultaneous Equations (Advanced)
 lessonsPerWeek: 2
-unitAim: Rearrange equations to solve for variables.
+unitAim: Solve simultaneous equations including one linear and one quadratic.
 objectives:
-  - Rearrange linear equations
-  - Rearrange with powers
-  - Use inverse operations
+  - Solve simultaneous equations algebraically
+  - Solve one linear and one quadratic equation simultaneously
+  - Interpret solutions graphically
 sections:
   - type: connect
     title: Connect to your lesson
     items:
       - type: info
-        id: m1136-c1
+        id: m1116-c1
         prompt: What we covered in your Purple Ruler lesson
         content: >-
-          Lessons 36 cover Rearranging Equations. Rearrange equations to solve for variables. Use this workbook after
-          your live lesson to practise and check your understanding.
+          Lesson 36 focused on Simultaneous Equations (Advanced). You practised skills from Algebra
+          and applied them to GCSE-style questions. Use this workbook after your live lesson to
+          strengthen your understanding.
   - type: practice
     title: Practice
     items:
       - type: mcq
-        id: m1136-p1
-        prompt: Which aim best describes "Rearranging Equations"?
+        id: m1116-p1
+        prompt: Which habit helps you succeed in Lesson 36?
         options:
-          - Rearrange linear equations
-          - Ignore units and notation
-          - Guess without showing working
-          - Skip checking answers
-        answer: Rearrange linear equations
+          - Show clear working for each step
+          - Guess without checking
+          - Skip units in calculations
+          - Avoid revising methods
+        answer: Show clear working for each step
       - type: numeric
-        id: m1136-p2
-        prompt: 'Calculate: 3/4 + 1/8 (give as a decimal).'
-        answer: 0.875
-        explanation: 3/4 = 0.75; 0.75 + 0.125 = 0.875
+        id: m1116-p2
+        prompt: Calculate 15% of 80
+        answer: 12
+        explanation: 15% of 80 = 0.15 × 80 = 12
       - type: mcq
-        id: m1136-p3
-        prompt: 'When solving GCSE maths problems, you should:'
+        id: m1116-p3
+        prompt: Which value is equal to 3/4?
         options:
-          - Show clear working and check the answer
-          - Hide all working from the examiner
-          - Never include units
-          - Skip reading the question
-        answer: Show clear working and check the answer
-      - type: numeric
-        id: m1136-p4
-        prompt: 'Simplify: 4x + 3x - 2 (give the coefficient of x as a number, e.g. if answer is 7x-2 write 7).'
-        answer: 7
-        explanation: 4x + 3x = 7x, so coefficient is 7
+          - '0.34'
+          - '0.75'
+          - '0.43'
+          - '7.5'
+        answer: '0.75'
+      - type: ordering
+        id: m1116-p4
+        prompt: 'Order these problem-solving steps:'
+        options:
+          - Read the question carefully
+          - Choose a method
+          - Show working
+          - Check the answer
+        answer:
+          - Read the question carefully
+          - Choose a method
+          - Show working
+          - Check the answer
   - type: check
     title: Check your understanding
     items:
+      - type: numeric
+        id: m1116-ch1
+        prompt: 'Simplify: 4x + 3x'
+        answer: 7x
       - type: mcq
-        id: m1136-ch1
-        prompt: Which skill is central to Rearranging Equations?
+        id: m1116-ch2
+        prompt: Which symbol makes this true? -2 ___ -5
         options:
-          - Rearrange linear equations
-          - Rounding every answer to the nearest 10 only
-          - Using the wrong formula deliberately
-          - Avoiding diagrams completely
-        answer: Rearrange linear equations
+          - '>'
+          - <
+          - '='
+          - ≥
+        answer: '>'
+        explanation: '-2 is greater than -5 on a number line.'
       - type: numeric
-        id: m1136-ch2
-        prompt: What is 15% of 80?
-        answer: 12
-      - type: numeric
-        id: m1136-ch3
-        prompt: 'Solve: 2x + 5 = 17. What is x?'
-        answer: 6
+        id: m1116-ch3
+        prompt: Calculate 2.5 × 4
+        answer: 10
+        tolerance: 0.01
   - type: reflect
     title: Reflect
     items:
       - type: short_text
-        id: m1136-rf1
-        prompt: >-
-          Explain in one sentence what was challenging in Rearranging Equations and how you overcame it (or will next
-          time).
+        id: m1116-rf1
+        prompt: Name one skill from "Simultaneous Equations (Advanced)" you will practise again.
         keywords:
-          - practice
           - method
           - working
-          - check
           - formula
-          - mistake
-          - help
-        exemplar: >-
-          I found choosing the correct method hardest, so I will write a short plan before calculating and check units
-          at the end.
+          - check
+          - practice
+          - accuracy
+        exemplar: Solve simultaneous equations algebraically
   - type: stretch
     title: Stretch
     items:
       - type: numeric
-        id: m1136-st1
-        prompt: 'Stretch: A rectangle has perimeter 30 cm and length 9 cm. What is its width in cm?'
-        answer: 6
-        explanation: Perimeter = 2(l + w); 30 = 2(9 + w); 15 = 9 + w; w = 6
+        id: m1116-st1
+        prompt: A shirt costs £24. Find the price after a 15% increase.
+        answer: 27.6
+        tolerance: 0.1
+        explanation: Increase = 24 × 0.15 = 3.6, new price = 27.6

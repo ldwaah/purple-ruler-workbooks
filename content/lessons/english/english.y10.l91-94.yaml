@@ -1,0 +1,136 @@
+id: english.y10.l91-94
+subject: english
+year: 10
+block: year-review
+blockTitle: Literature and Language Review
+lessonUnits: 91-94
+examBoard: AQA
+title: Literature Revision - Key Texts
+lessonsPerWeek: 3
+unitAim: Reinforce understanding of key literature texts and themes.
+objectives:
+  - Recap plot, themes, and characters of studied texts
+  - Analyse literary devices and their significance
+  - Practise essay planning on potential exam questions
+sections:
+  - type: connect
+    title: Connect to your lesson
+    items:
+      - type: info
+        id: en1051-c1
+        prompt: What we covered in your Purple Ruler lesson
+        content: >-
+          Lesson 91-94 focused on literature revision - key texts. You explored key ideas from
+          Literature and Language Review and built skills linked to your GCSE English objectives.
+          Use this workbook after your live lesson to consolidate that learning.
+  - type: practice
+    title: Practice
+    items:
+      - type: mcq
+        id: en1051-p1
+        prompt: Which objective best matches Lesson 91-94?
+        options:
+          - Recap plot, themes, and characters of studied texts
+          - Memorise dates only without analysis
+          - Ignore context when writing about texts
+          - Skip planning before extended writing
+        answer: Recap plot, themes, and characters of studied texts
+        scaffold: Choose the aim that matches what you practised in the live lesson.
+      - type: short_text
+        id: en1051-p2
+        prompt: In one or two sentences, explain a key idea from "Literature Revision - Key Texts".
+        keywords:
+          - understand
+          - analyse
+          - explain
+          - context
+          - theme
+          - character
+          - language
+          - structure
+        exemplar: Recap plot, themes, and characters of studied texts
+      - type: ordering
+        id: en1051-p3
+        prompt: 'Order these study skills from first step to final step:'
+        options:
+          - Review the lesson objective
+          - Collect evidence or examples
+          - Plan your response
+          - Write and check your answer
+        answer:
+          - Review the lesson objective
+          - Collect evidence or examples
+          - Plan your response
+          - Write and check your answer
+      - type: mcq
+        id: en1051-p4
+        prompt: Which skill is most important for Literature work in this unit?
+        options:
+          - Using evidence to support ideas
+          - Ignoring the question focus
+          - Copying text without comment
+          - Avoiding subject terminology
+        answer: Using evidence to support ideas
+  - type: check
+    title: Check your understanding
+    items:
+      - type: multi_select
+        id: en1051-ch1
+        prompt: 'Select ALL habits that strengthen GCSE English responses:'
+        options:
+          - Clear topic sentences
+          - Evidence from the text
+          - Ignoring the question
+          - Checking for accurate terminology
+        answer:
+          - Clear topic sentences
+          - Evidence from the text
+          - Checking for accurate terminology
+      - type: short_text
+        id: en1051-ch2
+        prompt: Name one subject term you should use when writing about this unit.
+        keywords:
+          - context
+          - theme
+          - structure
+          - language
+          - audience
+          - purpose
+          - character
+          - analysis
+        exemplar: Use precise terminology such as context, theme, or structure.
+      - type: mcq
+        id: en1051-ch3
+        prompt: What should you do first when answering an extended question?
+        options:
+          - Plan your main points
+          - Write the conclusion first
+          - Copy the question as your answer
+          - Skip reading the text
+        answer: Plan your main points
+  - type: reflect
+    title: Reflect
+    items:
+      - type: long_text
+        id: en1051-rf1
+        prompt: Write a short paragraph (about 40-60 words) explaining what you learned in Lesson 91-94.
+        scaffold: In Lesson 91-94, I learned that...
+        checklist:
+          - I stated the main idea from the lesson
+          - I used at least one piece of subject terminology
+          - I linked my learning to the unit aim
+        exemplar: Reinforce understanding of key literature texts and themes.
+        minWords: 30
+  - type: stretch
+    title: Stretch
+    items:
+      - type: long_text
+        id: en1051-st1
+        prompt: >-
+          Evaluate how confident you feel about "Literature Revision - Key Texts" and what you will
+          revise next. (50-70 words)
+        checklist:
+          - I identified one strength
+          - I identified one area to improve
+          - I suggested a specific next step
+        minWords: 40

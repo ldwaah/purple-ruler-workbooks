@@ -1,0 +1,109 @@
+id: maths.y11.l22-24
+subject: maths
+year: 11
+block: statistics-probability
+blockTitle: Statistics and Probability
+lessonUnits: 22-24
+examBoard: Edexcel
+title: Statistical Diagrams and Analysis
+lessonsPerWeek: 2
+unitAim: Construct and interpret statistical diagrams including histograms and box plots.
+objectives:
+  - Construct histograms with equal and unequal class widths
+  - Draw and interpret box plots and cumulative frequency graphs
+  - Compare data sets using statistical diagrams
+sections:
+  - type: connect
+    title: Connect to your lesson
+    items:
+      - type: info
+        id: m1111-c1
+        prompt: What we covered in your Purple Ruler lesson
+        content: >-
+          Lesson 22-24 focused on Statistical Diagrams and Analysis. You practised skills from
+          Statistics and Probability and applied them to GCSE-style questions. Use this workbook
+          after your live lesson to strengthen your understanding.
+  - type: practice
+    title: Practice
+    items:
+      - type: mcq
+        id: m1111-p1
+        prompt: Which habit helps you succeed in Lesson 22-24?
+        options:
+          - Show clear working for each step
+          - Guess without checking
+          - Skip units in calculations
+          - Avoid revising methods
+        answer: Show clear working for each step
+      - type: numeric
+        id: m1111-p2
+        prompt: Calculate 15% of 80
+        answer: 12
+        explanation: 15% of 80 = 0.15 × 80 = 12
+      - type: mcq
+        id: m1111-p3
+        prompt: Which value is equal to 3/4?
+        options:
+          - '0.34'
+          - '0.75'
+          - '0.43'
+          - '7.5'
+        answer: '0.75'
+      - type: ordering
+        id: m1111-p4
+        prompt: 'Order these problem-solving steps:'
+        options:
+          - Read the question carefully
+          - Choose a method
+          - Show working
+          - Check the answer
+        answer:
+          - Read the question carefully
+          - Choose a method
+          - Show working
+          - Check the answer
+  - type: check
+    title: Check your understanding
+    items:
+      - type: numeric
+        id: m1111-ch1
+        prompt: 'Simplify: 4x + 3x'
+        answer: 7x
+      - type: mcq
+        id: m1111-ch2
+        prompt: Which symbol makes this true? -2 ___ -5
+        options:
+          - '>'
+          - <
+          - '='
+          - ≥
+        answer: '>'
+        explanation: '-2 is greater than -5 on a number line.'
+      - type: numeric
+        id: m1111-ch3
+        prompt: Calculate 2.5 × 4
+        answer: 10
+        tolerance: 0.01
+  - type: reflect
+    title: Reflect
+    items:
+      - type: short_text
+        id: m1111-rf1
+        prompt: Name one skill from "Statistical Diagrams and Analysis" you will practise again.
+        keywords:
+          - method
+          - working
+          - formula
+          - check
+          - practice
+          - accuracy
+        exemplar: Construct histograms with equal and unequal class widths
+  - type: stretch
+    title: Stretch
+    items:
+      - type: numeric
+        id: m1111-st1
+        prompt: A shirt costs £24. Find the price after a 15% increase.
+        answer: 27.6
+        tolerance: 0.1
+        explanation: Increase = 24 × 0.15 = 3.6, new price = 27.6

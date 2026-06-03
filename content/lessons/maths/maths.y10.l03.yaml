@@ -7,96 +7,103 @@ lessonUnits: '3'
 examBoard: Edexcel
 title: Decimals and Place Value
 lessonsPerWeek: 2
-unitAim: Understand decimals, operations, and conversions.
+unitAim: Understand decimals and their place value, and perform operations with decimals.
 objectives:
-  - Perform decimal operations
-  - Convert between forms
-  - Solve word problems with decimals
+  - Understand decimal place value
+  - Convert between standard and scientific notation
+  - Use decimals in measurements and money problems
 sections:
   - type: connect
     title: Connect to your lesson
     items:
       - type: info
-        id: m103-c1
+        id: m1003-c1
         prompt: What we covered in your Purple Ruler lesson
         content: >-
-          Lessons 3 cover Decimals and Place Value. Understand decimals, operations, and conversions. Use this workbook
-          after your live lesson to practise and check your understanding.
+          Lesson 3 focused on Decimals and Place Value. You practised skills from Number and applied
+          them to GCSE-style questions. Use this workbook after your live lesson to strengthen your
+          understanding.
   - type: practice
     title: Practice
     items:
       - type: mcq
-        id: m103-p1
-        prompt: Which aim best describes "Decimals and Place Value"?
+        id: m1003-p1
+        prompt: Which habit helps you succeed in Lesson 3?
         options:
-          - Perform decimal operations
-          - Ignore units and notation
-          - Guess without showing working
-          - Skip checking answers
-        answer: Perform decimal operations
+          - Show clear working for each step
+          - Guess without checking
+          - Skip units in calculations
+          - Avoid revising methods
+        answer: Show clear working for each step
       - type: numeric
-        id: m103-p2
-        prompt: 'Calculate: 3/4 + 1/8 (give as a decimal).'
-        answer: 0.875
-        explanation: 3/4 = 0.75; 0.75 + 0.125 = 0.875
+        id: m1003-p2
+        prompt: Calculate 15% of 80
+        answer: 12
+        explanation: 15% of 80 = 0.15 × 80 = 12
       - type: mcq
-        id: m103-p3
-        prompt: 'When solving GCSE maths problems, you should:'
+        id: m1003-p3
+        prompt: Which value is equal to 3/4?
         options:
-          - Show clear working and check the answer
-          - Hide all working from the examiner
-          - Never include units
-          - Skip reading the question
-        answer: Show clear working and check the answer
-      - type: numeric
-        id: m103-p4
-        prompt: 'Simplify: 4x + 3x - 2 (give the coefficient of x as a number, e.g. if answer is 7x-2 write 7).'
-        answer: 7
-        explanation: 4x + 3x = 7x, so coefficient is 7
+          - '0.34'
+          - '0.75'
+          - '0.43'
+          - '7.5'
+        answer: '0.75'
+      - type: ordering
+        id: m1003-p4
+        prompt: 'Order these problem-solving steps:'
+        options:
+          - Read the question carefully
+          - Choose a method
+          - Show working
+          - Check the answer
+        answer:
+          - Read the question carefully
+          - Choose a method
+          - Show working
+          - Check the answer
   - type: check
     title: Check your understanding
     items:
+      - type: numeric
+        id: m1003-ch1
+        prompt: 'Simplify: 4x + 3x'
+        answer: 7x
       - type: mcq
-        id: m103-ch1
-        prompt: Which skill is central to Decimals and Place Value?
+        id: m1003-ch2
+        prompt: Which symbol makes this true? -2 ___ -5
         options:
-          - Perform decimal operations
-          - Rounding every answer to the nearest 10 only
-          - Using the wrong formula deliberately
-          - Avoiding diagrams completely
-        answer: Perform decimal operations
+          - '>'
+          - <
+          - '='
+          - ≥
+        answer: '>'
+        explanation: '-2 is greater than -5 on a number line.'
       - type: numeric
-        id: m103-ch2
-        prompt: What is 15% of 80?
-        answer: 12
-      - type: numeric
-        id: m103-ch3
-        prompt: 'Solve: 2x + 5 = 17. What is x?'
-        answer: 6
+        id: m1003-ch3
+        prompt: Calculate 2.5 × 4
+        answer: 10
+        tolerance: 0.01
   - type: reflect
     title: Reflect
     items:
       - type: short_text
-        id: m103-rf1
-        prompt: >-
-          Explain in one sentence what was challenging in Decimals and Place Value and how you overcame it (or will next
-          time).
+        id: m1003-rf1
+        prompt: Name one skill from "Decimals and Place Value" you will practise again.
         keywords:
-          - practice
           - method
           - working
-          - check
           - formula
-          - mistake
-          - help
-        exemplar: >-
-          I found choosing the correct method hardest, so I will write a short plan before calculating and check units
-          at the end.
+          - check
+          - practice
+          - accuracy
+        exemplar: Understand decimal place value
   - type: stretch
     title: Stretch
     items:
       - type: numeric
-        id: m103-st1
-        prompt: 'Stretch: A rectangle has perimeter 30 cm and length 9 cm. What is its width in cm?'
-        answer: 6
-        explanation: Perimeter = 2(l + w); 30 = 2(9 + w); 15 = 9 + w; w = 6
+        id: m1003-st1
+        prompt: A shirt costs £24. Find the price after a 15% increase.
+        answer: 27.6
+        tolerance: 0.1
+        explanation: Increase = 24 × 0.15 = 3.6, new price = 27.6

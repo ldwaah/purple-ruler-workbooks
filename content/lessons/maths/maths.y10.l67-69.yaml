@@ -1,100 +1,109 @@
 id: maths.y10.l67-69
 subject: maths
 year: 10
-block: geometry
+block: graphs-geometry
 blockTitle: Graphs, Geometry, Shapes and Functions
 lessonUnits: 67-69
 examBoard: Edexcel
-title: Circle Properties
+title: Perimeter, Area, and Volume
 lessonsPerWeek: 2
-unitAim: Use circumference and area of circles.
+unitAim: Calculate perimeter, area, and volume of 2D and 3D shapes.
 objectives:
-  - Calculate circumference
-  - Calculate area
-  - Solve circle problems
+  - Calculate perimeter and area of compound shapes
+  - Find volume of prisms, cylinders, and spheres
+  - Apply formulae for area and volume in problems
 sections:
   - type: connect
     title: Connect to your lesson
     items:
       - type: info
-        id: m106769-c1
+        id: m1037-c1
         prompt: What we covered in your Purple Ruler lesson
         content: >-
-          Lessons 67-69 cover Circle Properties. Use circumference and area of circles. Use this workbook after your
-          live lesson to practise and check your understanding.
+          Lesson 67-69 focused on Perimeter, Area, and Volume. You practised skills from Graphs,
+          Geometry, Shapes and Functions and applied them to GCSE-style questions. Use this workbook
+          after your live lesson to strengthen your understanding.
   - type: practice
     title: Practice
     items:
       - type: mcq
-        id: m106769-p1
-        prompt: Which aim best describes "Circle Properties"?
+        id: m1037-p1
+        prompt: Which habit helps you succeed in Lesson 67-69?
         options:
-          - Calculate circumference
-          - Ignore units and notation
-          - Guess without showing working
-          - Skip checking answers
-        answer: Calculate circumference
+          - Show clear working for each step
+          - Guess without checking
+          - Skip units in calculations
+          - Avoid revising methods
+        answer: Show clear working for each step
       - type: numeric
-        id: m106769-p2
-        prompt: 'Calculate: 3/4 + 1/8 (give as a decimal).'
-        answer: 0.875
-        explanation: 3/4 = 0.75; 0.75 + 0.125 = 0.875
+        id: m1037-p2
+        prompt: Calculate 15% of 80
+        answer: 12
+        explanation: 15% of 80 = 0.15 × 80 = 12
       - type: mcq
-        id: m106769-p3
-        prompt: 'When solving GCSE maths problems, you should:'
+        id: m1037-p3
+        prompt: Which value is equal to 3/4?
         options:
-          - Show clear working and check the answer
-          - Hide all working from the examiner
-          - Never include units
-          - Skip reading the question
-        answer: Show clear working and check the answer
-      - type: numeric
-        id: m106769-p4
-        prompt: 'Simplify: 4x + 3x - 2 (give the coefficient of x as a number, e.g. if answer is 7x-2 write 7).'
-        answer: 7
-        explanation: 4x + 3x = 7x, so coefficient is 7
+          - '0.34'
+          - '0.75'
+          - '0.43'
+          - '7.5'
+        answer: '0.75'
+      - type: ordering
+        id: m1037-p4
+        prompt: 'Order these problem-solving steps:'
+        options:
+          - Read the question carefully
+          - Choose a method
+          - Show working
+          - Check the answer
+        answer:
+          - Read the question carefully
+          - Choose a method
+          - Show working
+          - Check the answer
   - type: check
     title: Check your understanding
     items:
+      - type: numeric
+        id: m1037-ch1
+        prompt: 'Simplify: 4x + 3x'
+        answer: 7x
       - type: mcq
-        id: m106769-ch1
-        prompt: Which skill is central to Circle Properties?
+        id: m1037-ch2
+        prompt: Which symbol makes this true? -2 ___ -5
         options:
-          - Calculate circumference
-          - Rounding every answer to the nearest 10 only
-          - Using the wrong formula deliberately
-          - Avoiding diagrams completely
-        answer: Calculate circumference
+          - '>'
+          - <
+          - '='
+          - ≥
+        answer: '>'
+        explanation: '-2 is greater than -5 on a number line.'
       - type: numeric
-        id: m106769-ch2
-        prompt: What is 15% of 80?
-        answer: 12
-      - type: numeric
-        id: m106769-ch3
-        prompt: 'Solve: 2x + 5 = 17. What is x?'
-        answer: 6
+        id: m1037-ch3
+        prompt: Calculate 2.5 × 4
+        answer: 10
+        tolerance: 0.01
   - type: reflect
     title: Reflect
     items:
       - type: short_text
-        id: m106769-rf1
-        prompt: Explain in one sentence what was challenging in Circle Properties and how you overcame it (or will next time).
+        id: m1037-rf1
+        prompt: Name one skill from "Perimeter, Area, and Volume" you will practise again.
         keywords:
-          - practice
           - method
           - working
-          - check
           - formula
-          - mistake
-          - help
-        exemplar: >-
-          I found choosing the correct method hardest, so I will write a short plan before calculating and check units
-          at the end.
+          - check
+          - practice
+          - accuracy
+        exemplar: Calculate perimeter and area of compound shapes
   - type: stretch
     title: Stretch
     items:
       - type: numeric
-        id: m106769-st1
-        prompt: 'Stretch: A rectangle has perimeter 30 cm and length 9 cm. What is its width in cm?'
-        answer: 6
-        explanation: Perimeter = 2(l + w); 30 = 2(9 + w); 15 = 9 + w; w = 6
+        id: m1037-st1
+        prompt: A shirt costs £24. Find the price after a 15% increase.
+        answer: 27.6
+        tolerance: 0.1
+        explanation: Increase = 24 × 0.15 = 3.6, new price = 27.6

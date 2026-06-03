@@ -1,139 +1,136 @@
 id: english.y10.l43-44
 subject: english
 year: 10
-block: revision-paper1
-blockTitle: Paper 1 Revision and Consolidation
+block: paper1-revision
+blockTitle: Paper 1, An Inspector Calls and Poetry Revision
 lessonUnits: 43-44
 examBoard: AQA
-title: Reviewing Anthology Poems
+title: Reviewing Unseen Poetry
 lessonsPerWeek: 3
-unitAim: Revise selected Power and Conflict poems.
+unitAim: Refresh techniques for approaching unseen poetry.
 objectives:
-  - Consolidate poem knowledge
-  - Practise comparative analysis
-  - Refine analytical vocabulary
+  - Reinforce close reading techniques for unseen poetry
+  - Analyse structure of unseen poems
+  - Consider historical and cultural context in interpretation
 sections:
   - type: connect
     title: Connect to your lesson
     items:
       - type: info
-        id: en104344-c1
+        id: en1029-c1
         prompt: What we covered in your Purple Ruler lesson
         content: >-
-          Lessons 43-44 focus on Reviewing Anthology Poems. Revise selected Power and Conflict poems. Use this workbook
-          after your live lesson to consolidate that learning.
+          Lesson 43-44 focused on reviewing unseen poetry. You explored key ideas from Paper 1, An
+          Inspector Calls and Poetry Revision and built skills linked to your GCSE English
+          objectives. Use this workbook after your live lesson to consolidate that learning.
   - type: practice
     title: Practice
     items:
       - type: mcq
-        id: en104344-p1
-        prompt: Which statement best matches the focus of "Reviewing Anthology Poems"?
+        id: en1029-p1
+        prompt: Which objective best matches Lesson 43-44?
         options:
-          - Consolidate poem knowledge
-          - Memorising quotations without analysis
-          - Ignoring historical and social context
-          - Writing without planning or evidence
-        answer: Consolidate poem knowledge
-        scaffold: Think back to your lesson objectives and key terminology.
+          - Reinforce close reading techniques for unseen poetry
+          - Memorise dates only without analysis
+          - Ignore context when writing about texts
+          - Skip planning before extended writing
+        answer: Reinforce close reading techniques for unseen poetry
+        scaffold: Choose the aim that matches what you practised in the live lesson.
       - type: short_text
-        id: en104344-p2
-        prompt: In one or two sentences, explain a key idea from Reviewing Anthology Poems.
+        id: en1029-p2
+        prompt: In one or two sentences, explain a key idea from "Reviewing Unseen Poetry".
         keywords:
-          - reviewing
-          - anthology
-          - poems
-        scaffold: A key idea from Reviewing Anthology Poems is...
-        exemplar: Consolidate poem knowledge. This helps you analyse the text with clear, supported ideas.
-      - type: mcq
-        id: en104344-p3
-        prompt: Which skill is most important for GCSE English success in this unit?
-        options:
-          - Using evidence and subject terminology
-          - Copying the plot with no analysis
-          - Avoiding context completely
-          - Writing without checking accuracy
-        answer: Using evidence and subject terminology
+          - understand
+          - analyse
+          - explain
+          - context
+          - theme
+          - character
+          - language
+          - structure
+        exemplar: Reinforce close reading techniques for unseen poetry
       - type: ordering
-        id: en104344-p4
-        prompt: 'Put these steps for a strong analytical paragraph in the best order:'
+        id: en1029-p3
+        prompt: 'Order these study skills from first step to final step:'
         options:
-          - State a clear point linked to the question
-          - Select a relevant quotation or reference
-          - Explain the writer's method and effect
-          - Link back to the question or theme
+          - Review the lesson objective
+          - Collect evidence or examples
+          - Plan your response
+          - Write and check your answer
         answer:
-          - State a clear point linked to the question
-          - Select a relevant quotation or reference
-          - Explain the writer's method and effect
-          - Link back to the question or theme
+          - Review the lesson objective
+          - Collect evidence or examples
+          - Plan your response
+          - Write and check your answer
+      - type: mcq
+        id: en1029-p4
+        prompt: Which skill is most important for Paper work in this unit?
+        options:
+          - Using evidence to support ideas
+          - Ignoring the question focus
+          - Copying text without comment
+          - Avoiding subject terminology
+        answer: Using evidence to support ideas
   - type: check
     title: Check your understanding
     items:
       - type: multi_select
-        id: en104344-ch1
-        prompt: 'Select ALL objectives linked to Reviewing Anthology Poems:'
+        id: en1029-ch1
+        prompt: 'Select ALL habits that strengthen GCSE English responses:'
         options:
-          - Consolidate poem knowledge
-          - Practise comparative analysis
-          - Refine analytical vocabulary
-          - Ignore audience and purpose
-          - Skip planning entirely
+          - Clear topic sentences
+          - Evidence from the text
+          - Ignoring the question
+          - Checking for accurate terminology
         answer:
-          - Consolidate poem knowledge
-          - Practise comparative analysis
-          - Refine analytical vocabulary
+          - Clear topic sentences
+          - Evidence from the text
+          - Checking for accurate terminology
       - type: short_text
-        id: en104344-ch2
+        id: en1029-ch2
         prompt: Name one subject term you should use when writing about this unit.
         keywords:
           - context
           - theme
-          - method
           - structure
           - language
           - audience
           - purpose
           - character
-        exemplar: Use terms such as context, theme, structure, or writer's methods with precise evidence.
+          - analysis
+        exemplar: Use precise terminology such as context, theme, or structure.
       - type: mcq
-        id: en104344-ch3
-        prompt: 'After your live lesson, this workbook helps you to:'
+        id: en1029-ch3
+        prompt: What should you do first when answering an extended question?
         options:
-          - Consolidate and practise what you learned
-          - Replace all reading of the set texts
-          - Skip reflection on your work
-          - Avoid using feedback from teachers
-        answer: Consolidate and practise what you learned
+          - Plan your main points
+          - Write the conclusion first
+          - Copy the question as your answer
+          - Skip reading the text
+        answer: Plan your main points
   - type: reflect
     title: Reflect
     items:
       - type: long_text
-        id: en104344-rf1
-        prompt: >-
-          Write about 40-60 words: what did you learn in Reviewing Anthology Poems, and what do you still need to
-          practise?
-        scaffold: In Reviewing Anthology Poems, I learned... I still need to practise...
+        id: en1029-rf1
+        prompt: Write a short paragraph (about 40-60 words) explaining what you learned in Lesson 43-44.
+        scaffold: In Lesson 43-44, I learned that...
         checklist:
-          - I named a specific skill or idea from the lesson
-          - I gave an example from the text or task
-          - I identified one next step for improvement
+          - I stated the main idea from the lesson
+          - I used at least one piece of subject terminology
+          - I linked my learning to the unit aim
+        exemplar: Refresh techniques for approaching unseen poetry.
         minWords: 30
-        exemplar: >-
-          In Reviewing Anthology Poems, I learned how to link context to the writer's purpose. I still need to practise
-          selecting shorter, sharper quotations and explaining their effect in more detail.
   - type: stretch
     title: Stretch
     items:
       - type: long_text
-        id: en104344-st1
+        id: en1029-st1
         prompt: >-
-          Stretch: write 50-80 words comparing two ideas from Reviewing Anthology Poems. Which is more convincing and
-          why?
+          Evaluate how confident you feel about "Reviewing Unseen Poetry" and what you will revise
+          next. (50-70 words)
         checklist:
-          - Clear comparison between two ideas
-          - Evidence or example from the unit
-          - Evaluative judgement with justification
-        minWords: 45
-        exemplar: >-
-          Both ideas are important, but linking context to theme is more convincing because it shows why the writer made
-          choices for a real audience, not only what happens in the plot.
+          - I identified one strength
+          - I identified one area to improve
+          - I suggested a specific next step
+        minWords: 40

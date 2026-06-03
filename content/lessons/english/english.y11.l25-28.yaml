@@ -5,130 +5,132 @@ block: poetry-y11
 blockTitle: Power and Conflict and Unseen Poetry
 lessonUnits: 25-28
 examBoard: AQA
-title: Anthology Poems 1-5
+title: Anthology Poems 1-5 Analysis
 lessonsPerWeek: 3
-unitAim: Detailed study of anthology poems from both clusters.
+unitAim: Study and analyse selected poems from the Power and Conflict anthology.
 objectives:
-  - Annotate poems thoroughly
-  - Identify themes and methods
-  - Use comparative links
+  - Detailed study and annotation of poems from both clusters
+  - Identify themes and emotions in each poem
+  - Analyse language, structure, and contextual background
 sections:
   - type: connect
     title: Connect to your lesson
     items:
       - type: info
-        id: en112528-c1
+        id: en1110-c1
         prompt: What we covered in your Purple Ruler lesson
         content: >-
-          Lessons 25-28 focus on Anthology Poems 1-5. Detailed study of anthology poems from both clusters. Use this
-          workbook after your live lesson to consolidate that learning.
+          Lesson 25-28 focused on anthology poems 1-5 analysis. You explored key ideas from Power
+          and Conflict and Unseen Poetry and built skills linked to your GCSE English objectives.
+          Use this workbook after your live lesson to consolidate that learning.
   - type: practice
     title: Practice
     items:
       - type: mcq
-        id: en112528-p1
-        prompt: Which statement best matches the focus of "Anthology Poems 1-5"?
+        id: en1110-p1
+        prompt: Which objective best matches Lesson 25-28?
         options:
-          - Annotate poems thoroughly
-          - Memorising quotations without analysis
-          - Ignoring historical and social context
-          - Writing without planning or evidence
-        answer: Annotate poems thoroughly
-        scaffold: Think back to your lesson objectives and key terminology.
+          - Detailed study and annotation of poems from both clusters
+          - Memorise dates only without analysis
+          - Ignore context when writing about texts
+          - Skip planning before extended writing
+        answer: Detailed study and annotation of poems from both clusters
+        scaffold: Choose the aim that matches what you practised in the live lesson.
       - type: short_text
-        id: en112528-p2
-        prompt: In one or two sentences, explain a key idea from Anthology Poems 1-5.
+        id: en1110-p2
+        prompt: In one or two sentences, explain a key idea from "Anthology Poems 1-5 Analysis".
         keywords:
-          - anthology
-          - poems
-        scaffold: A key idea from Anthology Poems 1-5 is...
-        exemplar: Annotate poems thoroughly. This helps you analyse the text with clear, supported ideas.
-      - type: mcq
-        id: en112528-p3
-        prompt: Which skill is most important for GCSE English success in this unit?
-        options:
-          - Using evidence and subject terminology
-          - Copying the plot with no analysis
-          - Avoiding context completely
-          - Writing without checking accuracy
-        answer: Using evidence and subject terminology
+          - understand
+          - analyse
+          - explain
+          - context
+          - theme
+          - character
+          - language
+          - structure
+        exemplar: Detailed study and annotation of poems from both clusters
       - type: ordering
-        id: en112528-p4
-        prompt: 'Put these steps for a strong analytical paragraph in the best order:'
+        id: en1110-p3
+        prompt: 'Order these study skills from first step to final step:'
         options:
-          - State a clear point linked to the question
-          - Select a relevant quotation or reference
-          - Explain the writer's method and effect
-          - Link back to the question or theme
+          - Review the lesson objective
+          - Collect evidence or examples
+          - Plan your response
+          - Write and check your answer
         answer:
-          - State a clear point linked to the question
-          - Select a relevant quotation or reference
-          - Explain the writer's method and effect
-          - Link back to the question or theme
+          - Review the lesson objective
+          - Collect evidence or examples
+          - Plan your response
+          - Write and check your answer
+      - type: mcq
+        id: en1110-p4
+        prompt: Which skill is most important for Power work in this unit?
+        options:
+          - Using evidence to support ideas
+          - Ignoring the question focus
+          - Copying text without comment
+          - Avoiding subject terminology
+        answer: Using evidence to support ideas
   - type: check
     title: Check your understanding
     items:
       - type: multi_select
-        id: en112528-ch1
-        prompt: 'Select ALL objectives linked to Anthology Poems 1-5:'
+        id: en1110-ch1
+        prompt: 'Select ALL habits that strengthen GCSE English responses:'
         options:
-          - Annotate poems thoroughly
-          - Identify themes and methods
-          - Use comparative links
-          - Ignore audience and purpose
-          - Skip planning entirely
+          - Clear topic sentences
+          - Evidence from the text
+          - Ignoring the question
+          - Checking for accurate terminology
         answer:
-          - Annotate poems thoroughly
-          - Identify themes and methods
-          - Use comparative links
+          - Clear topic sentences
+          - Evidence from the text
+          - Checking for accurate terminology
       - type: short_text
-        id: en112528-ch2
+        id: en1110-ch2
         prompt: Name one subject term you should use when writing about this unit.
         keywords:
           - context
           - theme
-          - method
           - structure
           - language
           - audience
           - purpose
           - character
-        exemplar: Use terms such as context, theme, structure, or writer's methods with precise evidence.
+          - analysis
+        exemplar: Use precise terminology such as context, theme, or structure.
       - type: mcq
-        id: en112528-ch3
-        prompt: 'After your live lesson, this workbook helps you to:'
+        id: en1110-ch3
+        prompt: What should you do first when answering an extended question?
         options:
-          - Consolidate and practise what you learned
-          - Replace all reading of the set texts
-          - Skip reflection on your work
-          - Avoid using feedback from teachers
-        answer: Consolidate and practise what you learned
+          - Plan your main points
+          - Write the conclusion first
+          - Copy the question as your answer
+          - Skip reading the text
+        answer: Plan your main points
   - type: reflect
     title: Reflect
     items:
       - type: long_text
-        id: en112528-rf1
-        prompt: 'Write about 40-60 words: what did you learn in Anthology Poems 1-5, and what do you still need to practise?'
-        scaffold: In Anthology Poems 1-5, I learned... I still need to practise...
+        id: en1110-rf1
+        prompt: Write a short paragraph (about 40-60 words) explaining what you learned in Lesson 25-28.
+        scaffold: In Lesson 25-28, I learned that...
         checklist:
-          - I named a specific skill or idea from the lesson
-          - I gave an example from the text or task
-          - I identified one next step for improvement
+          - I stated the main idea from the lesson
+          - I used at least one piece of subject terminology
+          - I linked my learning to the unit aim
+        exemplar: Study and analyse selected poems from the Power and Conflict anthology.
         minWords: 30
-        exemplar: >-
-          In Anthology Poems 1-5, I learned how to link context to the writer's purpose. I still need to practise
-          selecting shorter, sharper quotations and explaining their effect in more detail.
   - type: stretch
     title: Stretch
     items:
       - type: long_text
-        id: en112528-st1
-        prompt: 'Stretch: write 50-80 words comparing two ideas from Anthology Poems 1-5. Which is more convincing and why?'
+        id: en1110-st1
+        prompt: >-
+          Evaluate how confident you feel about "Anthology Poems 1-5 Analysis" and what you will
+          revise next. (50-70 words)
         checklist:
-          - Clear comparison between two ideas
-          - Evidence or example from the unit
-          - Evaluative judgement with justification
-        minWords: 45
-        exemplar: >-
-          Both ideas are important, but linking context to theme is more convincing because it shows why the writer made
-          choices for a real audience, not only what happens in the plot.
+          - I identified one strength
+          - I identified one area to improve
+          - I suggested a specific next step
+        minWords: 40

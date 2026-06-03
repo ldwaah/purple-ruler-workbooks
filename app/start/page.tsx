@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { PILOT_LESSONS, LEARNING_JOURNEY } from "@/lib/curriculum";
+import { CURRICULUM, LEARNING_JOURNEY } from "@/lib/curriculum";
 import { LogoMark } from "@/components/ui/LogoMark";
 
 export default function StartPage() {
@@ -30,7 +30,7 @@ export default function StartPage() {
 
       <section className="grid gap-6 md:grid-cols-2">
         {(["english", "maths"] as const).map((subject) => {
-          const meta = PILOT_LESSONS[subject];
+          const meta = CURRICULUM[subject];
           const accent =
             subject === "english"
               ? "from-violet-500 to-purple-600"
@@ -67,36 +67,32 @@ export default function StartPage() {
           Your learning journey
         </h2>
         <div className="mt-6 grid gap-8 sm:grid-cols-2">
-          <div>
-            <h3 className="font-display font-bold text-violet-800">
-              English · Year 10
-            </h3>
-            <ul className="mt-3 space-y-2 text-sm text-violet-700">
-              {LEARNING_JOURNEY.english.year10.map((s) => (
-                <li
-                  key={s}
-                  className="rounded-xl border border-violet-100 bg-violet-50/80 px-3 py-2"
-                >
-                  {s}
-                </li>
+          {(["english", "maths"] as const).map((subject) => (
+            <div key={subject}>
+              <h3 className="font-display font-bold text-violet-800 capitalize">
+                {subject}
+              </h3>
+              {([10, 11] as const).map((year) => (
+                <div key={year} className="mt-4">
+                  <p className="text-xs font-bold uppercase tracking-wider text-pink-500">
+                    Year {year}
+                  </p>
+                  <ul className="mt-2 space-y-2 text-sm text-violet-700">
+                    {LEARNING_JOURNEY[subject][
+                      `year${year}` as "year10" | "year11"
+                    ].map((s) => (
+                      <li
+                        key={s}
+                        className="rounded-xl border border-violet-100 bg-violet-50/80 px-3 py-2"
+                      >
+                        {s}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               ))}
-            </ul>
-          </div>
-          <div>
-            <h3 className="font-display font-bold text-violet-800">
-              Maths · Year 10
-            </h3>
-            <ul className="mt-3 space-y-2 text-sm text-violet-700">
-              {LEARNING_JOURNEY.maths.year10.map((s) => (
-                <li
-                  key={s}
-                  className="rounded-xl border border-violet-100 bg-violet-50/80 px-3 py-2"
-                >
-                  {s}
-                </li>
-              ))}
-            </ul>
-          </div>
+            </div>
+          ))}
         </div>
       </section>
     </div>

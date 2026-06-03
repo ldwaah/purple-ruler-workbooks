@@ -1,0 +1,109 @@
+id: maths.y11.l34-35
+subject: maths
+year: 11
+block: algebra-y11
+blockTitle: Algebra
+lessonUnits: 34-35
+examBoard: Edexcel
+title: Graphs of Cubic and Reciprocal Functions
+lessonsPerWeek: 2
+unitAim: Recognise, sketch, and interpret graphs of cubic and reciprocal functions.
+objectives:
+  - Sketch graphs of cubic functions
+  - Recognise and sketch reciprocal graphs
+  - Identify key features of non-linear graphs
+sections:
+  - type: connect
+    title: Connect to your lesson
+    items:
+      - type: info
+        id: m1115-c1
+        prompt: What we covered in your Purple Ruler lesson
+        content: >-
+          Lesson 34-35 focused on Graphs of Cubic and Reciprocal Functions. You practised skills
+          from Algebra and applied them to GCSE-style questions. Use this workbook after your live
+          lesson to strengthen your understanding.
+  - type: practice
+    title: Practice
+    items:
+      - type: mcq
+        id: m1115-p1
+        prompt: Which habit helps you succeed in Lesson 34-35?
+        options:
+          - Show clear working for each step
+          - Guess without checking
+          - Skip units in calculations
+          - Avoid revising methods
+        answer: Show clear working for each step
+      - type: numeric
+        id: m1115-p2
+        prompt: Calculate 15% of 80
+        answer: 12
+        explanation: 15% of 80 = 0.15 × 80 = 12
+      - type: mcq
+        id: m1115-p3
+        prompt: Which value is equal to 3/4?
+        options:
+          - '0.34'
+          - '0.75'
+          - '0.43'
+          - '7.5'
+        answer: '0.75'
+      - type: ordering
+        id: m1115-p4
+        prompt: 'Order these problem-solving steps:'
+        options:
+          - Read the question carefully
+          - Choose a method
+          - Show working
+          - Check the answer
+        answer:
+          - Read the question carefully
+          - Choose a method
+          - Show working
+          - Check the answer
+  - type: check
+    title: Check your understanding
+    items:
+      - type: numeric
+        id: m1115-ch1
+        prompt: 'Simplify: 4x + 3x'
+        answer: 7x
+      - type: mcq
+        id: m1115-ch2
+        prompt: Which symbol makes this true? -2 ___ -5
+        options:
+          - '>'
+          - <
+          - '='
+          - ≥
+        answer: '>'
+        explanation: '-2 is greater than -5 on a number line.'
+      - type: numeric
+        id: m1115-ch3
+        prompt: Calculate 2.5 × 4
+        answer: 10
+        tolerance: 0.01
+  - type: reflect
+    title: Reflect
+    items:
+      - type: short_text
+        id: m1115-rf1
+        prompt: Name one skill from "Graphs of Cubic and Reciprocal Functions" you will practise again.
+        keywords:
+          - method
+          - working
+          - formula
+          - check
+          - practice
+          - accuracy
+        exemplar: Sketch graphs of cubic functions
+  - type: stretch
+    title: Stretch
+    items:
+      - type: numeric
+        id: m1115-st1
+        prompt: A shirt costs £24. Find the price after a 15% increase.
+        answer: 27.6
+        tolerance: 0.1
+        explanation: Increase = 24 × 0.15 = 3.6, new price = 27.6

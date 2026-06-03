@@ -1,0 +1,109 @@
+id: maths.y10.l85-87
+subject: maths
+year: 10
+block: equations
+blockTitle: Equations and Inequalities
+lessonUnits: 85-87
+examBoard: Edexcel
+title: Inequalities
+lessonsPerWeek: 2
+unitAim: Solve and represent linear inequalities.
+objectives:
+  - Solve linear inequalities in one variable
+  - Represent inequalities on number lines
+  - Form and solve inequality word problems
+sections:
+  - type: connect
+    title: Connect to your lesson
+    items:
+      - type: info
+        id: m1043-c1
+        prompt: What we covered in your Purple Ruler lesson
+        content: >-
+          Lesson 85-87 focused on Inequalities. You practised skills from Equations and Inequalities
+          and applied them to GCSE-style questions. Use this workbook after your live lesson to
+          strengthen your understanding.
+  - type: practice
+    title: Practice
+    items:
+      - type: mcq
+        id: m1043-p1
+        prompt: Which habit helps you succeed in Lesson 85-87?
+        options:
+          - Show clear working for each step
+          - Guess without checking
+          - Skip units in calculations
+          - Avoid revising methods
+        answer: Show clear working for each step
+      - type: numeric
+        id: m1043-p2
+        prompt: Calculate 15% of 80
+        answer: 12
+        explanation: 15% of 80 = 0.15 × 80 = 12
+      - type: mcq
+        id: m1043-p3
+        prompt: Which value is equal to 3/4?
+        options:
+          - '0.34'
+          - '0.75'
+          - '0.43'
+          - '7.5'
+        answer: '0.75'
+      - type: ordering
+        id: m1043-p4
+        prompt: 'Order these problem-solving steps:'
+        options:
+          - Read the question carefully
+          - Choose a method
+          - Show working
+          - Check the answer
+        answer:
+          - Read the question carefully
+          - Choose a method
+          - Show working
+          - Check the answer
+  - type: check
+    title: Check your understanding
+    items:
+      - type: numeric
+        id: m1043-ch1
+        prompt: 'Simplify: 4x + 3x'
+        answer: 7x
+      - type: mcq
+        id: m1043-ch2
+        prompt: Which symbol makes this true? -2 ___ -5
+        options:
+          - '>'
+          - <
+          - '='
+          - ≥
+        answer: '>'
+        explanation: '-2 is greater than -5 on a number line.'
+      - type: numeric
+        id: m1043-ch3
+        prompt: Calculate 2.5 × 4
+        answer: 10
+        tolerance: 0.01
+  - type: reflect
+    title: Reflect
+    items:
+      - type: short_text
+        id: m1043-rf1
+        prompt: Name one skill from "Inequalities" you will practise again.
+        keywords:
+          - method
+          - working
+          - formula
+          - check
+          - practice
+          - accuracy
+        exemplar: Solve linear inequalities in one variable
+  - type: stretch
+    title: Stretch
+    items:
+      - type: numeric
+        id: m1043-st1
+        prompt: A shirt costs £24. Find the price after a 15% increase.
+        answer: 27.6
+        tolerance: 0.1
+        explanation: Increase = 24 × 0.15 = 3.6, new price = 27.6

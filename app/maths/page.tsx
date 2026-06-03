@@ -1,23 +1,9 @@
 import Link from "next/link";
-import { CURRICULUM, type LessonMeta } from "@/lib/curriculum";
+import { CURRICULUM } from "@/lib/curriculum";
 import { lessonExists } from "@/lib/lessons";
-
-function groupByBlock(lessons: LessonMeta[]) {
-  const seen = new Map<string, LessonMeta[]>();
-  for (const lesson of lessons) {
-    const list = seen.get(lesson.blockTitle) ?? [];
-    list.push(lesson);
-    seen.set(lesson.blockTitle, list);
-  }
-  return [...seen.entries()].map(([blockTitle, blockLessons]) => ({
-    blockTitle,
-    lessons: blockLessons,
-  }));
-}
 
 export default function MathsPage() {
   const meta = CURRICULUM.maths;
-  const years = [10, 11] as const;
 
   return (
     <div className="space-y-10">
@@ -29,40 +15,54 @@ export default function MathsPage() {
           {meta.label}
         </h1>
         <p className="mt-2 text-violet-600">
-          {meta.lessonsPerWeek} lessons per week · {meta.lessons.length} workbooks
+          {meta.lessonsPerWeek} lessons per week · {meta.lessons.length}{" "}
+          workbooks
         </p>
       </header>
 
-      {years.map((year) => {
+      {([10, 11] as const).map((year) => {
+        const blocks = meta.byYear[`year${year}` as "year10" | "year11"];
         const yearLessons = meta.lessons.filter((l) => l.year === year);
-        const blocks = groupByBlock(yearLessons);
+        const ready = yearLessons.filter((l) => lessonExists(l.id)).length;
+
         return (
           <section key={year} className="space-y-6">
-            <h2 className="font-display text-xl font-bold text-violet-900">
-              Year {year}
-            </h2>
+            <div className="flex flex-wrap items-end justify-between gap-4">
+              <h2 className="font-display text-2xl font-bold text-violet-900">
+                Year {year}
+              </h2>
+              <p className="text-sm text-violet-600">
+                {ready} of {yearLessons.length} workbooks ready
+              </p>
+            </div>
+
             {blocks.map((block) => (
-              <div key={block.blockTitle} className="space-y-3">
-                <h3 className="text-sm font-semibold uppercase tracking-wide text-violet-500">
+              <div key={`${year}-${block.block}`} className="space-y-3">
+                <h3 className="font-display text-lg font-bold text-violet-800">
                   {block.blockTitle}
                 </h3>
                 <ul className="space-y-3">
-                  {block.lessons.map((lesson) => (
+                  {block.lessons.map((lesson, i) => (
                     <li key={lesson.id}>
                       <Link
                         href={`/workbook/${lesson.id}`}
-                        className="pr-panel group flex items-center justify-between gap-4 px-5 py-4 transition hover:-translate-y-0.5"
+                        className="pr-panel group flex items-center justify-between gap-4 px-6 py-4 transition hover:-translate-y-0.5"
                       >
-                        <div>
-                          <p className="font-display font-bold text-violet-900">
-                            {lesson.title}
-                          </p>
-                          <p className="mt-0.5 text-sm text-violet-600">
-                            Lesson {lesson.lessonUnits}
-                          </p>
+                        <div className="flex items-start gap-4">
+                          <span className="font-display text-xl font-bold text-violet-300">
+                            {String(i + 1).padStart(2, "0")}
+                          </span>
+                          <div>
+                            <p className="font-display font-bold text-violet-900">
+                              {lesson.title}
+                            </p>
+                            <p className="mt-1 text-sm text-violet-600">
+                              Lesson {lesson.lessonUnits}
+                            </p>
+                          </div>
                         </div>
                         <span
-                          className={`shrink-0 rounded-2xl px-3 py-1.5 font-display text-xs font-bold ${
+                          className={`shrink-0 rounded-2xl px-4 py-2 font-display text-xs font-bold ${
                             lessonExists(lesson.id)
                               ? "pr-btn-primary"
                               : "border-2 border-violet-100 text-violet-400"
