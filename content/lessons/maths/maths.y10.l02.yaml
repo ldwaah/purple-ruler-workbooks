@@ -92,7 +92,7 @@ sections:
           - better
           - increased
           - improved
-        exemplar: "Yes — −1 is greater than −3 so goal difference improved."
+        exemplar: "Yes, −1 is greater than −3 so goal difference improved."
   - type: reflect
     title: Reflect
     items:
@@ -113,4 +113,4 @@ sections:
         id: m2-st1
         prompt: "The integers a, b, and c satisfy a < b < c. If a = −8 and c = 5, how many possible integer values of b are there?"
         answer: 12
-        explanation: "b can be −7, −6, …, 4 — that is 12 integers."
+        explanation: "b can be −7, −6, …, 4; that is 12 integers."

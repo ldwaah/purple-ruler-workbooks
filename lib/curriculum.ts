@@ -16,8 +16,8 @@ export const PILOT_LESSONS: Record<
     lessons: [
       {
         id: "english.y10.l01-03",
-        title: "An Inspector Calls — Context",
-        lessonUnits: "1–3",
+        title: "An Inspector Calls - Context",
+        lessonUnits: "1-3",
         blockTitle: "An Inspector Calls and Paper 1 Language Skills",
       },
     ],

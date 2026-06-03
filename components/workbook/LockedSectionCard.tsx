@@ -25,7 +25,7 @@ export function LockedSectionCard({
       </span>
       <div>
         <p className="font-display text-xs font-bold uppercase tracking-wider text-violet-400">
-          Step {index + 1} — locked
+          Step {index + 1} (locked)
         </p>
         <p className="font-display text-base text-violet-500">
           {section.title ?? meta.label}

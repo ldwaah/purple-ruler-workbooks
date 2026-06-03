@@ -31,7 +31,7 @@ block: inspector-paper1
 blockTitle: An Inspector Calls and Paper 1 Language Skills
 lessonUnits: "4-5"
 examBoard: AQA
-title: "Act 1 — Events and Characters"
+title: "Act 1 - Events and Characters"
 unitAim: "..."
 objectives:
   - "..."
@@ -44,8 +44,8 @@ Every lesson **must** include these section types:
 | Section | Purpose | Typical items |
 |---------|---------|---------------|
 | `connect` | Link to live lesson | 1× `info` |
-| `practice` | Scaffolded tasks | 3–5 questions |
-| `check` | Low-stakes quiz | 2–3 auto-marked |
+| `practice` | Scaffolded tasks | 3-5 questions |
+| `check` | Low-stakes quiz | 2-3 auto-marked |
 | `reflect` | Exit slip | 1× `short_text` or `long_text` |
 | `stretch` | Optional challenge | 1 harder item |
 
@@ -78,13 +78,13 @@ npm run build
 
 ## 7. Target size
 
-Aim for **8–12 interactive items** per workbook (excluding `info`). Roughly 15–25 minutes of student time.
+Aim for **8-12 interactive items** per workbook (excluding `info`). Roughly 15-25 minutes of student time.
 
 ## Quality checklist
 
 - [ ] Lesson unit numbers match the teacher SoW exactly
 - [ ] Objectives copied or paraphrased from SoW sub-topic objectives
-- [ ] No duplicate mock exam papers — use skills practice only
+- [ ] No duplicate mock exam papers; use skills practice only
 - [ ] SEND: scaffolds on extended writing; clear wording
 - [ ] English long tasks include `checklist` and `exemplar`
 - [ ] Maths numerics include `tolerance` when rounding matters
@@ -93,7 +93,7 @@ Aim for **8–12 interactive items** per workbook (excluding `info`). Roughly 15
 
 1. Copy `content/lessons/english/english.y10.l01-03.yaml` → `english.y10.l04-05.yaml`
 2. Rewrite `objectives`, `sections`, and item prompts for Act 1
-3. Add `{ id: "english.y10.l04-05", title: "...", lessonUnits: "4–5", ... }` to `PILOT_LESSONS.english.lessons`
+3. Add `{ id: "english.y10.l04-05", title: "...", lessonUnits: "4-5", ... }` to `PILOT_LESSONS.english.lessons`
 4. Run `npm run validate-content`
 
 No redeploy of components is required if you only add YAML and curriculum entries.

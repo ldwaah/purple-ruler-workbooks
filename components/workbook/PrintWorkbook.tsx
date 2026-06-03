@@ -15,7 +15,7 @@ export function PrintWorkbook({ lesson }: { lesson: Lesson }) {
     <article className="print-workbook mx-auto max-w-3xl space-y-6 p-8 text-base text-gray-900">
       <header className="border-b-2 border-purple-700 pb-4">
         <p className="text-sm font-semibold uppercase tracking-wide text-purple-700">
-          Purple Ruler — KS4 Workbook (add-on)
+          Purple Ruler - KS4 Workbook (add-on)
         </p>
         <h1 className="mt-2 text-2xl font-bold">{lesson.title}</h1>
         <p className="mt-1 text-sm">

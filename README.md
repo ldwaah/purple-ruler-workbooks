@@ -4,8 +4,8 @@ Lesson-aligned add-on workbooks for Purple Ruler KS4 English (AQA) and Maths (Ed
 
 ## Pilot content
 
-- **English:** Year 10, lesson units 1–3 (*An Inspector Calls* — context)
-- **Maths:** Year 10, lesson units 1–3 (Number strand)
+- **English:** Year 10, lesson units 1-3 (*An Inspector Calls* - context)
+- **Maths:** Year 10, lesson units 1-3 (Number strand)
 
 ## Quick start
 
@@ -30,7 +30,7 @@ Open [http://localhost:3000](http://localhost:3000).
 
 | Path | Description |
 |------|-------------|
-| `/` | Home — subject picker |
+| `/` | Home - subject picker |
 | `/english`, `/maths` | Pilot workbook lists |
 | `/workbook/[lessonId]` | Interactive workbook |
 | `/workbook/[lessonId]/print` | Printable layout |

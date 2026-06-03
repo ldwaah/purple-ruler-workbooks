@@ -87,7 +87,7 @@ export function markItem(
       return {
         correct,
         feedback: correct
-          ? item.explanation ?? "Good — key ideas included."
+          ? item.explanation ?? "Good. Key ideas included."
           : `Try to include ideas such as: ${item.keywords.slice(0, 3).join(", ")}`,
       };
     }

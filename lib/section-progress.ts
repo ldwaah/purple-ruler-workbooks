@@ -8,7 +8,7 @@ export const SECTION_META: Record<
   connect: {
     label: "Warm-up",
     short: "01",
-    cheer: "Nice — you are ready for practice.",
+    cheer: "Nice! You are ready for practice.",
     accent: "from-violet-500 to-purple-600",
   },
   practice: {

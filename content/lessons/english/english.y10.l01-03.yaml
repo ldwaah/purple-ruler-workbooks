@@ -5,7 +5,7 @@ block: inspector-paper1
 blockTitle: An Inspector Calls and Paper 1 Language Skills
 lessonUnits: "1-3"
 examBoard: AQA
-title: An Inspector Calls — Context
+title: An Inspector Calls - Context
 lessonsPerWeek: 3
 unitAim: >-
   Understand and analyse the social, historical, and cultural context of An Inspector Calls,
@@ -23,7 +23,7 @@ sections:
         id: en-c1
         prompt: What we covered in your Purple Ruler lesson
         content: >-
-          Lessons 1–3 introduce An Inspector Calls. You explored Edwardian society (1912 setting),
+          Lessons 1-3 introduce An Inspector Calls. You explored Edwardian society (1912 setting),
           post-war Britain (1945 audience), and Priestley's message about social responsibility.
           Use this workbook after your live lesson to consolidate that learning.
   - type: practice
@@ -53,7 +53,7 @@ sections:
           - "Because the Inspector was a real police officer in 1912"
           - "Because the Birlings lived in the future"
         answer: "To let the audience judge Edwardian attitudes with hindsight after the wars"
-        scaffold: "Think about dramatic irony — the audience knows what happens after 1912."
+        scaffold: "Think about dramatic irony: the audience knows what happens after 1912."
       - type: short_text
         id: en-p3
         prompt: >-
@@ -67,16 +67,16 @@ sections:
         scaffold: "Social responsibility means that we have a duty to..."
         exemplar: >-
           Social responsibility means that we have a duty to care for others in society,
-          not only ourselves — the Inspector challenges the Birlings for failing this duty.
+          not only ourselves; the Inspector challenges the Birlings for failing this duty.
       - type: mcq
         id: en-p4
         prompt: "Which historical period best describes Britain when the play is SET?"
         options:
-          - "Victorian industrial Britain (1837–1901)"
-          - "Edwardian Britain before WWI (1901–1914)"
-          - "Post-WWII austerity (1945–1950s)"
+          - "Victorian industrial Britain (1837-1901)"
+          - "Edwardian Britain before WWI (1901-1914)"
+          - "Post-WWII austerity (1945-1950s)"
           - "Modern digital Britain"
-        answer: "Edwardian Britain before WWI (1901–1914)"
+        answer: "Edwardian Britain before WWI (1901-1914)"
   - type: check
     title: Check your understanding
     items:
@@ -105,7 +105,7 @@ sections:
           - nhs
           - experience
         exemplar: >-
-          The 1945 audience had experienced WWII and wanted social change, including a welfare state —
+          The 1945 audience had experienced WWII and wanted social change, including a welfare state,
           unlike the confident Edwardian world of 1912.
       - type: mcq
         id: en-ch3
@@ -122,7 +122,7 @@ sections:
       - type: long_text
         id: en-rf1
         prompt: >-
-          Write a short paragraph (about 40–60 words) explaining how knowing the context
+          Write a short paragraph (about 40-60 words) explaining how knowing the context
           helps you understand Priestley's purpose. Use the sentence starter below if helpful.
         scaffold: >-
           Knowing the context of 1912 and 1945 helps me understand Priestley's purpose because...
@@ -142,7 +142,7 @@ sections:
         id: en-st1
         prompt: >-
           Compare ONE attitude from 1912 in the play with ONE attitude from 1945 or today.
-          Which is more responsible, and why? (60–80 words)
+          Which is more responsible, and why? (60-80 words)
         checklist:
           - Clear comparison between two time periods
           - Linked to a character or idea from the play

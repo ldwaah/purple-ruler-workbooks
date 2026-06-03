@@ -5,8 +5,8 @@ export function AddonBanner() {
       role="note"
     >
       <p className="text-sm text-violet-800">
-        <strong className="font-display text-violet-900">Goes with your lesson</strong>{" "}
-        — do this workbook after your Purple Ruler class. It is extra practice, not
+        <strong className="font-display text-violet-900">Goes with your lesson.</strong>{" "}
+        Do this workbook after your Purple Ruler class. It is extra practice, not
         a replacement for live teaching or formal tests.
       </p>
     </div>

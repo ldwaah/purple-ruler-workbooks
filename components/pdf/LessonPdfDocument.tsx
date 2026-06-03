@@ -32,16 +32,16 @@ export function LessonPdfDocument({ lesson }: { lesson: Lesson }) {
   let q = 0;
 
   return (
-    <Document title={`${lesson.title} — Purple Ruler Workbook`}>
+    <Document title={`${lesson.title} - Purple Ruler Workbook`}>
       <Page size="A4" style={styles.page}>
         <View style={styles.header}>
-          <Text style={styles.title}>Purple Ruler — {lesson.title}</Text>
+          <Text style={styles.title}>Purple Ruler - {lesson.title}</Text>
           <Text style={styles.meta}>
             {lesson.subject === "english" ? "English" : "Mathematics"} · Year{" "}
             {lesson.year} · Lesson {lesson.lessonUnits} · {lesson.examBoard}
           </Text>
           <Text style={styles.meta}>Block: {lesson.blockTitle}</Text>
-          <Text style={styles.meta}>Add-on workbook — complete after your lesson</Text>
+          <Text style={styles.meta}>Add-on workbook. Complete after your lesson.</Text>
         </View>
 
         <Text style={{ marginBottom: 10 }}>{lesson.unitAim}</Text>

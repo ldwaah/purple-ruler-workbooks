@@ -21,7 +21,7 @@ export default function StartPage() {
               Choose your workbook
             </h1>
             <p className="mt-2 max-w-lg text-violet-700">
-              Pick a subject below. Each workbook unlocks in small steps — just
+              Pick a subject below. Each workbook unlocks in small steps, just
               like levelling up.
             </p>
           </div>

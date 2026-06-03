@@ -94,7 +94,7 @@ body {
     0 4px 12px rgba(124, 58, 237, 0.2);
 }
 
-/* Splash — white 3D room + bubbly CTA (matches brand artwork) */
+/* Splash: white 3D room + bubbly CTA (matches brand artwork) */
 .splash-room {
   background: linear-gradient(180deg, #ffffff 0%, #f8f7ff 45%, #f3f0ff 100%);
 }

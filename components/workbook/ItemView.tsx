@@ -88,7 +88,7 @@ export function ItemView({
           }`}
           role="status"
         >
-          {correct ? "Correct — well done!" : "Not quite — try again."}
+          {correct ? "Correct, well done!" : "Not quite. Try again."}
           {"exemplar" in item && item.exemplar && revealed && (
             <span className="mt-2 block font-normal text-violet-700">
               <strong>Model answer:</strong> {item.exemplar}
