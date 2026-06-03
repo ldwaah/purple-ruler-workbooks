@@ -1,0 +1,109 @@
+id: maths.y10.l03
+subject: maths
+year: 10
+block: number
+blockTitle: Number
+lessonUnits: "3"
+examBoard: Edexcel
+title: Decimals & Place Value
+lessonsPerWeek: 2
+unitAim: >-
+  Understand decimals and their place value, perform comparisons, and connect
+  decimals to fractions in real-world contexts.
+objectives:
+  - Understand decimal place value (tenths, hundredths, thousandths)
+  - Compare and order decimals
+  - Connect decimals to equivalent fractions
+sections:
+  - type: connect
+    title: Connect to your lesson
+    items:
+      - type: info
+        id: m3-c1
+        prompt: What we covered in your Purple Ruler lesson
+        content: >-
+          Lesson 3 introduces decimals and place value. You compared decimal values,
+          linked them to fractions, and used visual models (grids, base-ten blocks).
+  - type: practice
+    title: Practice
+    items:
+      - type: mcq
+        id: m3-p1
+        prompt: "In 6.408, which digit is in the hundredths place?"
+        options:
+          - "6"
+          - "4"
+          - "0"
+          - "8"
+        answer: "0"
+      - type: ordering
+        id: m3-p2
+        prompt: "Order from smallest to largest:"
+        options:
+          - "0.7"
+          - "0.07"
+          - "0.707"
+          - "0.77"
+        answer:
+          - "0.07"
+          - "0.7"
+          - "0.707"
+          - "0.77"
+      - type: numeric
+        id: m3-p3
+        prompt: "Write 3/8 as a decimal (3 d.p.)."
+        answer: 0.375
+        tolerance: 0.001
+      - type: mcq
+        id: m3-p4
+        prompt: "Which is the best estimate for 4.9 × 6.1?"
+        options:
+          - "About 3"
+          - "About 30"
+          - "About 300"
+          - "About 3000"
+        answer: "About 30"
+        scaffold: "Round 4.9 → 5 and 6.1 → 6, then multiply."
+  - type: check
+    title: Check your understanding
+    items:
+      - type: numeric
+        id: m3-ch1
+        prompt: "Write 0.25 as a fraction in simplest form (e.g. 1/4)."
+        answer: "1/4"
+      - type: mcq
+        id: m3-ch2
+        prompt: "Which decimal is equal to 2 1/2?"
+        options:
+          - "2.12"
+          - "2.5"
+          - "2.05"
+          - "21.0"
+        answer: "2.5"
+      - type: numeric
+        id: m3-ch3
+        prompt: "Calculate 5.6 + 2.34"
+        answer: 7.94
+        tolerance: 0.01
+  - type: reflect
+    title: Reflect
+    items:
+      - type: short_text
+        id: m3-rf1
+        prompt: "Give one real-life example where comparing decimals matters."
+        keywords:
+          - money
+          - measure
+          - length
+          - price
+          - time
+          - weight
+        exemplar: "Comparing prices in shops, e.g. £2.49 vs £2.50."
+  - type: stretch
+    title: Stretch
+    items:
+      - type: numeric
+        id: m3-st1
+        prompt: "A length is 0.375 m. Express this length in millimetres."
+        answer: 375
+        explanation: "Multiply by 1000: 0.375 × 1000 = 375 mm."

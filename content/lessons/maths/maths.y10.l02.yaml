@@ -1,0 +1,116 @@
+id: maths.y10.l02
+subject: maths
+year: 10
+block: number
+blockTitle: Number
+lessonUnits: "2"
+examBoard: Edexcel
+title: Ordering Integers
+lessonsPerWeek: 2
+unitAim: >-
+  Order positive and negative integers from least to greatest and apply ordering
+  in real-world contexts such as temperature and bank balances.
+objectives:
+  - Order positive and negative integers
+  - Interpret integers on a number line
+  - Solve real-world ordering problems involving integers
+sections:
+  - type: connect
+    title: Connect to your lesson
+    items:
+      - type: info
+        id: m2-c1
+        prompt: What we covered in your Purple Ruler lesson
+        content: >-
+          Lesson 2 builds on place value by ordering integers. You used number lines and
+          real contexts (temperature, scores, bank balances) to compare positive and negative values.
+  - type: practice
+    title: Practice
+    items:
+      - type: ordering
+        id: m2-p1
+        prompt: "Order these temperatures from coldest to warmest:"
+        options:
+          - "−4°C"
+          - "2°C"
+          - "−1°C"
+          - "−7°C"
+        answer:
+          - "−7°C"
+          - "−4°C"
+          - "−1°C"
+          - "2°C"
+      - type: mcq
+        id: m2-p2
+        prompt: "Which integer is greatest?"
+        options:
+          - "−12"
+          - "−3"
+          - "0"
+          - "−8"
+        answer: "0"
+      - type: numeric
+        id: m2-p3
+        prompt: "A bank balance changes from −£40 to −£15. How many pounds has the balance increased by?"
+        answer: 25
+        scaffold: "Find the distance between −40 and −15 on a number line."
+      - type: ordering
+        id: m2-p4
+        prompt: "Order from least to greatest:"
+        options:
+          - "15"
+          - "−9"
+          - "0"
+          - "−2"
+        answer:
+          - "−9"
+          - "−2"
+          - "0"
+          - "15"
+  - type: check
+    title: Check your understanding
+    items:
+      - type: mcq
+        id: m2-ch1
+        prompt: "Which list is in ascending order?"
+        options:
+          - "3, 1, −2, −5"
+          - "−5, −2, 1, 3"
+          - "−2, −5, 1, 3"
+          - "1, 3, −2, −5"
+        answer: "−5, −2, 1, 3"
+      - type: numeric
+        id: m2-ch2
+        prompt: "What is −6 + 10?"
+        answer: 4
+      - type: short_text
+        id: m2-ch3
+        prompt: "A football team has goal difference −3 then −1. Has their position improved? Answer yes or no and one word why."
+        keywords:
+          - "yes"
+          - higher
+          - better
+          - increased
+          - improved
+        exemplar: "Yes — −1 is greater than −3 so goal difference improved."
+  - type: reflect
+    title: Reflect
+    items:
+      - type: short_text
+        id: m2-rf1
+        prompt: "Describe how a number line helps you order negative integers."
+        keywords:
+          - left
+          - right
+          - smaller
+          - greater
+          - direction
+        exemplar: "Numbers further left are smaller; further right are greater, so −5 < −1."
+  - type: stretch
+    title: Stretch
+    items:
+      - type: numeric
+        id: m2-st1
+        prompt: "The integers a, b, and c satisfy a < b < c. If a = −8 and c = 5, how many possible integer values of b are there?"
+        answer: 12
+        explanation: "b can be −7, −6, …, 4 — that is 12 integers."

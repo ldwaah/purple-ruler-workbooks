@@ -1,0 +1,108 @@
+id: maths.y10.l01
+subject: maths
+year: 10
+block: number
+blockTitle: Number
+lessonUnits: "1"
+examBoard: Edexcel
+title: Place Value & Inequality Symbols
+lessonsPerWeek: 2
+unitAim: >-
+  Understand place value and use inequality symbols (=, ≠, <, >, ≤, ≥) to order
+  positive and negative integers, decimals, and fractions.
+objectives:
+  - Use symbols (=, ≠, <, >, ≤, ≥) to compare numbers
+  - Order positive and negative integers with decimals and fractions
+  - Apply place value in real-world contexts such as money and measurement
+sections:
+  - type: connect
+    title: Connect to your lesson
+    items:
+      - type: info
+        id: m1-c1
+        prompt: What we covered in your Purple Ruler lesson
+        content: >-
+          Lesson 1 focuses on place value and inequality symbols. You used number lines,
+          manipulatives, and real-life examples (money, measurements) to compare numbers accurately.
+  - type: practice
+    title: Practice
+    items:
+      - type: mcq
+        id: m1-p1
+        prompt: "Which symbol makes this true?  −3 ___ −7"
+        options:
+          - "<"
+          - ">"
+          - "≤"
+          - "="
+        answer: ">"
+        explanation: "−3 is to the right of −7 on a number line, so −3 > −7."
+      - type: numeric
+        id: m1-p2
+        prompt: "Write the digit in the tens column of 4,582."
+        answer: 8
+      - type: mcq
+        id: m1-p3
+        prompt: "Which statement is correct?"
+        options:
+          - "0.5 < 0.05"
+          - "0.5 > 0.05"
+          - "0.5 = 0.05"
+          - "0.5 ≤ 0.05"
+        answer: "0.5 > 0.05"
+        scaffold: "Compare tenths: 0.5 has 5 tenths; 0.05 has 0 tenths in the tenths place."
+      - type: ordering
+        id: m1-p4
+        prompt: "Order from smallest to largest:"
+        options:
+          - "−2"
+          - "0"
+          - "−5"
+          - "3"
+        answer:
+          - "−5"
+          - "−2"
+          - "0"
+          - "3"
+  - type: check
+    title: Check your understanding
+    items:
+      - type: mcq
+        id: m1-ch1
+        prompt: "Which is equivalent to 3/4?"
+        options:
+          - "0.34"
+          - "0.75"
+          - "0.43"
+          - "7.5"
+        answer: "0.75"
+      - type: numeric
+        id: m1-ch2
+        prompt: "Insert the missing symbol as a single character: 2/5 ___ 0.4  (use =, <, or >)"
+        answer: "="
+        explanation: "2/5 = 0.4"
+      - type: numeric
+        id: m1-ch3
+        prompt: "What is 1.25 × 100?"
+        answer: 125
+  - type: reflect
+    title: Reflect
+    items:
+      - type: short_text
+        id: m1-rf1
+        prompt: >-
+          Explain in one sentence when you would use ≤ instead of <. Give an example.
+        keywords:
+          - equal
+          - or
+          - includes
+          - same
+        exemplar: "Use ≤ when the value can be equal or less, e.g. x ≤ 5 includes 5."
+  - type: stretch
+    title: Stretch
+    items:
+      - type: numeric
+        id: m1-st1
+        prompt: "Place −1.5, 2/3, and −0.75 in order from smallest to largest. What is the middle value? (Give as a decimal rounded to 2 d.p.)"
+        answer: -0.75
+        explanation: "Order: −1.5, −0.75, 2/3 ≈ 0.67. Middle value is −0.75."
