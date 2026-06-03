@@ -1,0 +1,138 @@
+id: english.y11.l66-69
+subject: english
+year: 11
+block: exam-focus
+blockTitle: Literature and Language Exam Focus
+lessonUnits: 66-69
+examBoard: AQA
+title: GCSE Final Exam Preparation
+lessonsPerWeek: 3
+unitAim: Targeted preparation for final GCSE exams.
+objectives:
+  - Use exam techniques
+  - Practise under pressure
+  - Reduce exam anxiety
+sections:
+  - type: connect
+    title: Connect to your lesson
+    items:
+      - type: info
+        id: en116669-c1
+        prompt: What we covered in your Purple Ruler lesson
+        content: >-
+          Lessons 66-69 focus on GCSE Final Exam Preparation. Targeted preparation for final GCSE exams. Use this
+          workbook after your live lesson to consolidate that learning.
+  - type: practice
+    title: Practice
+    items:
+      - type: mcq
+        id: en116669-p1
+        prompt: Which statement best matches the focus of "GCSE Final Exam Preparation"?
+        options:
+          - Use exam techniques
+          - Memorising quotations without analysis
+          - Ignoring historical and social context
+          - Writing without planning or evidence
+        answer: Use exam techniques
+        scaffold: Think back to your lesson objectives and key terminology.
+      - type: short_text
+        id: en116669-p2
+        prompt: In one or two sentences, explain a key idea from GCSE Final Exam Preparation.
+        keywords:
+          - final
+          - preparation
+        scaffold: A key idea from GCSE Final Exam Preparation is...
+        exemplar: Use exam techniques. This helps you analyse the text with clear, supported ideas.
+      - type: mcq
+        id: en116669-p3
+        prompt: Which skill is most important for GCSE English success in this unit?
+        options:
+          - Using evidence and subject terminology
+          - Copying the plot with no analysis
+          - Avoiding context completely
+          - Writing without checking accuracy
+        answer: Using evidence and subject terminology
+      - type: ordering
+        id: en116669-p4
+        prompt: 'Put these steps for a strong analytical paragraph in the best order:'
+        options:
+          - State a clear point linked to the question
+          - Select a relevant quotation or reference
+          - Explain the writer's method and effect
+          - Link back to the question or theme
+        answer:
+          - State a clear point linked to the question
+          - Select a relevant quotation or reference
+          - Explain the writer's method and effect
+          - Link back to the question or theme
+  - type: check
+    title: Check your understanding
+    items:
+      - type: multi_select
+        id: en116669-ch1
+        prompt: 'Select ALL objectives linked to GCSE Final Exam Preparation:'
+        options:
+          - Use exam techniques
+          - Practise under pressure
+          - Reduce exam anxiety
+          - Ignore audience and purpose
+          - Skip planning entirely
+        answer:
+          - Use exam techniques
+          - Practise under pressure
+          - Reduce exam anxiety
+      - type: short_text
+        id: en116669-ch2
+        prompt: Name one subject term you should use when writing about this unit.
+        keywords:
+          - context
+          - theme
+          - method
+          - structure
+          - language
+          - audience
+          - purpose
+          - character
+        exemplar: Use terms such as context, theme, structure, or writer's methods with precise evidence.
+      - type: mcq
+        id: en116669-ch3
+        prompt: 'After your live lesson, this workbook helps you to:'
+        options:
+          - Consolidate and practise what you learned
+          - Replace all reading of the set texts
+          - Skip reflection on your work
+          - Avoid using feedback from teachers
+        answer: Consolidate and practise what you learned
+  - type: reflect
+    title: Reflect
+    items:
+      - type: long_text
+        id: en116669-rf1
+        prompt: >-
+          Write about 40-60 words: what did you learn in GCSE Final Exam Preparation, and what do you still need to
+          practise?
+        scaffold: In GCSE Final Exam Preparation, I learned... I still need to practise...
+        checklist:
+          - I named a specific skill or idea from the lesson
+          - I gave an example from the text or task
+          - I identified one next step for improvement
+        minWords: 30
+        exemplar: >-
+          In GCSE Final Exam Preparation, I learned how to link context to the writer's purpose. I still need to
+          practise selecting shorter, sharper quotations and explaining their effect in more detail.
+  - type: stretch
+    title: Stretch
+    items:
+      - type: long_text
+        id: en116669-st1
+        prompt: >-
+          Stretch: write 50-80 words comparing two ideas from GCSE Final Exam Preparation. Which is more convincing and
+          why?
+        checklist:
+          - Clear comparison between two ideas
+          - Evidence or example from the unit
+          - Evaluative judgement with justification
+        minWords: 45
+        exemplar: >-
+          Both ideas are important, but linking context to theme is more convincing because it shows why the writer made
+          choices for a real audience, not only what happens in the plot.

@@ -1,0 +1,137 @@
+id: english.y10.l45-46
+subject: english
+year: 10
+block: revision-paper1
+blockTitle: Paper 1 Revision and Consolidation
+lessonUnits: 45-46
+examBoard: AQA
+title: Reviewing Unseen Poetry
+lessonsPerWeek: 3
+unitAim: Refresh techniques for unseen poetry.
+objectives:
+  - Practise unseen approaches
+  - Analyse structure and language
+  - Write timed responses
+sections:
+  - type: connect
+    title: Connect to your lesson
+    items:
+      - type: info
+        id: en104546-c1
+        prompt: What we covered in your Purple Ruler lesson
+        content: >-
+          Lessons 45-46 focus on Reviewing Unseen Poetry. Refresh techniques for unseen poetry. Use this workbook after
+          your live lesson to consolidate that learning.
+  - type: practice
+    title: Practice
+    items:
+      - type: mcq
+        id: en104546-p1
+        prompt: Which statement best matches the focus of "Reviewing Unseen Poetry"?
+        options:
+          - Practise unseen approaches
+          - Memorising quotations without analysis
+          - Ignoring historical and social context
+          - Writing without planning or evidence
+        answer: Practise unseen approaches
+        scaffold: Think back to your lesson objectives and key terminology.
+      - type: short_text
+        id: en104546-p2
+        prompt: In one or two sentences, explain a key idea from Reviewing Unseen Poetry.
+        keywords:
+          - reviewing
+          - unseen
+          - poetry
+        scaffold: A key idea from Reviewing Unseen Poetry is...
+        exemplar: Practise unseen approaches. This helps you analyse the text with clear, supported ideas.
+      - type: mcq
+        id: en104546-p3
+        prompt: Which skill is most important for GCSE English success in this unit?
+        options:
+          - Using evidence and subject terminology
+          - Copying the plot with no analysis
+          - Avoiding context completely
+          - Writing without checking accuracy
+        answer: Using evidence and subject terminology
+      - type: ordering
+        id: en104546-p4
+        prompt: 'Put these steps for a strong analytical paragraph in the best order:'
+        options:
+          - State a clear point linked to the question
+          - Select a relevant quotation or reference
+          - Explain the writer's method and effect
+          - Link back to the question or theme
+        answer:
+          - State a clear point linked to the question
+          - Select a relevant quotation or reference
+          - Explain the writer's method and effect
+          - Link back to the question or theme
+  - type: check
+    title: Check your understanding
+    items:
+      - type: multi_select
+        id: en104546-ch1
+        prompt: 'Select ALL objectives linked to Reviewing Unseen Poetry:'
+        options:
+          - Practise unseen approaches
+          - Analyse structure and language
+          - Write timed responses
+          - Ignore audience and purpose
+          - Skip planning entirely
+        answer:
+          - Practise unseen approaches
+          - Analyse structure and language
+          - Write timed responses
+      - type: short_text
+        id: en104546-ch2
+        prompt: Name one subject term you should use when writing about this unit.
+        keywords:
+          - context
+          - theme
+          - method
+          - structure
+          - language
+          - audience
+          - purpose
+          - character
+        exemplar: Use terms such as context, theme, structure, or writer's methods with precise evidence.
+      - type: mcq
+        id: en104546-ch3
+        prompt: 'After your live lesson, this workbook helps you to:'
+        options:
+          - Consolidate and practise what you learned
+          - Replace all reading of the set texts
+          - Skip reflection on your work
+          - Avoid using feedback from teachers
+        answer: Consolidate and practise what you learned
+  - type: reflect
+    title: Reflect
+    items:
+      - type: long_text
+        id: en104546-rf1
+        prompt: >-
+          Write about 40-60 words: what did you learn in Reviewing Unseen Poetry, and what do you still need to
+          practise?
+        scaffold: In Reviewing Unseen Poetry, I learned... I still need to practise...
+        checklist:
+          - I named a specific skill or idea from the lesson
+          - I gave an example from the text or task
+          - I identified one next step for improvement
+        minWords: 30
+        exemplar: >-
+          In Reviewing Unseen Poetry, I learned how to link context to the writer's purpose. I still need to practise
+          selecting shorter, sharper quotations and explaining their effect in more detail.
+  - type: stretch
+    title: Stretch
+    items:
+      - type: long_text
+        id: en104546-st1
+        prompt: 'Stretch: write 50-80 words comparing two ideas from Reviewing Unseen Poetry. Which is more convincing and why?'
+        checklist:
+          - Clear comparison between two ideas
+          - Evidence or example from the unit
+          - Evaluative judgement with justification
+        minWords: 45
+        exemplar: >-
+          Both ideas are important, but linking context to theme is more convincing because it shows why the writer made
+          choices for a real audience, not only what happens in the plot.

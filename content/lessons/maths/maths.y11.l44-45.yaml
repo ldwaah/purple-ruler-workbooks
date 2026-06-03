@@ -1,0 +1,102 @@
+id: maths.y11.l44-45
+subject: maths
+year: 11
+block: graphs-algebra
+blockTitle: Graphs and Algebra
+lessonUnits: 44-45
+examBoard: Edexcel
+title: Factorising Quadratics
+lessonsPerWeek: 2
+unitAim: Factorise quadratic expressions.
+objectives:
+  - Factorise simple quadratics
+  - Factorise with leading coefficient
+  - Solve by factorising
+sections:
+  - type: connect
+    title: Connect to your lesson
+    items:
+      - type: info
+        id: m114445-c1
+        prompt: What we covered in your Purple Ruler lesson
+        content: >-
+          Lessons 44-45 cover Factorising Quadratics. Factorise quadratic expressions. Use this workbook after your live
+          lesson to practise and check your understanding.
+  - type: practice
+    title: Practice
+    items:
+      - type: mcq
+        id: m114445-p1
+        prompt: Which aim best describes "Factorising Quadratics"?
+        options:
+          - Factorise simple quadratics
+          - Ignore units and notation
+          - Guess without showing working
+          - Skip checking answers
+        answer: Factorise simple quadratics
+      - type: numeric
+        id: m114445-p2
+        prompt: 'Calculate: 3/4 + 1/8 (give as a decimal).'
+        answer: 0.875
+        explanation: 3/4 = 0.75; 0.75 + 0.125 = 0.875
+      - type: mcq
+        id: m114445-p3
+        prompt: 'When solving GCSE maths problems, you should:'
+        options:
+          - Show clear working and check the answer
+          - Hide all working from the examiner
+          - Never include units
+          - Skip reading the question
+        answer: Show clear working and check the answer
+      - type: numeric
+        id: m114445-p4
+        prompt: 'Simplify: 4x + 3x - 2 (give the coefficient of x as a number, e.g. if answer is 7x-2 write 7).'
+        answer: 7
+        explanation: 4x + 3x = 7x, so coefficient is 7
+  - type: check
+    title: Check your understanding
+    items:
+      - type: mcq
+        id: m114445-ch1
+        prompt: Which skill is central to Factorising Quadratics?
+        options:
+          - Factorise simple quadratics
+          - Rounding every answer to the nearest 10 only
+          - Using the wrong formula deliberately
+          - Avoiding diagrams completely
+        answer: Factorise simple quadratics
+      - type: numeric
+        id: m114445-ch2
+        prompt: What is 15% of 80?
+        answer: 12
+      - type: numeric
+        id: m114445-ch3
+        prompt: 'Solve: 2x + 5 = 17. What is x?'
+        answer: 6
+  - type: reflect
+    title: Reflect
+    items:
+      - type: short_text
+        id: m114445-rf1
+        prompt: >-
+          Explain in one sentence what was challenging in Factorising Quadratics and how you overcame it (or will next
+          time).
+        keywords:
+          - practice
+          - method
+          - working
+          - check
+          - formula
+          - mistake
+          - help
+        exemplar: >-
+          I found choosing the correct method hardest, so I will write a short plan before calculating and check units
+          at the end.
+  - type: stretch
+    title: Stretch
+    items:
+      - type: numeric
+        id: m114445-st1
+        prompt: 'Stretch: A rectangle has perimeter 30 cm and length 9 cm. What is its width in cm?'
+        answer: 6
+        explanation: Perimeter = 2(l + w); 30 = 2(9 + w); 15 = 9 + w; w = 6

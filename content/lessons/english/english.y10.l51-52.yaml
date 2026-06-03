@@ -1,0 +1,140 @@
+id: english.y10.l51-52
+subject: english
+year: 10
+block: language-paper1
+blockTitle: Paper 1 Reading Skills
+lessonUnits: 51-52
+examBoard: AQA
+title: Paper 1 Section A Question Types
+lessonsPerWeek: 3
+unitAim: Learn different Paper 1 reading question types and strategies.
+objectives:
+  - Recognise question types
+  - Select relevant evidence
+  - Structure clear answers
+sections:
+  - type: connect
+    title: Connect to your lesson
+    items:
+      - type: info
+        id: en105152-c1
+        prompt: What we covered in your Purple Ruler lesson
+        content: >-
+          Lessons 51-52 focus on Paper 1 Section A Question Types. Learn different Paper 1 reading question types and
+          strategies. Use this workbook after your live lesson to consolidate that learning.
+  - type: practice
+    title: Practice
+    items:
+      - type: mcq
+        id: en105152-p1
+        prompt: Which statement best matches the focus of "Paper 1 Section A Question Types"?
+        options:
+          - Recognise question types
+          - Memorising quotations without analysis
+          - Ignoring historical and social context
+          - Writing without planning or evidence
+        answer: Recognise question types
+        scaffold: Think back to your lesson objectives and key terminology.
+      - type: short_text
+        id: en105152-p2
+        prompt: In one or two sentences, explain a key idea from Paper 1 Section A Question Types.
+        keywords:
+          - paper
+          - section
+          - question
+          - types
+        scaffold: A key idea from Paper 1 Section A Question Types is...
+        exemplar: Recognise question types. This helps you analyse the text with clear, supported ideas.
+      - type: mcq
+        id: en105152-p3
+        prompt: Which skill is most important for GCSE English success in this unit?
+        options:
+          - Using evidence and subject terminology
+          - Copying the plot with no analysis
+          - Avoiding context completely
+          - Writing without checking accuracy
+        answer: Using evidence and subject terminology
+      - type: ordering
+        id: en105152-p4
+        prompt: 'Put these steps for a strong analytical paragraph in the best order:'
+        options:
+          - State a clear point linked to the question
+          - Select a relevant quotation or reference
+          - Explain the writer's method and effect
+          - Link back to the question or theme
+        answer:
+          - State a clear point linked to the question
+          - Select a relevant quotation or reference
+          - Explain the writer's method and effect
+          - Link back to the question or theme
+  - type: check
+    title: Check your understanding
+    items:
+      - type: multi_select
+        id: en105152-ch1
+        prompt: 'Select ALL objectives linked to Paper 1 Section A Question Types:'
+        options:
+          - Recognise question types
+          - Select relevant evidence
+          - Structure clear answers
+          - Ignore audience and purpose
+          - Skip planning entirely
+        answer:
+          - Recognise question types
+          - Select relevant evidence
+          - Structure clear answers
+      - type: short_text
+        id: en105152-ch2
+        prompt: Name one subject term you should use when writing about this unit.
+        keywords:
+          - context
+          - theme
+          - method
+          - structure
+          - language
+          - audience
+          - purpose
+          - character
+        exemplar: Use terms such as context, theme, structure, or writer's methods with precise evidence.
+      - type: mcq
+        id: en105152-ch3
+        prompt: 'After your live lesson, this workbook helps you to:'
+        options:
+          - Consolidate and practise what you learned
+          - Replace all reading of the set texts
+          - Skip reflection on your work
+          - Avoid using feedback from teachers
+        answer: Consolidate and practise what you learned
+  - type: reflect
+    title: Reflect
+    items:
+      - type: long_text
+        id: en105152-rf1
+        prompt: >-
+          Write about 40-60 words: what did you learn in Paper 1 Section A Question Types, and what do you still need to
+          practise?
+        scaffold: In Paper 1 Section A Question Types, I learned... I still need to practise...
+        checklist:
+          - I named a specific skill or idea from the lesson
+          - I gave an example from the text or task
+          - I identified one next step for improvement
+        minWords: 30
+        exemplar: >-
+          In Paper 1 Section A Question Types, I learned how to link context to the writer's purpose. I still need to
+          practise selecting shorter, sharper quotations and explaining their effect in more detail.
+  - type: stretch
+    title: Stretch
+    items:
+      - type: long_text
+        id: en105152-st1
+        prompt: >-
+          Stretch: write 50-80 words comparing two ideas from Paper 1 Section A Question Types. Which is more convincing
+          and why?
+        checklist:
+          - Clear comparison between two ideas
+          - Evidence or example from the unit
+          - Evaluative judgement with justification
+        minWords: 45
+        exemplar: >-
+          Both ideas are important, but linking context to theme is more convincing because it shows why the writer made
+          choices for a real audience, not only what happens in the plot.

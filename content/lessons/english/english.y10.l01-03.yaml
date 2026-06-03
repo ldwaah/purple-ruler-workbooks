@@ -3,152 +3,139 @@ subject: english
 year: 10
 block: inspector-paper1
 blockTitle: An Inspector Calls and Paper 1 Language Skills
-lessonUnits: "1-3"
+lessonUnits: 1-3
 examBoard: AQA
 title: An Inspector Calls - Context
 lessonsPerWeek: 3
-unitAim: >-
-  Understand and analyse the social, historical, and cultural context of An Inspector Calls,
-  including Priestley's intentions and the contrast between 1912 and 1945.
+unitAim: Understand and analyse the social, historical, and cultural context of An Inspector Calls.
 objectives:
-  - Understand the social, historical, and cultural context of the play
-  - Explain who J. B. Priestley was and why he wrote the play in 1945
-  - Compare attitudes in 1912 (setting) with 1945 (first performance) and today
-  - Use relevant terminology when discussing context
+  - Understand social, historical, and cultural context
+  - Explain Priestley's intentions and 1912 vs 1945
+  - Compare attitudes across time periods
 sections:
   - type: connect
     title: Connect to your lesson
     items:
       - type: info
-        id: en-c1
+        id: en1013-c1
         prompt: What we covered in your Purple Ruler lesson
         content: >-
-          Lessons 1-3 introduce An Inspector Calls. You explored Edwardian society (1912 setting),
-          post-war Britain (1945 audience), and Priestley's message about social responsibility.
-          Use this workbook after your live lesson to consolidate that learning.
+          Lessons 1-3 focus on An Inspector Calls - Context. Understand and analyse the social, historical, and cultural
+          context of An Inspector Calls. Use this workbook after your live lesson to consolidate that learning.
   - type: practice
     title: Practice
     items:
-      - type: ordering
-        id: en-p1
-        prompt: "Put these events in chronological order (earliest first):"
-        options:
-          - "First performance of An Inspector Calls (1945)"
-          - "The play is set (1912)"
-          - "End of the First World War (1918)"
-          - "Priestley writes the play (during WWII, published 1945)"
-        answer:
-          - "The play is set (1912)"
-          - "End of the First World War (1918)"
-          - "Priestley writes the play (during WWII, published 1945)"
-          - "First performance of An Inspector Calls (1945)"
-        explanation: >-
-          The play is set in 1912 but written for a 1945 audience who had lived through two world wars.
       - type: mcq
-        id: en-p2
-        prompt: "Why did Priestley set the play in 1912 rather than 1945?"
+        id: en1013-p1
+        prompt: Which statement best matches the focus of "An Inspector Calls - Context"?
         options:
-          - "Because he could not write about modern events"
-          - "To let the audience judge Edwardian attitudes with hindsight after the wars"
-          - "Because the Inspector was a real police officer in 1912"
-          - "Because the Birlings lived in the future"
-        answer: "To let the audience judge Edwardian attitudes with hindsight after the wars"
-        scaffold: "Think about dramatic irony: the audience knows what happens after 1912."
+          - Understand social, historical, and cultural context
+          - Memorising quotations without analysis
+          - Ignoring historical and social context
+          - Writing without planning or evidence
+        answer: Understand social, historical, and cultural context
+        scaffold: Think back to your lesson objectives and key terminology.
       - type: short_text
-        id: en-p3
-        prompt: >-
-          In one or two sentences, explain what "social responsibility" means in the play.
+        id: en1013-p2
+        prompt: In one or two sentences, explain a key idea from An Inspector Calls - Context.
         keywords:
-          - responsibility
-          - community
-          - society
-          - others
-          - collective
-        scaffold: "Social responsibility means that we have a duty to..."
+          - inspector
+          - calls
+          - context
+        scaffold: A key idea from An Inspector Calls - Context is...
         exemplar: >-
-          Social responsibility means that we have a duty to care for others in society,
-          not only ourselves; the Inspector challenges the Birlings for failing this duty.
+          Understand social, historical, and cultural context. This helps you analyse the text with clear, supported
+          ideas.
       - type: mcq
-        id: en-p4
-        prompt: "Which historical period best describes Britain when the play is SET?"
+        id: en1013-p3
+        prompt: Which skill is most important for GCSE English success in this unit?
         options:
-          - "Victorian industrial Britain (1837-1901)"
-          - "Edwardian Britain before WWI (1901-1914)"
-          - "Post-WWII austerity (1945-1950s)"
-          - "Modern digital Britain"
-        answer: "Edwardian Britain before WWI (1901-1914)"
+          - Using evidence and subject terminology
+          - Copying the plot with no analysis
+          - Avoiding context completely
+          - Writing without checking accuracy
+        answer: Using evidence and subject terminology
+      - type: ordering
+        id: en1013-p4
+        prompt: 'Put these steps for a strong analytical paragraph in the best order:'
+        options:
+          - State a clear point linked to the question
+          - Select a relevant quotation or reference
+          - Explain the writer's method and effect
+          - Link back to the question or theme
+        answer:
+          - State a clear point linked to the question
+          - Select a relevant quotation or reference
+          - Explain the writer's method and effect
+          - Link back to the question or theme
   - type: check
     title: Check your understanding
     items:
       - type: multi_select
-        id: en-ch1
-        prompt: "Select ALL themes Priestley is likely to challenge in the play:"
+        id: en1013-ch1
+        prompt: 'Select ALL objectives linked to An Inspector Calls - Context:'
         options:
-          - "Class division and inequality"
-          - "Selfishness and lack of collective responsibility"
-          - "Space exploration"
-          - "Gender expectations in Edwardian society"
+          - Understand social, historical, and cultural context
+          - Explain Priestley's intentions and 1912 vs 1945
+          - Compare attitudes across time periods
+          - Ignore audience and purpose
+          - Skip planning entirely
         answer:
-          - "Class division and inequality"
-          - "Selfishness and lack of collective responsibility"
-          - "Gender expectations in Edwardian society"
+          - Understand social, historical, and cultural context
+          - Explain Priestley's intentions and 1912 vs 1945
+          - Compare attitudes across time periods
       - type: short_text
-        id: en-ch2
-        prompt: >-
-          Name one way life in 1945 was different from 1912 for the audience watching the play.
+        id: en1013-ch2
+        prompt: Name one subject term you should use when writing about this unit.
         keywords:
-          - war
-          - welfare
-          - bombing
-          - labour
-          - vote
-          - nhs
-          - experience
-        exemplar: >-
-          The 1945 audience had experienced WWII and wanted social change, including a welfare state,
-          unlike the confident Edwardian world of 1912.
+          - context
+          - theme
+          - method
+          - structure
+          - language
+          - audience
+          - purpose
+          - character
+        exemplar: Use terms such as context, theme, structure, or writer's methods with precise evidence.
       - type: mcq
-        id: en-ch3
-        prompt: "The Inspector's message is best summarised as:"
+        id: en1013-ch3
+        prompt: 'After your live lesson, this workbook helps you to:'
         options:
-          - "We are all responsible for each other"
-          - "Money is the only measure of success"
-          - "Young people should not question adults"
-          - "The past cannot affect the present"
-        answer: "We are all responsible for each other"
+          - Consolidate and practise what you learned
+          - Replace all reading of the set texts
+          - Skip reflection on your work
+          - Avoid using feedback from teachers
+        answer: Consolidate and practise what you learned
   - type: reflect
     title: Reflect
     items:
       - type: long_text
-        id: en-rf1
+        id: en1013-rf1
         prompt: >-
-          Write a short paragraph (about 40-60 words) explaining how knowing the context
-          helps you understand Priestley's purpose. Use the sentence starter below if helpful.
-        scaffold: >-
-          Knowing the context of 1912 and 1945 helps me understand Priestley's purpose because...
+          Write about 40-60 words: what did you learn in An Inspector Calls - Context, and what do you still need to
+          practise?
+        scaffold: In An Inspector Calls - Context, I learned... I still need to practise...
         checklist:
-          - I mentioned 1912 (setting) and/or 1945 (audience)
-          - I linked context to a theme such as social responsibility
-          - I used at least one piece of subject terminology (e.g. context, audience, purpose)
-        exemplar: >-
-          Knowing the context of 1912 and 1945 helps me understand Priestley's purpose because
-          the audience can see how arrogant Edwardian attitudes led to suffering. Priestley
-          warns that ignoring social responsibility could repeat the mistakes of the past.
+          - I named a specific skill or idea from the lesson
+          - I gave an example from the text or task
+          - I identified one next step for improvement
         minWords: 30
+        exemplar: >-
+          In An Inspector Calls - Context, I learned how to link context to the writer's purpose. I still need to
+          practise selecting shorter, sharper quotations and explaining their effect in more detail.
   - type: stretch
     title: Stretch
     items:
       - type: long_text
-        id: en-st1
+        id: en1013-st1
         prompt: >-
-          Compare ONE attitude from 1912 in the play with ONE attitude from 1945 or today.
-          Which is more responsible, and why? (60-80 words)
+          Stretch: write 50-80 words comparing two ideas from An Inspector Calls - Context. Which is more convincing and
+          why?
         checklist:
-          - Clear comparison between two time periods
-          - Linked to a character or idea from the play
-          - Evaluative judgement (which attitude is more responsible)
-        minWords: 50
+          - Clear comparison between two ideas
+          - Evidence or example from the unit
+          - Evaluative judgement with justification
+        minWords: 45
         exemplar: >-
-          In 1912 the Birlings represent selfish capitalism, believing the individual matters most.
-          In 1945 audiences wanted collective welfare after war. Priestley suggests the 1945
-          attitude is more responsible because society must learn from Eva Smith's treatment.
+          Both ideas are important, but linking context to theme is more convincing because it shows why the writer made
+          choices for a real audience, not only what happens in the plot.

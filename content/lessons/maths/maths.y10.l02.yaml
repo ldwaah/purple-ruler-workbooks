@@ -3,114 +3,98 @@ subject: maths
 year: 10
 block: number
 blockTitle: Number
-lessonUnits: "2"
+lessonUnits: '2'
 examBoard: Edexcel
 title: Ordering Integers
 lessonsPerWeek: 2
-unitAim: >-
-  Order positive and negative integers from least to greatest and apply ordering
-  in real-world contexts such as temperature and bank balances.
+unitAim: Order positive and negative integers.
 objectives:
-  - Order positive and negative integers
-  - Interpret integers on a number line
-  - Solve real-world ordering problems involving integers
+  - Order integers on a number line
+  - Apply ordering in real contexts
+  - Compare negative values
 sections:
   - type: connect
     title: Connect to your lesson
     items:
       - type: info
-        id: m2-c1
+        id: m102-c1
         prompt: What we covered in your Purple Ruler lesson
         content: >-
-          Lesson 2 builds on place value by ordering integers. You used number lines and
-          real contexts (temperature, scores, bank balances) to compare positive and negative values.
+          Lessons 2 cover Ordering Integers. Order positive and negative integers. Use this workbook after your live
+          lesson to practise and check your understanding.
   - type: practice
     title: Practice
     items:
-      - type: ordering
-        id: m2-p1
-        prompt: "Order these temperatures from coldest to warmest:"
-        options:
-          - "−4°C"
-          - "2°C"
-          - "−1°C"
-          - "−7°C"
-        answer:
-          - "−7°C"
-          - "−4°C"
-          - "−1°C"
-          - "2°C"
       - type: mcq
-        id: m2-p2
-        prompt: "Which integer is greatest?"
+        id: m102-p1
+        prompt: Which aim best describes "Ordering Integers"?
         options:
-          - "−12"
-          - "−3"
-          - "0"
-          - "−8"
-        answer: "0"
+          - Order integers on a number line
+          - Ignore units and notation
+          - Guess without showing working
+          - Skip checking answers
+        answer: Order integers on a number line
       - type: numeric
-        id: m2-p3
-        prompt: "A bank balance changes from −£40 to −£15. How many pounds has the balance increased by?"
-        answer: 25
-        scaffold: "Find the distance between −40 and −15 on a number line."
-      - type: ordering
-        id: m2-p4
-        prompt: "Order from least to greatest:"
+        id: m102-p2
+        prompt: 'Calculate: 3/4 + 1/8 (give as a decimal).'
+        answer: 0.875
+        explanation: 3/4 = 0.75; 0.75 + 0.125 = 0.875
+      - type: mcq
+        id: m102-p3
+        prompt: 'When solving GCSE maths problems, you should:'
         options:
-          - "15"
-          - "−9"
-          - "0"
-          - "−2"
-        answer:
-          - "−9"
-          - "−2"
-          - "0"
-          - "15"
+          - Show clear working and check the answer
+          - Hide all working from the examiner
+          - Never include units
+          - Skip reading the question
+        answer: Show clear working and check the answer
+      - type: numeric
+        id: m102-p4
+        prompt: 'Simplify: 4x + 3x - 2 (give the coefficient of x as a number, e.g. if answer is 7x-2 write 7).'
+        answer: 7
+        explanation: 4x + 3x = 7x, so coefficient is 7
   - type: check
     title: Check your understanding
     items:
       - type: mcq
-        id: m2-ch1
-        prompt: "Which list is in ascending order?"
+        id: m102-ch1
+        prompt: Which skill is central to Ordering Integers?
         options:
-          - "3, 1, −2, −5"
-          - "−5, −2, 1, 3"
-          - "−2, −5, 1, 3"
-          - "1, 3, −2, −5"
-        answer: "−5, −2, 1, 3"
+          - Order integers on a number line
+          - Rounding every answer to the nearest 10 only
+          - Using the wrong formula deliberately
+          - Avoiding diagrams completely
+        answer: Order integers on a number line
       - type: numeric
-        id: m2-ch2
-        prompt: "What is −6 + 10?"
-        answer: 4
-      - type: short_text
-        id: m2-ch3
-        prompt: "A football team has goal difference −3 then −1. Has their position improved? Answer yes or no and one word why."
-        keywords:
-          - "yes"
-          - higher
-          - better
-          - increased
-          - improved
-        exemplar: "Yes, −1 is greater than −3 so goal difference improved."
+        id: m102-ch2
+        prompt: What is 15% of 80?
+        answer: 12
+      - type: numeric
+        id: m102-ch3
+        prompt: 'Solve: 2x + 5 = 17. What is x?'
+        answer: 6
   - type: reflect
     title: Reflect
     items:
       - type: short_text
-        id: m2-rf1
-        prompt: "Describe how a number line helps you order negative integers."
+        id: m102-rf1
+        prompt: Explain in one sentence what was challenging in Ordering Integers and how you overcame it (or will next time).
         keywords:
-          - left
-          - right
-          - smaller
-          - greater
-          - direction
-        exemplar: "Numbers further left are smaller; further right are greater, so −5 < −1."
+          - practice
+          - method
+          - working
+          - check
+          - formula
+          - mistake
+          - help
+        exemplar: >-
+          I found choosing the correct method hardest, so I will write a short plan before calculating and check units
+          at the end.
   - type: stretch
     title: Stretch
     items:
       - type: numeric
-        id: m2-st1
-        prompt: "The integers a, b, and c satisfy a < b < c. If a = −8 and c = 5, how many possible integer values of b are there?"
-        answer: 12
-        explanation: "b can be −7, −6, …, 4; that is 12 integers."
+        id: m102-st1
+        prompt: 'Stretch: A rectangle has perimeter 30 cm and length 9 cm. What is its width in cm?'
+        answer: 6
+        explanation: Perimeter = 2(l + w); 30 = 2(9 + w); 15 = 9 + w; w = 6

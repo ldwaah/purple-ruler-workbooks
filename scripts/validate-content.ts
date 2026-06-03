@@ -2,7 +2,7 @@ import fs from "fs";
 import path from "path";
 import yaml from "js-yaml";
 import { lessonSchema } from "../lib/schema";
-import { PILOT_LESSONS } from "../lib/curriculum";
+import { CURRICULUM } from "../lib/curriculum";
 
 const CONTENT_DIR = path.join(process.cwd(), "content", "lessons");
 
@@ -58,10 +58,10 @@ function main() {
   }
 
   for (const subject of ["english", "maths"] as const) {
-    for (const meta of PILOT_LESSONS[subject].lessons) {
+    for (const meta of CURRICULUM[subject].lessons) {
       if (!ids.has(meta.id)) {
         console.warn(
-          `⚠ Pilot lesson ${meta.id} listed in curriculum but no YAML file`,
+          `⚠ Lesson ${meta.id} listed in curriculum but no YAML file`,
         );
       }
     }

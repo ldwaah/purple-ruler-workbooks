@@ -1,0 +1,139 @@
+id: english.y10.l101-104
+subject: english
+year: 10
+block: lit-review
+blockTitle: Literature and Language Review
+lessonUnits: 101-104
+examBoard: AQA
+title: Language Skills Reinforcement
+lessonsPerWeek: 3
+unitAim: Develop language skills for GCSE papers.
+objectives:
+  - Strengthen reading analysis
+  - Improve writing accuracy
+  - Build exam confidence
+sections:
+  - type: connect
+    title: Connect to your lesson
+    items:
+      - type: info
+        id: en10101104-c1
+        prompt: What we covered in your Purple Ruler lesson
+        content: >-
+          Lessons 101-104 focus on Language Skills Reinforcement. Develop language skills for GCSE papers. Use this
+          workbook after your live lesson to consolidate that learning.
+  - type: practice
+    title: Practice
+    items:
+      - type: mcq
+        id: en10101104-p1
+        prompt: Which statement best matches the focus of "Language Skills Reinforcement"?
+        options:
+          - Strengthen reading analysis
+          - Memorising quotations without analysis
+          - Ignoring historical and social context
+          - Writing without planning or evidence
+        answer: Strengthen reading analysis
+        scaffold: Think back to your lesson objectives and key terminology.
+      - type: short_text
+        id: en10101104-p2
+        prompt: In one or two sentences, explain a key idea from Language Skills Reinforcement.
+        keywords:
+          - language
+          - skills
+          - reinforcement
+        scaffold: A key idea from Language Skills Reinforcement is...
+        exemplar: Strengthen reading analysis. This helps you analyse the text with clear, supported ideas.
+      - type: mcq
+        id: en10101104-p3
+        prompt: Which skill is most important for GCSE English success in this unit?
+        options:
+          - Using evidence and subject terminology
+          - Copying the plot with no analysis
+          - Avoiding context completely
+          - Writing without checking accuracy
+        answer: Using evidence and subject terminology
+      - type: ordering
+        id: en10101104-p4
+        prompt: 'Put these steps for a strong analytical paragraph in the best order:'
+        options:
+          - State a clear point linked to the question
+          - Select a relevant quotation or reference
+          - Explain the writer's method and effect
+          - Link back to the question or theme
+        answer:
+          - State a clear point linked to the question
+          - Select a relevant quotation or reference
+          - Explain the writer's method and effect
+          - Link back to the question or theme
+  - type: check
+    title: Check your understanding
+    items:
+      - type: multi_select
+        id: en10101104-ch1
+        prompt: 'Select ALL objectives linked to Language Skills Reinforcement:'
+        options:
+          - Strengthen reading analysis
+          - Improve writing accuracy
+          - Build exam confidence
+          - Ignore audience and purpose
+          - Skip planning entirely
+        answer:
+          - Strengthen reading analysis
+          - Improve writing accuracy
+          - Build exam confidence
+      - type: short_text
+        id: en10101104-ch2
+        prompt: Name one subject term you should use when writing about this unit.
+        keywords:
+          - context
+          - theme
+          - method
+          - structure
+          - language
+          - audience
+          - purpose
+          - character
+        exemplar: Use terms such as context, theme, structure, or writer's methods with precise evidence.
+      - type: mcq
+        id: en10101104-ch3
+        prompt: 'After your live lesson, this workbook helps you to:'
+        options:
+          - Consolidate and practise what you learned
+          - Replace all reading of the set texts
+          - Skip reflection on your work
+          - Avoid using feedback from teachers
+        answer: Consolidate and practise what you learned
+  - type: reflect
+    title: Reflect
+    items:
+      - type: long_text
+        id: en10101104-rf1
+        prompt: >-
+          Write about 40-60 words: what did you learn in Language Skills Reinforcement, and what do you still need to
+          practise?
+        scaffold: In Language Skills Reinforcement, I learned... I still need to practise...
+        checklist:
+          - I named a specific skill or idea from the lesson
+          - I gave an example from the text or task
+          - I identified one next step for improvement
+        minWords: 30
+        exemplar: >-
+          In Language Skills Reinforcement, I learned how to link context to the writer's purpose. I still need to
+          practise selecting shorter, sharper quotations and explaining their effect in more detail.
+  - type: stretch
+    title: Stretch
+    items:
+      - type: long_text
+        id: en10101104-st1
+        prompt: >-
+          Stretch: write 50-80 words comparing two ideas from Language Skills Reinforcement. Which is more convincing
+          and why?
+        checklist:
+          - Clear comparison between two ideas
+          - Evidence or example from the unit
+          - Evaluative judgement with justification
+        minWords: 45
+        exemplar: >-
+          Both ideas are important, but linking context to theme is more convincing because it shows why the writer made
+          choices for a real audience, not only what happens in the plot.

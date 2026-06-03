@@ -2,7 +2,7 @@ import fs from "fs";
 import path from "path";
 import yaml from "js-yaml";
 import { lessonSchema, type Lesson } from "./schema";
-import { PILOT_LESSONS } from "./curriculum";
+import { CURRICULUM } from "./curriculum";
 
 const CONTENT_DIR = path.join(process.cwd(), "content", "lessons");
 
@@ -49,7 +49,7 @@ export function loadAllLessons(): Lesson[] {
 export function getLessonIdsForSubject(
   subject: "english" | "maths",
 ): string[] {
-  return PILOT_LESSONS[subject].lessons.map((l) => l.id);
+  return CURRICULUM[subject].lessons.map((l) => l.id);
 }
 
 export function lessonExists(id: string): boolean {

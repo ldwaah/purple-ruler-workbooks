@@ -1,0 +1,139 @@
+id: english.y10.l36
+subject: english
+year: 10
+block: unseen-paper2
+blockTitle: Unseen Poetry and Paper 2 Writing
+lessonUnits: '36'
+examBoard: AQA
+title: Articles and Opinion Pieces
+lessonsPerWeek: 3
+unitAim: Develop skills writing articles and opinion pieces.
+objectives:
+  - Structure arguments clearly
+  - Use evidence and examples
+  - Engage the reader
+sections:
+  - type: connect
+    title: Connect to your lesson
+    items:
+      - type: info
+        id: en1036-c1
+        prompt: What we covered in your Purple Ruler lesson
+        content: >-
+          Lessons 36 focus on Articles and Opinion Pieces. Develop skills writing articles and opinion pieces. Use this
+          workbook after your live lesson to consolidate that learning.
+  - type: practice
+    title: Practice
+    items:
+      - type: mcq
+        id: en1036-p1
+        prompt: Which statement best matches the focus of "Articles and Opinion Pieces"?
+        options:
+          - Structure arguments clearly
+          - Memorising quotations without analysis
+          - Ignoring historical and social context
+          - Writing without planning or evidence
+        answer: Structure arguments clearly
+        scaffold: Think back to your lesson objectives and key terminology.
+      - type: short_text
+        id: en1036-p2
+        prompt: In one or two sentences, explain a key idea from Articles and Opinion Pieces.
+        keywords:
+          - articles
+          - opinion
+          - pieces
+        scaffold: A key idea from Articles and Opinion Pieces is...
+        exemplar: Structure arguments clearly. This helps you analyse the text with clear, supported ideas.
+      - type: mcq
+        id: en1036-p3
+        prompt: Which skill is most important for GCSE English success in this unit?
+        options:
+          - Using evidence and subject terminology
+          - Copying the plot with no analysis
+          - Avoiding context completely
+          - Writing without checking accuracy
+        answer: Using evidence and subject terminology
+      - type: ordering
+        id: en1036-p4
+        prompt: 'Put these steps for a strong analytical paragraph in the best order:'
+        options:
+          - State a clear point linked to the question
+          - Select a relevant quotation or reference
+          - Explain the writer's method and effect
+          - Link back to the question or theme
+        answer:
+          - State a clear point linked to the question
+          - Select a relevant quotation or reference
+          - Explain the writer's method and effect
+          - Link back to the question or theme
+  - type: check
+    title: Check your understanding
+    items:
+      - type: multi_select
+        id: en1036-ch1
+        prompt: 'Select ALL objectives linked to Articles and Opinion Pieces:'
+        options:
+          - Structure arguments clearly
+          - Use evidence and examples
+          - Engage the reader
+          - Ignore audience and purpose
+          - Skip planning entirely
+        answer:
+          - Structure arguments clearly
+          - Use evidence and examples
+          - Engage the reader
+      - type: short_text
+        id: en1036-ch2
+        prompt: Name one subject term you should use when writing about this unit.
+        keywords:
+          - context
+          - theme
+          - method
+          - structure
+          - language
+          - audience
+          - purpose
+          - character
+        exemplar: Use terms such as context, theme, structure, or writer's methods with precise evidence.
+      - type: mcq
+        id: en1036-ch3
+        prompt: 'After your live lesson, this workbook helps you to:'
+        options:
+          - Consolidate and practise what you learned
+          - Replace all reading of the set texts
+          - Skip reflection on your work
+          - Avoid using feedback from teachers
+        answer: Consolidate and practise what you learned
+  - type: reflect
+    title: Reflect
+    items:
+      - type: long_text
+        id: en1036-rf1
+        prompt: >-
+          Write about 40-60 words: what did you learn in Articles and Opinion Pieces, and what do you still need to
+          practise?
+        scaffold: In Articles and Opinion Pieces, I learned... I still need to practise...
+        checklist:
+          - I named a specific skill or idea from the lesson
+          - I gave an example from the text or task
+          - I identified one next step for improvement
+        minWords: 30
+        exemplar: >-
+          In Articles and Opinion Pieces, I learned how to link context to the writer's purpose. I still need to
+          practise selecting shorter, sharper quotations and explaining their effect in more detail.
+  - type: stretch
+    title: Stretch
+    items:
+      - type: long_text
+        id: en1036-st1
+        prompt: >-
+          Stretch: write 50-80 words comparing two ideas from Articles and Opinion Pieces. Which is more convincing and
+          why?
+        checklist:
+          - Clear comparison between two ideas
+          - Evidence or example from the unit
+          - Evaluative judgement with justification
+        minWords: 45
+        exemplar: >-
+          Both ideas are important, but linking context to theme is more convincing because it shows why the writer made
+          choices for a real audience, not only what happens in the plot.

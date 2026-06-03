@@ -3,106 +3,100 @@ subject: maths
 year: 10
 block: number
 blockTitle: Number
-lessonUnits: "1"
+lessonUnits: '1'
 examBoard: Edexcel
-title: Place Value & Inequality Symbols
+title: Place Value and Inequality Symbols
 lessonsPerWeek: 2
-unitAim: >-
-  Understand place value and use inequality symbols (=, ≠, <, >, ≤, ≥) to order
-  positive and negative integers, decimals, and fractions.
+unitAim: Understand place value and use inequality symbols to order numbers.
 objectives:
-  - Use symbols (=, ≠, <, >, ≤, ≥) to compare numbers
-  - Order positive and negative integers with decimals and fractions
-  - Apply place value in real-world contexts such as money and measurement
+  - Use inequality symbols correctly
+  - Order integers, decimals, and fractions
+  - Apply place value in context
 sections:
   - type: connect
     title: Connect to your lesson
     items:
       - type: info
-        id: m1-c1
+        id: m101-c1
         prompt: What we covered in your Purple Ruler lesson
         content: >-
-          Lesson 1 focuses on place value and inequality symbols. You used number lines,
-          manipulatives, and real-life examples (money, measurements) to compare numbers accurately.
+          Lessons 1 cover Place Value and Inequality Symbols. Understand place value and use inequality symbols to order
+          numbers. Use this workbook after your live lesson to practise and check your understanding.
   - type: practice
     title: Practice
     items:
       - type: mcq
-        id: m1-p1
-        prompt: "Which symbol makes this true?  −3 ___ −7"
+        id: m101-p1
+        prompt: Which aim best describes "Place Value and Inequality Symbols"?
         options:
-          - "<"
-          - ">"
-          - "≤"
-          - "="
-        answer: ">"
-        explanation: "−3 is to the right of −7 on a number line, so −3 > −7."
+          - Use inequality symbols correctly
+          - Ignore units and notation
+          - Guess without showing working
+          - Skip checking answers
+        answer: Use inequality symbols correctly
       - type: numeric
-        id: m1-p2
-        prompt: "Write the digit in the tens column of 4,582."
-        answer: 8
+        id: m101-p2
+        prompt: 'Calculate: 3/4 + 1/8 (give as a decimal).'
+        answer: 0.875
+        explanation: 3/4 = 0.75; 0.75 + 0.125 = 0.875
       - type: mcq
-        id: m1-p3
-        prompt: "Which statement is correct?"
+        id: m101-p3
+        prompt: 'When solving GCSE maths problems, you should:'
         options:
-          - "0.5 < 0.05"
-          - "0.5 > 0.05"
-          - "0.5 = 0.05"
-          - "0.5 ≤ 0.05"
-        answer: "0.5 > 0.05"
-        scaffold: "Compare tenths: 0.5 has 5 tenths; 0.05 has 0 tenths in the tenths place."
-      - type: ordering
-        id: m1-p4
-        prompt: "Order from smallest to largest:"
-        options:
-          - "−2"
-          - "0"
-          - "−5"
-          - "3"
-        answer:
-          - "−5"
-          - "−2"
-          - "0"
-          - "3"
+          - Show clear working and check the answer
+          - Hide all working from the examiner
+          - Never include units
+          - Skip reading the question
+        answer: Show clear working and check the answer
+      - type: numeric
+        id: m101-p4
+        prompt: 'Simplify: 4x + 3x - 2 (give the coefficient of x as a number, e.g. if answer is 7x-2 write 7).'
+        answer: 7
+        explanation: 4x + 3x = 7x, so coefficient is 7
   - type: check
     title: Check your understanding
     items:
       - type: mcq
-        id: m1-ch1
-        prompt: "Which is equivalent to 3/4?"
+        id: m101-ch1
+        prompt: Which skill is central to Place Value and Inequality Symbols?
         options:
-          - "0.34"
-          - "0.75"
-          - "0.43"
-          - "7.5"
-        answer: "0.75"
+          - Use inequality symbols correctly
+          - Rounding every answer to the nearest 10 only
+          - Using the wrong formula deliberately
+          - Avoiding diagrams completely
+        answer: Use inequality symbols correctly
       - type: numeric
-        id: m1-ch2
-        prompt: "Insert the missing symbol as a single character: 2/5 ___ 0.4  (use =, <, or >)"
-        answer: "="
-        explanation: "2/5 = 0.4"
+        id: m101-ch2
+        prompt: What is 15% of 80?
+        answer: 12
       - type: numeric
-        id: m1-ch3
-        prompt: "What is 1.25 × 100?"
-        answer: 125
+        id: m101-ch3
+        prompt: 'Solve: 2x + 5 = 17. What is x?'
+        answer: 6
   - type: reflect
     title: Reflect
     items:
       - type: short_text
-        id: m1-rf1
+        id: m101-rf1
         prompt: >-
-          Explain in one sentence when you would use ≤ instead of <. Give an example.
+          Explain in one sentence what was challenging in Place Value and Inequality Symbols and how you overcame it (or
+          will next time).
         keywords:
-          - equal
-          - or
-          - includes
-          - same
-        exemplar: "Use ≤ when the value can be equal or less, e.g. x ≤ 5 includes 5."
+          - practice
+          - method
+          - working
+          - check
+          - formula
+          - mistake
+          - help
+        exemplar: >-
+          I found choosing the correct method hardest, so I will write a short plan before calculating and check units
+          at the end.
   - type: stretch
     title: Stretch
     items:
       - type: numeric
-        id: m1-st1
-        prompt: "Place −1.5, 2/3, and −0.75 in order from smallest to largest. What is the middle value? (Give as a decimal rounded to 2 d.p.)"
-        answer: -0.75
-        explanation: "Order: −1.5, −0.75, 2/3 ≈ 0.67. Middle value is −0.75."
+        id: m101-st1
+        prompt: 'Stretch: A rectangle has perimeter 30 cm and length 9 cm. What is its width in cm?'
+        answer: 6
+        explanation: Perimeter = 2(l + w); 30 = 2(9 + w); 15 = 9 + w; w = 6
