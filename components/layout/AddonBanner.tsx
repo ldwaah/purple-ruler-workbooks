@@ -1,12 +1,17 @@
+import { Mascot } from "@/components/ui/Mascot";
+
 export function AddonBanner() {
   return (
     <div
-      className="rounded-lg border border-purple-300 bg-purple-50 px-4 py-3 text-sm text-purple-900"
+      className="flex items-start gap-3 rounded-2xl border-2 border-violet-300 bg-gradient-to-r from-violet-100 to-fuchsia-100 px-4 py-3"
       role="note"
     >
-      <strong>Add-on to your Purple Ruler lesson</strong> — complete this workbook
-      after your live lesson to consolidate learning. It does not replace your
-      taught lesson or formal assessments.
+      <Mascot size="sm" mood="think" className="shrink-0" />
+      <p className="text-sm text-violet-900">
+        <strong className="font-display">Hey — this goes with your lesson!</strong>{" "}
+        Do this workbook after your Purple Ruler class to practise what you
+        learned. It&apos;s extra practice, not a test day 🙂
+      </p>
     </div>
   );
 }

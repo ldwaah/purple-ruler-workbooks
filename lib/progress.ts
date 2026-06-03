@@ -8,6 +8,8 @@ export type LessonProgress = {
   lessonId: string;
   responses: Record<string, ItemResponse>;
   completedSections: string[];
+  /** Highest section index the student has unlocked (0-based) */
+  unlockedSectionIndex?: number;
   updatedAt: string;
 };
 

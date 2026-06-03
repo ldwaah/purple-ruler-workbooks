@@ -1,17 +1,23 @@
 import Link from "next/link";
 import { PILOT_LESSONS } from "@/lib/curriculum";
 import { lessonExists } from "@/lib/lessons";
+import { Mascot } from "@/components/ui/Mascot";
 
 export default function MathsPage() {
   const meta = PILOT_LESSONS.maths;
 
   return (
     <div className="space-y-6">
-      <div>
-        <h1 className="text-2xl font-bold text-purple-900">{meta.label}</h1>
-        <p className="text-sm text-purple-700">
-          {meta.examBoard} · {meta.lessonsPerWeek} lessons per week
-        </p>
+      <div className="flex items-center gap-4">
+        <Mascot mood="happy" />
+        <div>
+          <h1 className="font-display text-2xl font-bold text-violet-900">
+            {meta.label}
+          </h1>
+          <p className="text-sm font-semibold text-fuchsia-600">
+            {meta.examBoard} · {meta.lessonsPerWeek} lessons a week
+          </p>
+        </div>
       </div>
 
       <ul className="space-y-3">
@@ -19,30 +25,35 @@ export default function MathsPage() {
           <li key={lesson.id}>
             <Link
               href={`/workbook/${lesson.id}`}
-              className="flex items-center justify-between rounded-lg border border-purple-200 bg-white px-4 py-4 hover:border-purple-500"
+              className="cartoon-card flex items-center justify-between px-5 py-4 transition hover:scale-[1.01]"
             >
               <div>
-                <p className="font-medium text-gray-900">{lesson.title}</p>
-                <p className="text-sm text-gray-600">
-                  Lesson unit {lesson.lessonUnits} · {lesson.blockTitle}
+                <p className="font-display font-bold text-violet-900">
+                  {lesson.title}
+                </p>
+                <p className="text-sm text-violet-700">
+                  Lesson {lesson.lessonUnits} · {lesson.blockTitle}
                 </p>
               </div>
               <span
-                className={`rounded-full px-3 py-1 text-xs font-medium ${
+                className={`rounded-full px-3 py-1 font-display text-xs font-bold ${
                   lessonExists(lesson.id)
-                    ? "bg-green-100 text-green-800"
-                    : "bg-gray-100 text-gray-600"
+                    ? "bg-emerald-300 text-emerald-900"
+                    : "bg-gray-200 text-gray-600"
                 }`}
               >
-                {lessonExists(lesson.id) ? "Available" : "Coming soon"}
+                {lessonExists(lesson.id) ? "▶ Start" : "Soon"}
               </span>
             </Link>
           </li>
         ))}
       </ul>
 
-      <Link href="/" className="text-sm text-purple-700 hover:underline">
-        ← Back to home
+      <Link
+        href="/"
+        className="font-display text-sm font-bold text-violet-700 hover:underline"
+      >
+        ← Back home
       </Link>
     </div>
   );

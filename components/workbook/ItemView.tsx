@@ -29,9 +29,9 @@ export function ItemView({
 
   if (item.type === "info") {
     return (
-      <div className="rounded-lg border border-gray-200 bg-gray-50 p-4">
-        <p className="mb-1 font-medium text-gray-900">{item.prompt}</p>
-        <p className="text-gray-700 whitespace-pre-wrap">{item.content}</p>
+      <div className="rounded-2xl border-2 border-white/80 bg-white/90 p-4 shadow-sm">
+        <p className="font-display font-bold text-violet-900">{item.prompt}</p>
+        <p className="mt-2 text-gray-800 whitespace-pre-wrap">{item.content}</p>
       </div>
     );
   }
@@ -45,23 +45,21 @@ export function ItemView({
   };
 
   return (
-    <fieldset className="rounded-lg border border-gray-200 p-4">
-      <legend className="px-1 text-base font-medium text-gray-900">
+    <fieldset className="rounded-2xl border-2 border-white bg-white/95 p-4 shadow-sm">
+      <legend className="font-display px-1 text-base font-bold text-gray-900">
         {index}. {item.prompt}
       </legend>
       {item.scaffold && (
-        <p className="mt-2 text-sm italic text-purple-800">{item.scaffold}</p>
+        <p className="mt-2 rounded-xl bg-violet-100 px-3 py-2 text-sm text-violet-900">
+          💡 {item.scaffold}
+        </p>
       )}
 
       <div className="mt-3">{renderInput(item, value, onChange, readOnly)}</div>
 
       {!readOnly && item.type !== "long_text" && (
-        <button
-          type="button"
-          onClick={handleCheck}
-          className="mt-3 rounded-md bg-purple-700 px-4 py-2 text-sm font-medium text-white hover:bg-purple-800"
-        >
-          Check answer
+        <button type="button" onClick={handleCheck} className="cartoon-btn-primary mt-3">
+          Check my answer ✓
         </button>
       )}
 
@@ -75,29 +73,29 @@ export function ItemView({
               setRevealed(true);
             }
           }}
-          className="mt-3 rounded-md bg-purple-700 px-4 py-2 text-sm font-medium text-white hover:bg-purple-800"
+          className="cartoon-btn-primary mt-3"
         >
-          I&apos;ve finished — show checklist
+          I&apos;m done — show my checklist 📋
         </button>
       )}
 
       {marked && revealed && (
         <p
-          className={`mt-3 rounded-md px-3 py-2 text-sm ${
+          className={`mt-3 rounded-2xl px-4 py-3 text-sm font-medium ${
             correct
-              ? "bg-green-50 text-green-900"
-              : "bg-amber-50 text-amber-900"
+              ? "bg-emerald-100 text-emerald-900 border-2 border-emerald-300"
+              : "bg-amber-100 text-amber-900 border-2 border-amber-300"
           }`}
           role="status"
         >
-          {correct ? "Well done." : "Review and try again."}
+          {correct ? "🌟 Yes! Great job!" : "🔄 Nearly — have another go!"}
           {"exemplar" in item && item.exemplar && revealed && (
-            <span className="mt-2 block">
-              <strong>Model:</strong> {item.exemplar}
+            <span className="mt-2 block font-normal">
+              <strong>Here's a model answer:</strong> {item.exemplar}
             </span>
           )}
           {item.type === "long_text" && (
-            <ul className="mt-2 list-inside list-disc">
+            <ul className="mt-2 list-inside list-disc font-normal">
               {item.checklist.map((c) => (
                 <li key={c}>{c}</li>
               ))}
@@ -116,13 +114,15 @@ function renderInput(
   readOnly: boolean,
 ) {
   const disabled = readOnly;
+  const optionClass =
+    "flex cursor-pointer items-center gap-3 rounded-xl border-2 border-violet-100 bg-violet-50/50 px-3 py-2 transition hover:border-violet-300 hover:bg-violet-100 has-checked:border-violet-500 has-checked:bg-violet-100";
 
   switch (item.type) {
     case "mcq":
       return (
         <div className="space-y-2">
           {item.options.map((opt) => (
-            <label key={opt} className="flex cursor-pointer items-center gap-2">
+            <label key={opt} className={optionClass}>
               <input
                 type="radio"
                 name={item.id}
@@ -130,7 +130,7 @@ function renderInput(
                 checked={value === opt}
                 disabled={disabled}
                 onChange={() => onChange(item.id, opt)}
-                className="text-purple-700"
+                className="h-4 w-4 text-violet-600"
               />
               <span>{opt}</span>
             </label>
@@ -144,7 +144,7 @@ function renderInput(
             const selected = Array.isArray(value) ? value : [];
             const checked = selected.includes(opt);
             return (
-              <label key={opt} className="flex cursor-pointer items-center gap-2">
+              <label key={opt} className={optionClass}>
                 <input
                   type="checkbox"
                   checked={checked}
@@ -155,7 +155,7 @@ function renderInput(
                       : [...selected, opt];
                     onChange(item.id, next);
                   }}
-                  className="text-purple-700"
+                  className="h-4 w-4 rounded text-violet-600"
                 />
                 <span>{opt}</span>
               </label>
@@ -171,8 +171,8 @@ function renderInput(
           value={String(value ?? "")}
           disabled={disabled}
           onChange={(e) => onChange(item.id, e.target.value)}
-          className="w-full max-w-xs rounded-md border border-gray-300 px-3 py-2"
-          placeholder={item.unit ? `Answer (${item.unit})` : "Your answer"}
+          className="cartoon-input w-full max-w-xs"
+          placeholder={item.unit ? `Type here (${item.unit})` : "Type your answer…"}
         />
       );
     case "ordering": {
@@ -180,11 +180,14 @@ function renderInput(
       return (
         <ol className="space-y-2">
           {order.map((opt, i) => (
-            <li key={opt} className="flex items-center gap-2">
-              <span className="w-6 text-gray-500">{i + 1}.</span>
-              <span className="flex-1 rounded border border-gray-200 px-2 py-1">
-                {opt}
+            <li
+              key={opt}
+              className="flex items-center gap-2 rounded-xl border-2 border-violet-100 bg-violet-50/80 px-2 py-2"
+            >
+              <span className="flex h-8 w-8 items-center justify-center rounded-full bg-violet-600 text-sm font-bold text-white">
+                {i + 1}
               </span>
+              <span className="flex-1 text-sm">{opt}</span>
               {!disabled && (
                 <span className="flex gap-1">
                   <button
@@ -195,7 +198,7 @@ function renderInput(
                       [next[i - 1], next[i]] = [next[i], next[i - 1]];
                       onChange(item.id, next);
                     }}
-                    className="rounded border px-2 py-1 text-xs"
+                    className="cartoon-btn-secondary px-2 py-1 text-xs"
                     aria-label="Move up"
                   >
                     ↑
@@ -208,7 +211,7 @@ function renderInput(
                       [next[i], next[i + 1]] = [next[i + 1], next[i]];
                       onChange(item.id, next);
                     }}
-                    className="rounded border px-2 py-1 text-xs"
+                    className="cartoon-btn-secondary px-2 py-1 text-xs"
                     aria-label="Move down"
                   >
                     ↓
@@ -227,7 +230,8 @@ function renderInput(
           value={String(value ?? "")}
           disabled={disabled}
           onChange={(e) => onChange(item.id, e.target.value)}
-          className="w-full rounded-md border border-gray-300 px-3 py-2"
+          className="cartoon-input w-full"
+          placeholder="Write your ideas here…"
         />
       );
     case "long_text":
@@ -237,7 +241,8 @@ function renderInput(
           value={String(value ?? "")}
           disabled={disabled}
           onChange={(e) => onChange(item.id, e.target.value)}
-          className="w-full rounded-md border border-gray-300 px-3 py-2"
+          className="cartoon-input w-full"
+          placeholder="Take your time — a few sentences is perfect…"
         />
       );
     default:

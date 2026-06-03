@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
 import type { Lesson } from "@/lib/schema";
 import {
@@ -10,12 +10,23 @@ import {
   type ItemResponse,
   type LessonProgress,
 } from "@/lib/progress";
+import {
+  inferUnlockedIndex,
+  isSectionComplete,
+  SECTION_META,
+} from "@/lib/section-progress";
 import { AddonBanner } from "@/components/layout/AddonBanner";
 import { LessonMeta } from "@/components/layout/LessonMeta";
+import { Mascot } from "@/components/ui/Mascot";
 import { SectionView } from "./SectionView";
+import { SectionStepper } from "./SectionStepper";
+import { LockedSectionCard } from "./LockedSectionCard";
 
 export function WorkbookClient({ lesson }: { lesson: Lesson }) {
   const [progress, setProgress] = useState<LessonProgress | null>(null);
+  const [unlockedIndex, setUnlockedIndex] = useState(0);
+  const [celebrate, setCelebrate] = useState(false);
+  const sectionRefs = useRef<(HTMLElement | null)[]>([]);
 
   useEffect(() => {
     const stored =
@@ -24,10 +35,18 @@ export function WorkbookClient({ lesson }: { lesson: Lesson }) {
         lessonId: lesson.id,
         responses: {},
         completedSections: [],
+        unlockedSectionIndex: 0,
         updatedAt: new Date().toISOString(),
       } satisfies LessonProgress);
-    setProgress(stored);
-  }, [lesson.id]);
+
+    const unlocked = inferUnlockedIndex(
+      lesson.sections,
+      stored.responses,
+      stored.unlockedSectionIndex,
+    );
+    setProgress({ ...stored, unlockedSectionIndex: unlocked });
+    setUnlockedIndex(unlocked);
+  }, [lesson.id, lesson.sections]);
 
   const totalItems = useMemo(
     () =>
@@ -81,68 +100,238 @@ export function WorkbookClient({ lesson }: { lesson: Lesson }) {
     });
   };
 
+  const unlockNext = () => {
+    if (!progress) return;
+    const section = lesson.sections[unlockedIndex];
+    const nextIndex = Math.min(unlockedIndex + 1, lesson.sections.length - 1);
+    const completed = progress.completedSections.includes(section.type)
+      ? progress.completedSections
+      : [...progress.completedSections, section.type];
+
+    setCelebrate(true);
+    setTimeout(() => setCelebrate(false), 1200);
+
+    if (unlockedIndex < lesson.sections.length - 1) {
+      setUnlockedIndex(nextIndex);
+      persist({
+        ...progress,
+        completedSections: completed,
+        unlockedSectionIndex: nextIndex,
+      });
+      requestAnimationFrame(() => {
+        sectionRefs.current[nextIndex]?.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      });
+    } else {
+      persist({
+        ...progress,
+        completedSections: completed,
+        unlockedSectionIndex: unlockedIndex,
+      });
+    }
+  };
+
   if (!progress) {
-    return <p className="text-gray-600">Loading workbook…</p>;
+    return (
+      <div className="flex items-center gap-4 py-12">
+        <Mascot mood="think" />
+        <p className="font-display text-lg text-violet-800">
+          Getting your workbook ready…
+        </p>
+      </div>
+    );
   }
 
+  const allComplete = lesson.sections.every((s) =>
+    isSectionComplete(s, progress.responses),
+  );
   let itemOffset = 0;
 
   return (
     <div className="space-y-6">
       <AddonBanner />
-      <div>
-        <h1 className="text-2xl font-bold text-purple-900">{lesson.title}</h1>
-        <LessonMeta lesson={lesson} />
-        <p className="mt-3 text-gray-700">{lesson.unitAim}</p>
-        <ul className="mt-2 list-inside list-disc text-sm text-gray-600">
-          {lesson.objectives.map((o) => (
-            <li key={o}>{o}</li>
-          ))}
-        </ul>
+
+      <div className="cartoon-card flex gap-4 p-5">
+        <Mascot mood={celebrate ? "cheer" : "happy"} className="shrink-0" />
+        <div className="min-w-0 flex-1">
+          <h1 className="font-display text-2xl font-bold text-violet-900 sm:text-3xl">
+            {lesson.title}
+          </h1>
+          <LessonMeta lesson={lesson} />
+          <p className="mt-2 text-sm text-violet-800/90">
+            One step at a time — finish each colourful section to unlock the
+            next!
+          </p>
+        </div>
       </div>
 
-      <div className="flex flex-wrap items-center gap-4 rounded-lg border border-gray-200 bg-white p-4">
+      <SectionStepper
+        sections={lesson.sections}
+        unlockedIndex={unlockedIndex}
+      />
+
+      <div className="cartoon-card flex flex-wrap items-center gap-4 p-4">
         <div className="flex-1">
-          <p className="text-sm font-medium text-gray-700">Your progress</p>
-          <div className="mt-1 h-2 w-full max-w-xs overflow-hidden rounded-full bg-gray-200">
+          <p className="font-display text-sm font-bold text-violet-900">
+            Your adventure bar
+          </p>
+          <div className="mt-2 h-4 w-full max-w-xs overflow-hidden rounded-full border-2 border-violet-300 bg-white">
             <div
-              className="h-full bg-purple-600 transition-all"
-              style={{ width: `${percent}%` }}
+              className="h-full rounded-full bg-gradient-to-r from-violet-500 to-fuchsia-400 transition-all duration-500"
+              style={{
+                width: `${Math.round(((unlockedIndex + 1) / lesson.sections.length) * 100)}%`,
+              }}
             />
           </div>
-          <p className="mt-1 text-xs text-gray-500">{percent}% answered</p>
+          <p className="mt-1 text-xs font-medium text-violet-600">
+            Step {unlockedIndex + 1} of {lesson.sections.length} · {percent}%
+            questions touched
+          </p>
         </div>
         <div className="flex gap-2">
           <Link
             href={`/workbook/${lesson.id}/print`}
-            className="rounded-md border border-purple-700 px-4 py-2 text-sm font-medium text-purple-800 hover:bg-purple-50"
+            className="cartoon-btn-secondary text-sm"
           >
-            Printable view
+            🖨️ Print
           </Link>
           <a
             href={`/api/pdf/${lesson.id}`}
-            className="rounded-md bg-purple-700 px-4 py-2 text-sm font-medium text-white hover:bg-purple-800"
+            className="cartoon-btn-secondary text-sm"
           >
-            Download PDF
+            📄 PDF
           </a>
         </div>
       </div>
 
-      {lesson.sections.map((section) => {
+      {lesson.sections.map((section, sectionIndex) => {
         const start = itemOffset;
         const countable = section.items.filter((i) => i.type !== "info").length;
         itemOffset += countable;
+
+        const visible = sectionIndex <= unlockedIndex;
+        const isCurrent = sectionIndex === unlockedIndex;
+        const infoOnly = section.items.every((i) => i.type === "info");
+        const complete = infoOnly
+          ? progress.completedSections.includes(section.type)
+          : isSectionComplete(section, progress.responses);
+        const meta = SECTION_META[section.type];
+        const canUnlock =
+          isCurrent &&
+          complete &&
+          sectionIndex < lesson.sections.length - 1;
+        const needsAck = isCurrent && infoOnly && !complete;
+        const isLastSection = sectionIndex === lesson.sections.length - 1;
+
+        const acknowledgeAndContinue = () => {
+          const completed = progress.completedSections.includes(section.type)
+            ? progress.completedSections
+            : [...progress.completedSections, section.type];
+          if (sectionIndex >= lesson.sections.length - 1) {
+            persist({ ...progress, completedSections: completed });
+            return;
+          }
+          const nextIndex = sectionIndex + 1;
+          setCelebrate(true);
+          setTimeout(() => setCelebrate(false), 1200);
+          setUnlockedIndex(nextIndex);
+          persist({
+            ...progress,
+            completedSections: completed,
+            unlockedSectionIndex: nextIndex,
+          });
+          requestAnimationFrame(() => {
+            sectionRefs.current[nextIndex]?.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+          });
+        };
+
+        if (!visible) {
+          return (
+            <LockedSectionCard
+              key={section.type}
+              section={section}
+              index={sectionIndex}
+            />
+          );
+        }
+
         return (
-          <SectionView
+          <div
             key={section.type}
-            section={section}
-            responses={progress.responses}
-            onChange={handleChange}
-            onMark={handleMark}
-            startIndex={start}
-          />
+            ref={(el) => {
+              sectionRefs.current[sectionIndex] = el;
+            }}
+            className="scroll-mt-24"
+          >
+            <SectionView
+              section={section}
+              sectionIndex={sectionIndex}
+              responses={progress.responses}
+              onChange={handleChange}
+              onMark={handleMark}
+              startIndex={start}
+              isActive={isCurrent}
+            />
+
+            {needsAck && (
+              <div className="mt-4 flex flex-col items-center gap-3 rounded-2xl border-2 border-dashed border-violet-300 bg-gradient-to-b from-violet-50 to-fuchsia-50 p-6 text-center">
+                <p className="font-display text-lg font-bold text-violet-900">
+                  Ready for the fun part?
+                </p>
+                <button
+                  type="button"
+                  onClick={acknowledgeAndContinue}
+                  className="cartoon-btn-primary text-base"
+                >
+                  Let&apos;s go! →
+                </button>
+              </div>
+            )}
+
+            {canUnlock && (
+              <div className="mt-4 flex flex-col items-center gap-3 rounded-2xl border-2 border-dashed border-violet-300 bg-gradient-to-b from-violet-50 to-fuchsia-50 p-6 text-center">
+                <Mascot mood="cheer" size="sm" />
+                <p className="font-display text-lg font-bold text-violet-900">
+                  {meta?.cheer ?? "Section complete!"}
+                </p>
+                <button
+                  type="button"
+                  onClick={unlockNext}
+                  className="cartoon-btn-primary text-base"
+                >
+                  Unlock the next bit →
+                </button>
+              </div>
+            )}
+
+            {isCurrent && complete && isLastSection && (
+              <div className="mt-4 flex flex-col items-center gap-3 rounded-2xl border-2 border-emerald-300 bg-emerald-50 p-6 text-center">
+                <span className="text-4xl" aria-hidden>
+                  🎉
+                </span>
+                <p className="font-display text-xl font-bold text-emerald-900">
+                  Workbook complete — amazing!
+                </p>
+                <p className="text-sm text-emerald-800">
+                  You smashed every section. See you at your next Purple Ruler
+                  lesson!
+                </p>
+              </div>
+            )}
+          </div>
         );
       })}
+
+      {allComplete && unlockedIndex === lesson.sections.length - 1 && (
+        <p className="text-center text-sm text-violet-600">
+          Tip: you can scroll back up to review any section anytime.
+        </p>
+      )}
     </div>
   );
 }
