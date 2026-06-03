@@ -9,7 +9,10 @@
     "lint": "eslint",
     "validate-content": "tsx scripts/validate-content.ts",
     "generate-workbooks": "tsx scripts/generate-workbooks.ts",
-    "seed-tokens": "tsx scripts/seed-tokens.ts"
+    "seed-tokens": "tsx scripts/seed-tokens.ts",
+    "db:verify": "tsx scripts/verify-supabase.ts",
+    "db:bootstrap": "tsx scripts/bootstrap-supabase.ts",
+    "test:api": "bash scripts/test-api.sh"
   },
   "dependencies": {
     "@react-pdf/renderer": "^4.5.1",

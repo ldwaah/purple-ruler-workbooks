@@ -2,139 +2,91 @@
 
 One central Vercel app stores student submissions, points, and teacher review. Students use magic links (`/s/[token]`). No student passwords.
 
+## Quick links
+
+| Step | URL |
+|------|-----|
+| Create free project | [supabase.com/dashboard](https://supabase.com/dashboard) |
+| API keys (env vars) | Project → **Settings → API** |
+| Run SQL | Project → **SQL → New query** |
+| Vercel env vars | [vercel.com](https://vercel.com) → your project → **Settings → Environment Variables** |
+
 ## 1. Create a Supabase project
 
-1. Go to [supabase.com](https://supabase.com) and create a project.
+1. Go to [supabase.com](https://supabase.com) and create a project (free tier is fine).
 2. Open **Project Settings → API** and copy:
-   - Project URL → `NEXT_PUBLIC_SUPABASE_URL`
-   - `anon` public key → `NEXT_PUBLIC_SUPABASE_ANON_KEY`
-   - `service_role` secret → `SUPABASE_SERVICE_ROLE_KEY` (server only, never expose to the browser)
+   - **Project URL** → `NEXT_PUBLIC_SUPABASE_URL`
+   - **`anon` public** key → `NEXT_PUBLIC_SUPABASE_ANON_KEY`
+   - **`service_role` secret** → `SUPABASE_SERVICE_ROLE_KEY` (server only; never expose to the browser)
 
-Add these in Vercel: **Project → Settings → Environment Variables** for Production and Preview.
+Local: copy `.env.example` to `.env.local` and paste the three values.
 
-## 2. Run the SQL schema
+Vercel: add the same three names for **Production** and **Preview**, or run (after `.env.local` is filled):
 
-In the Supabase SQL editor, run:
-
-```sql
--- Classes (optional simple grouping)
-create table if not exists public.classes (
-  id text primary key,
-  name text not null,
-  teacher_id text not null references public.teachers (id) on delete cascade
-);
-
-create table if not exists public.teachers (
-  id text primary key,
-  name text not null,
-  token text not null unique
-);
-
--- Fix order: teachers must exist before classes FK
--- If you already created classes, create teachers first without FK, then add FK.
-
-create table if not exists public.students (
-  id text primary key,
-  name text not null,
-  token text not null unique,
-  class_id text not null references public.classes (id) on delete cascade
-);
-
-create table if not exists public.submissions (
-  id uuid primary key default gen_random_uuid(),
-  student_id text not null references public.students (id) on delete cascade,
-  lesson_id text not null,
-  responses jsonb not null default '{}',
-  status text not null default 'submitted' check (status in ('submitted', 'draft')),
-  submitted_at timestamptz not null default now(),
-  file_url text,
-  unique (student_id, lesson_id)
-);
-
-create table if not exists public.points (
-  student_id text primary key references public.students (id) on delete cascade,
-  total_points integer not null default 0
-);
-
-create index if not exists submissions_student_idx on public.submissions (student_id);
-create index if not exists submissions_submitted_at_idx on public.submissions (submitted_at desc);
-create index if not exists students_class_idx on public.students (class_id);
-
--- RLS: API uses service role; enable RLS and deny anon direct access
-alter table public.teachers enable row level security;
-alter table public.classes enable row level security;
-alter table public.students enable row level security;
-alter table public.submissions enable row level security;
-alter table public.points enable row level security;
+```bash
+./scripts/sync-vercel-env.sh production
+./scripts/sync-vercel-env.sh preview
+vercel --prod
 ```
 
-Recommended bootstrap order if FK errors occur:
+## 2. Run the SQL schema + seed
 
-```sql
-create table if not exists public.teachers (
-  id text primary key,
-  name text not null,
-  token text not null unique
-);
+**Easiest:** open [SQL editor](https://supabase.com/dashboard/project/_/sql/new), paste the contents of [`supabase/bootstrap.sql`](../supabase/bootstrap.sql), and **Run**.
 
-create table if not exists public.classes (
-  id text primary key,
-  name text not null,
-  teacher_id text not null references public.teachers (id) on delete cascade
-);
+Or run the split files in order:
 
-create table if not exists public.students (
-  id text primary key,
-  name text not null,
-  token text not null unique,
-  class_id text not null references public.classes (id) on delete cascade
-);
+1. [`supabase/schema.sql`](../supabase/schema.sql)
+2. [`supabase/seed.sql`](../supabase/seed.sql)
 
-create table if not exists public.submissions (
-  id uuid primary key default gen_random_uuid(),
-  student_id text not null references public.students (id) on delete cascade,
-  lesson_id text not null,
-  responses jsonb not null default '{}',
-  status text not null default 'submitted',
-  submitted_at timestamptz not null default now(),
-  file_url text,
-  unique (student_id, lesson_id)
-);
+Tables: `teachers`, `classes`, `students`, `submissions`, `points`. RLS is enabled; the Next.js API uses the **service role** key only on the server.
 
-create table if not exists public.points (
-  student_id text primary key references public.students (id) on delete cascade,
-  total_points integer not null default 0
-);
+## 3. Optional: seed via script (after SQL)
+
+If `.env.local` has your keys and tables exist:
+
+```bash
+npm run db:bootstrap
+npm run db:verify
 ```
 
-## 3. Seed pilot rows
+## 4. Pilot magic links
 
-```sql
-insert into public.teachers (id, name, token) values
-  ('teacher-pilot', 'Pilot Teacher', 'teacher-pilot-token')
-on conflict (id) do nothing;
+Replace the host with your Vercel URL (or `http://localhost:3000`):
 
-insert into public.classes (id, name, teacher_id) values
-  ('class-pilot-ks4', 'KS4 Pilot', 'teacher-pilot')
-on conflict (id) do nothing;
-
-insert into public.students (id, name, token, class_id) values
-  ('student-alex', 'Alex', 'student-alex-token', 'class-pilot-ks4'),
-  ('student-sam', 'Sam', 'student-sam-token', 'class-pilot-ks4'),
-  ('student-jordan', 'Jordan', 'student-jordan-token', 'class-pilot-ks4')
-on conflict (id) do nothing;
-
-insert into public.points (student_id, total_points)
-select id, 0 from public.students
-on conflict (student_id) do nothing;
+```bash
+npm run seed-tokens https://YOUR_APP.vercel.app
 ```
 
-Magic links (replace host with your Vercel URL):
+| Who | Link |
+|-----|------|
+| Alex | `/s/student-alex-token` |
+| Sam | `/s/student-sam-token` |
+| Jordan | `/s/student-jordan-token` |
+| Teacher | `/t/teacher-pilot-token` |
 
-- Student Alex: `https://YOUR_APP.vercel.app/s/student-alex-token`
-- Teacher: `https://YOUR_APP.vercel.app/t/teacher-pilot-token`
+## 5. Verify persistence
 
-## 4. Optional: file uploads
+```bash
+npm run dev
+npm run test:api
+# Leaderboard JSON should show "dbMode":"local" without env, "supabase" with all three vars set
+```
+
+On Vercel, `GET /api/leaderboard?token=student-alex-token` returns `dbMode: "supabase"` only when all three env vars are set.
+
+## 6. Vercel env checklist (current project)
+
+As of setup, these must be added manually if not using `sync-vercel-env.sh`:
+
+| Variable | Environments |
+|----------|----------------|
+| `NEXT_PUBLIC_SUPABASE_URL` | Production, Preview |
+| `NEXT_PUBLIC_SUPABASE_ANON_KEY` | Production, Preview |
+| `SUPABASE_SERVICE_ROLE_KEY` | Production, Preview |
+
+Check with: `vercel env ls production`
+
+## 7. Optional: file uploads
 
 Printed work uploads are not required for MVP. To add later:
 
@@ -142,6 +94,6 @@ Printed work uploads are not required for MVP. To add later:
 2. Upload from an API route with the service role.
 3. Save `file_url` on `submissions`.
 
-## 5. Local demo without Supabase
+## 8. Local demo without Supabase
 
-If env vars are missing, the app uses an in-memory / `.data/local-db.json` store with the same pilot tokens. Data on Vercel serverless is ephemeral until Supabase is configured.
+If env vars are missing, the app uses `.data/local-db.json` with the same pilot tokens. Data on Vercel serverless is **ephemeral** until Supabase is configured.

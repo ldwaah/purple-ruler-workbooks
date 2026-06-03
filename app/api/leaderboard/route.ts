@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { getLeaderboard, getStudentByToken } from "@/lib/db";
+import { getDbMode, getLeaderboard, getStudentByToken } from "@/lib/db";
 
 export async function GET(request: Request) {
   const token = new URL(request.url).searchParams.get("token");
@@ -21,6 +21,6 @@ export async function GET(request: Request) {
     studentName: student.name,
     myPoints: me?.total_points ?? 0,
     entries,
-    dbMode: process.env.NEXT_PUBLIC_SUPABASE_URL ? "supabase" : "local",
+    dbMode: getDbMode(),
   });
 }

@@ -31,6 +31,26 @@ Teacher dashboard: `http://localhost:3000/t/teacher-pilot-token`
 
 Flow: splash → year → hub → workbook → **Submit my work** (+10 points first time per lesson).
 
+## 5-minute Supabase setup (production persistence)
+
+Without Supabase, Vercel deployments use an **ephemeral in-memory store** — submissions and leaderboard reset across serverless instances.
+
+1. **Create a project** at [supabase.com/dashboard](https://supabase.com/dashboard) (free).
+2. **Copy API keys** from **Settings → API** into `.env.local` (see [`.env.example`](.env.example)):
+   - `NEXT_PUBLIC_SUPABASE_URL`
+   - `NEXT_PUBLIC_SUPABASE_ANON_KEY`
+   - `SUPABASE_SERVICE_ROLE_KEY`
+3. **Run SQL once:** Supabase → **SQL** → paste [`supabase/bootstrap.sql`](supabase/bootstrap.sql) → **Run**.
+4. **Optional seed script:** `npm run db:bootstrap` then `npm run db:verify`.
+5. **Vercel:** add the same three variables under **Settings → Environment Variables** (Production + Preview), or:
+   ```bash
+   ./scripts/sync-vercel-env.sh production
+   vercel --prod
+   ```
+6. **Check:** `npm run test:api` locally — response includes `"dbMode":"supabase"` when env is complete.
+
+Full detail: [docs/supabase-setup.md](docs/supabase-setup.md).
+
 ## Environment variables
 
 | Variable | Required | Description |
@@ -39,9 +59,7 @@ Flow: splash → year → hub → workbook → **Submit my work** (+10 points fi
 | `NEXT_PUBLIC_SUPABASE_ANON_KEY` | With Supabase | Public anon key |
 | `SUPABASE_SERVICE_ROLE_KEY` | With Supabase | Server-only; used in API routes |
 
-Without these, the app builds and runs using a **local in-memory / `.data/local-db.json` fallback** (fine for local demo; **ephemeral on Vercel** until Supabase is wired).
-
-See [docs/supabase-setup.md](docs/supabase-setup.md) for SQL schema and Vercel env setup.
+Copy [`.env.example`](.env.example) → `.env.local` for local development.
 
 ## Scripts
 
@@ -51,6 +69,9 @@ See [docs/supabase-setup.md](docs/supabase-setup.md) for SQL schema and Vercel e
 | `npm run build` | Production build (works without Supabase) |
 | `npm run validate-content` | Validate all YAML lesson files |
 | `npm run seed-tokens` | Print pilot student/teacher URLs |
+| `npm run db:verify` | Check Supabase env + pilot rows |
+| `npm run db:bootstrap` | Upsert pilot seed via API (after SQL) |
+| `npm run test:api` | Curl smoke test (leaderboard + submit) |
 
 ## Routes
 
@@ -66,13 +87,13 @@ See [docs/supabase-setup.md](docs/supabase-setup.md) for SQL schema and Vercel e
 | `/workbook/[lessonId]` | Interactive workbook + submit |
 | `/workbook/[lessonId]/print` | Printable layout |
 | `/api/submissions` | POST hand-in (+10 points first submit per lesson) |
-| `/api/leaderboard` | GET class points |
+| `/api/leaderboard` | GET class points (`dbMode` in JSON) |
 | `/api/pdf/[lessonId]` | PDF download |
 
 ## Progress and submit
 
 - Draft answers: **localStorage** (`purple-ruler:progress:{lessonId}`)
-- Hand-in: **POST `/api/submissions`** (Supabase or local store)
+- Hand-in: **POST `/api/submissions`** (Supabase when all three env vars are set, else local store)
 - Points: **10 per lesson** on first submit; resubmit updates answers without extra points
 
 ## Adding content
@@ -86,4 +107,4 @@ npm run build
 vercel --prod
 ```
 
-Add Supabase env vars in the Vercel dashboard for persistent submissions across serverless instances.
+Add Supabase env vars (see **5-minute Supabase setup** above) for persistent submissions across serverless instances.
