@@ -2,13 +2,20 @@
  * Prints pilot magic links for local demo or after Supabase seed.
  * Run: npm run seed-tokens [baseUrl]
  */
+import { getAppUrlFromEnv, PRODUCTION_APP_URL } from "../lib/app-url";
 import { loadEnvLocal } from "./load-env-local";
 import { isSupabaseConfigured } from "../lib/db/config";
 
 loadEnvLocal();
 
 const base =
-  process.argv[2]?.replace(/\/$/, "") ?? "http://localhost:3000";
+  process.argv[2]?.replace(/\/$/, "") ??
+  getAppUrlFromEnv() ??
+  "http://localhost:3000";
+
+if (!process.argv[2] && !getAppUrlFromEnv()) {
+  console.log(`Tip: npm run seed-tokens ${PRODUCTION_APP_URL} for production links.\n`);
+}
 
 const students = [
   { name: "Alex", token: "student-alex-token" },

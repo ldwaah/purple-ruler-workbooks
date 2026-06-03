@@ -2,7 +2,7 @@
 
 Lesson-aligned add-on workbooks for Purple Ruler KS4 English (AQA) and Maths (Edexcel).
 
-One central app on Vercel. Students open a **magic link** (no password). Submitting a workbook adds **10 points** to the class leaderboard. Teachers review submissions via their own magic link.
+One central app on Vercel at **[https://purpleruler.vercel.app](https://purpleruler.vercel.app)**. Students open a **magic link** (no password). Submitting a workbook adds **10 points** to the class leaderboard. Teachers review submissions via their own magic link.
 
 ## Pilot content
 
@@ -33,7 +33,7 @@ Flow: splash → year → hub → workbook → **Submit my work** (+10 points fi
 
 ## For teachers
 
-**Teacher dashboard:** open `/t/teacher-pilot-token` (replace the host with your deployed URL).
+**Teacher dashboard:** [https://purpleruler.vercel.app/t/teacher-pilot-token](https://purpleruler.vercel.app/t/teacher-pilot-token) (pilot token; use your own teacher link in production).
 
 From the dashboard you can:
 
@@ -69,6 +69,7 @@ Full detail: [docs/supabase-setup.md](docs/supabase-setup.md).
 
 | Variable | Required | Description |
 |----------|----------|-------------|
+| `NEXT_PUBLIC_APP_URL` | Recommended on Vercel | Public base URL for magic links (default `https://purpleruler.vercel.app`) |
 | `NEXT_PUBLIC_SUPABASE_URL` | For production persistence | Supabase project URL |
 | `NEXT_PUBLIC_SUPABASE_ANON_KEY` | With Supabase | Public anon key |
 | `SUPABASE_SERVICE_ROLE_KEY` | With Supabase | Server-only; used in API routes |
@@ -123,4 +124,18 @@ npm run build
 vercel --prod
 ```
 
+Set `NEXT_PUBLIC_APP_URL=https://purpleruler.vercel.app` in Vercel (or run `./scripts/sync-vercel-env.sh production` after adding it to `.env.local`).
+
+### Custom domain `purpleruler.vercel.app`
+
+Vercel project **Settings → Domains**: add `purpleruler.vercel.app` and assign it to this deployment. If the hostname already belongs to another Vercel project, remove it there first or use **Settings → Domains → Edit** to point it at this app.
+
+CLI (from this repo, linked to the correct project):
+
+```bash
+vercel alias set <deployment-url> purpleruler.vercel.app
+```
+
 Add Supabase env vars (see **5-minute Supabase setup** above) for persistent submissions across serverless instances.
+
+**Share with teachers:** `https://purpleruler.vercel.app/t/<teacher-token>`

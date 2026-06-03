@@ -51,10 +51,17 @@ npm run db:verify
 
 ## 4. Pilot magic links
 
-Replace the host with your Vercel URL (or `http://localhost:3000`):
+Production (or set `NEXT_PUBLIC_APP_URL` in `.env.local`):
 
 ```bash
-npm run seed-tokens https://YOUR_APP.vercel.app
+npm run seed-tokens https://purpleruler.vercel.app
+```
+
+Local:
+
+```bash
+npm run seed-tokens
+# or: npm run seed-tokens http://localhost:3000
 ```
 
 | Who | Link |
@@ -80,6 +87,7 @@ As of setup, these must be added manually if not using `sync-vercel-env.sh`:
 
 | Variable | Environments |
 |----------|----------------|
+| `NEXT_PUBLIC_APP_URL` | Production, Preview (`https://purpleruler.vercel.app`) |
 | `NEXT_PUBLIC_SUPABASE_URL` | Production, Preview |
 | `NEXT_PUBLIC_SUPABASE_ANON_KEY` | Production, Preview |
 | `SUPABASE_SERVICE_ROLE_KEY` | Production, Preview |
