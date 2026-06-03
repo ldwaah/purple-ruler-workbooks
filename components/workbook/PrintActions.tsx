@@ -8,21 +8,14 @@ export function PrintActions({
   backHref: string;
 }) {
   return (
-    <div className="no-print mb-6 flex flex-wrap gap-4">
-      <a href={backHref} className="text-sm text-purple-700 hover:underline">
-        ← Back to interactive workbook
+    <div className="no-print mb-6 flex flex-wrap gap-3">
+      <a href={backHref} className="pr-btn-ghost text-sm">
+        Back to workbook
       </a>
-      <button
-        type="button"
-        onClick={() => window.print()}
-        className="rounded-md bg-purple-700 px-4 py-2 text-sm text-white hover:bg-purple-800"
-      >
+      <button type="button" onClick={() => window.print()} className="pr-btn-primary text-sm">
         Print
       </button>
-      <a
-        href={`/api/pdf/${lessonId}`}
-        className="rounded-md border border-purple-700 px-4 py-2 text-sm text-purple-800 hover:bg-purple-50"
-      >
+      <a href={`/api/pdf/${lessonId}`} className="pr-btn-ghost text-sm">
         Download PDF
       </a>
     </div>

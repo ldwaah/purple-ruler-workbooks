@@ -1,24 +1,24 @@
 import type { Metadata } from "next";
-import { Fredoka, Nunito } from "next/font/google";
+import { Syne, DM_Sans } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/layout/Header";
 
-const fredoka = Fredoka({
-  variable: "--font-fredoka",
+const syne = Syne({
+  variable: "--font-syne",
   subsets: ["latin"],
-  weight: ["500", "600", "700"],
+  weight: ["500", "600", "700", "800"],
 });
 
-const nunito = Nunito({
-  variable: "--font-nunito",
+const dmSans = DM_Sans({
+  variable: "--font-dm-sans",
   subsets: ["latin"],
-  weight: ["400", "600", "700"],
+  weight: ["400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
   title: "Purple Ruler KS4 Workbooks",
   description:
-    "Fun, lesson-aligned add-on workbooks for Purple Ruler KS4 English and Maths",
+    "Lesson-aligned add-on workbooks for Purple Ruler KS4 English and Maths",
 };
 
 export default function RootLayout({
@@ -29,11 +29,12 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${fredoka.variable} ${nunito.variable} h-full antialiased`}
+      className={`${syne.variable} ${dmSans.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
+        <div className="cosmic-bg" aria-hidden />
         <Header />
-        <main className="mx-auto w-full max-w-4xl flex-1 px-4 py-8">
+        <main className="relative mx-auto w-full max-w-6xl flex-1 px-4 py-8 sm:px-6">
           {children}
         </main>
       </body>

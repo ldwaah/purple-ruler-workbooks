@@ -1,73 +1,79 @@
 import Link from "next/link";
 import { PILOT_LESSONS, LEARNING_JOURNEY } from "@/lib/curriculum";
-import { Mascot } from "@/components/ui/Mascot";
 
 export default function HomePage() {
   return (
-    <div className="space-y-8">
-      <section className="cartoon-card flex flex-col items-center gap-4 p-8 text-center sm:flex-row sm:text-left">
-        <Mascot size="lg" mood="cheer" />
-        <div>
-          <h1 className="font-display text-3xl font-bold text-violet-900 sm:text-4xl">
-            Your KS4 workbook adventure!
-          </h1>
-          <p className="mt-2 max-w-xl text-violet-800">
-            Short, colourful practice that matches your Purple Ruler lessons.
-            One step unlocks the next — no giant scroll of doom!
-          </p>
-        </div>
+    <div className="space-y-12">
+      <section className="relative overflow-hidden rounded-3xl pr-panel-active px-8 py-14 sm:px-12 sm:py-20">
+        <div
+          className="pointer-events-none absolute left-1/2 top-0 h-[400px] w-[400px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-violet-600/30 blur-[100px]"
+          aria-hidden
+        />
+        <p className="relative font-display text-xs font-semibold uppercase tracking-[0.25em] text-violet-300">
+          Beyond the classroom
+        </p>
+        <h1 className="relative mt-4 max-w-2xl font-display text-4xl font-bold leading-[1.1] text-white sm:text-5xl lg:text-6xl">
+          Workbooks built for your orbit
+        </h1>
+        <p className="relative mt-6 max-w-xl text-base text-violet-200/85 sm:text-lg">
+          Lesson-aligned practice that unlocks one sector at a time. No endless
+          scroll — just focused steps mapped to your Purple Ruler scheme of work.
+        </p>
       </section>
 
-      <section className="grid gap-6 sm:grid-cols-2">
+      <section className="grid gap-6 md:grid-cols-2">
         {(["english", "maths"] as const).map((subject) => {
           const meta = PILOT_LESSONS[subject];
-          const emoji = subject === "english" ? "📖" : "🔢";
           return (
             <Link
               key={subject}
               href={`/${subject}`}
-              className="cartoon-card block p-6 transition hover:scale-[1.02] hover:border-violet-400"
+              className="group relative overflow-hidden rounded-2xl pr-panel p-8 transition hover:border-violet-400/40"
             >
-              <span className="text-4xl" aria-hidden>
-                {emoji}
-              </span>
-              <h2 className="mt-2 font-display text-xl font-bold text-violet-900">
-                {meta.label}
-              </h2>
-              <p className="text-sm font-semibold text-fuchsia-600">
+              <div
+                className="pointer-events-none absolute -right-8 -top-8 h-32 w-32 rounded-full bg-violet-500/20 blur-2xl transition group-hover:bg-fuchsia-500/25"
+                aria-hidden
+              />
+              <p className="font-display text-xs font-semibold uppercase tracking-[0.2em] text-violet-400">
                 {meta.examBoard}
               </p>
-              <p className="mt-3 text-sm text-violet-700">
+              <h2 className="mt-2 font-display text-2xl font-bold text-white">
+                {meta.label}
+              </h2>
+              <p className="mt-4 text-sm text-violet-300/80">
                 {meta.lessons.length} workbook
-                {meta.lessons.length !== 1 ? "s" : ""} ready · tap to start
+                {meta.lessons.length !== 1 ? "s" : ""} ready
               </p>
+              <span className="mt-6 inline-block font-display text-sm font-semibold text-fuchsia-300 group-hover:text-fuchsia-200">
+                Enter →
+              </span>
             </Link>
           );
         })}
       </section>
 
-      <section className="cartoon-card p-6">
-        <h2 className="font-display text-lg font-bold text-violet-900">
-          Where you&apos;re headed 🗺️
+      <section className="pr-panel p-8">
+        <h2 className="font-display text-lg font-bold text-white">
+          Learning journey
         </h2>
-        <div className="mt-4 grid gap-6 sm:grid-cols-2">
+        <div className="mt-6 grid gap-8 sm:grid-cols-2">
           <div>
-            <h3 className="font-display font-bold text-violet-800">
-              English — Year 10
+            <h3 className="font-display text-sm font-semibold uppercase tracking-wider text-violet-400">
+              English · Year 10
             </h3>
-            <ul className="mt-2 space-y-1 text-sm text-violet-700">
+            <ul className="mt-3 space-y-2 border-l border-violet-500/30 pl-4 text-sm text-violet-200/80">
               {LEARNING_JOURNEY.english.year10.map((s) => (
-                <li key={s}>✦ {s}</li>
+                <li key={s}>{s}</li>
               ))}
             </ul>
           </div>
           <div>
-            <h3 className="font-display font-bold text-violet-800">
-              Maths — Year 10
+            <h3 className="font-display text-sm font-semibold uppercase tracking-wider text-violet-400">
+              Maths · Year 10
             </h3>
-            <ul className="mt-2 space-y-1 text-sm text-violet-700">
+            <ul className="mt-3 space-y-2 border-l border-violet-500/30 pl-4 text-sm text-violet-200/80">
               {LEARNING_JOURNEY.maths.year10.map((s) => (
-                <li key={s}>✦ {s}</li>
+                <li key={s}>{s}</li>
               ))}
             </ul>
           </div>

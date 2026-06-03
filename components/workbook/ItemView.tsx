@@ -29,9 +29,13 @@ export function ItemView({
 
   if (item.type === "info") {
     return (
-      <div className="rounded-2xl border-2 border-white/80 bg-white/90 p-4 shadow-sm">
-        <p className="font-display font-bold text-violet-900">{item.prompt}</p>
-        <p className="mt-2 text-gray-800 whitespace-pre-wrap">{item.content}</p>
+      <div className="rounded-xl border border-white/10 bg-black/25 p-5">
+        <p className="font-display text-sm font-semibold text-violet-200">
+          {item.prompt}
+        </p>
+        <p className="mt-2 text-sm leading-relaxed text-violet-100/90 whitespace-pre-wrap">
+          {item.content}
+        </p>
       </div>
     );
   }
@@ -45,21 +49,21 @@ export function ItemView({
   };
 
   return (
-    <fieldset className="rounded-2xl border-2 border-white bg-white/95 p-4 shadow-sm">
-      <legend className="font-display px-1 text-base font-bold text-gray-900">
-        {index}. {item.prompt}
+    <fieldset className="rounded-xl border border-white/10 bg-black/20 p-5">
+      <legend className="font-display px-1 text-base font-semibold text-violet-50">
+        <span className="text-violet-400">Q{index}.</span> {item.prompt}
       </legend>
       {item.scaffold && (
-        <p className="mt-2 rounded-xl bg-violet-100 px-3 py-2 text-sm text-violet-900">
-          💡 {item.scaffold}
+        <p className="mt-3 rounded-lg border border-violet-500/20 bg-violet-950/50 px-3 py-2 text-sm text-violet-200/90">
+          {item.scaffold}
         </p>
       )}
 
-      <div className="mt-3">{renderInput(item, value, onChange, readOnly)}</div>
+      <div className="mt-4">{renderInput(item, value, onChange, readOnly)}</div>
 
       {!readOnly && item.type !== "long_text" && (
-        <button type="button" onClick={handleCheck} className="cartoon-btn-primary mt-3">
-          Check my answer ✓
+        <button type="button" onClick={handleCheck} className="pr-btn-primary mt-4">
+          Check answer
         </button>
       )}
 
@@ -73,25 +77,26 @@ export function ItemView({
               setRevealed(true);
             }
           }}
-          className="cartoon-btn-primary mt-3"
+          className="pr-btn-primary mt-4"
         >
-          I&apos;m done — show my checklist 📋
+          Show checklist
         </button>
       )}
 
       {marked && revealed && (
         <p
-          className={`mt-3 rounded-2xl px-4 py-3 text-sm font-medium ${
+          className={`mt-4 rounded-xl px-4 py-3 text-sm ${
             correct
-              ? "bg-emerald-100 text-emerald-900 border-2 border-emerald-300"
-              : "bg-amber-100 text-amber-900 border-2 border-amber-300"
+              ? "border border-emerald-500/30 bg-emerald-950/40 text-emerald-200"
+              : "border border-amber-500/30 bg-amber-950/40 text-amber-200"
           }`}
           role="status"
         >
-          {correct ? "🌟 Yes! Great job!" : "🔄 Nearly — have another go!"}
+          {correct ? "Correct — well done." : "Not quite — review and try again."}
           {"exemplar" in item && item.exemplar && revealed && (
-            <span className="mt-2 block font-normal">
-              <strong>Here's a model answer:</strong> {item.exemplar}
+            <span className="mt-2 block font-normal text-violet-200/90">
+              <strong className="text-violet-100">Model answer:</strong>{" "}
+              {item.exemplar}
             </span>
           )}
           {item.type === "long_text" && (
@@ -115,7 +120,7 @@ function renderInput(
 ) {
   const disabled = readOnly;
   const optionClass =
-    "flex cursor-pointer items-center gap-3 rounded-xl border-2 border-violet-100 bg-violet-50/50 px-3 py-2 transition hover:border-violet-300 hover:bg-violet-100 has-checked:border-violet-500 has-checked:bg-violet-100";
+    "flex cursor-pointer items-center gap-3 rounded-xl border border-white/10 bg-black/30 px-4 py-3 transition hover:border-violet-400/40 hover:bg-violet-950/40 has-checked:border-violet-400/60 has-checked:bg-violet-900/30";
 
   switch (item.type) {
     case "mcq":
@@ -130,9 +135,9 @@ function renderInput(
                 checked={value === opt}
                 disabled={disabled}
                 onChange={() => onChange(item.id, opt)}
-                className="h-4 w-4 text-violet-600"
+                className="h-4 w-4 border-violet-400 text-violet-500 focus:ring-violet-500"
               />
-              <span>{opt}</span>
+              <span className="text-sm text-violet-100">{opt}</span>
             </label>
           ))}
         </div>
@@ -155,9 +160,9 @@ function renderInput(
                       : [...selected, opt];
                     onChange(item.id, next);
                   }}
-                  className="h-4 w-4 rounded text-violet-600"
+                  className="h-4 w-4 rounded border-violet-400 text-violet-500"
                 />
-                <span>{opt}</span>
+                <span className="text-sm text-violet-100">{opt}</span>
               </label>
             );
           })}
@@ -171,8 +176,8 @@ function renderInput(
           value={String(value ?? "")}
           disabled={disabled}
           onChange={(e) => onChange(item.id, e.target.value)}
-          className="cartoon-input w-full max-w-xs"
-          placeholder={item.unit ? `Type here (${item.unit})` : "Type your answer…"}
+          className="pr-input max-w-xs"
+          placeholder={item.unit ? `Answer (${item.unit})` : "Your answer"}
         />
       );
     case "ordering": {
@@ -182,12 +187,12 @@ function renderInput(
           {order.map((opt, i) => (
             <li
               key={opt}
-              className="flex items-center gap-2 rounded-xl border-2 border-violet-100 bg-violet-50/80 px-2 py-2"
+              className="flex items-center gap-3 rounded-xl border border-white/10 bg-black/30 px-3 py-2"
             >
-              <span className="flex h-8 w-8 items-center justify-center rounded-full bg-violet-600 text-sm font-bold text-white">
+              <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-violet-600/80 font-display text-xs font-bold text-white">
                 {i + 1}
               </span>
-              <span className="flex-1 text-sm">{opt}</span>
+              <span className="flex-1 text-sm text-violet-100">{opt}</span>
               {!disabled && (
                 <span className="flex gap-1">
                   <button
@@ -198,10 +203,10 @@ function renderInput(
                       [next[i - 1], next[i]] = [next[i], next[i - 1]];
                       onChange(item.id, next);
                     }}
-                    className="cartoon-btn-secondary px-2 py-1 text-xs"
+                    className="pr-btn-ghost px-2 py-1 text-xs"
                     aria-label="Move up"
                   >
-                    ↑
+                    Up
                   </button>
                   <button
                     type="button"
@@ -211,10 +216,10 @@ function renderInput(
                       [next[i], next[i + 1]] = [next[i + 1], next[i]];
                       onChange(item.id, next);
                     }}
-                    className="cartoon-btn-secondary px-2 py-1 text-xs"
+                    className="pr-btn-ghost px-2 py-1 text-xs"
                     aria-label="Move down"
                   >
-                    ↓
+                    Down
                   </button>
                 </span>
               )}
@@ -230,8 +235,8 @@ function renderInput(
           value={String(value ?? "")}
           disabled={disabled}
           onChange={(e) => onChange(item.id, e.target.value)}
-          className="cartoon-input w-full"
-          placeholder="Write your ideas here…"
+          className="pr-input"
+          placeholder="Write your answer…"
         />
       );
     case "long_text":
@@ -241,8 +246,8 @@ function renderInput(
           value={String(value ?? "")}
           disabled={disabled}
           onChange={(e) => onChange(item.id, e.target.value)}
-          className="cartoon-input w-full"
-          placeholder="Take your time — a few sentences is perfect…"
+          className="pr-input"
+          placeholder="Write your response…"
         />
       );
     default:

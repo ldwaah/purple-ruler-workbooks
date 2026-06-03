@@ -1,27 +1,25 @@
 import Link from "next/link";
-import { Mascot } from "@/components/ui/Mascot";
+import { LogoMark } from "@/components/ui/LogoMark";
 
 export function Header() {
   return (
-    <header className="no-print border-b-4 border-violet-300 bg-white/90 backdrop-blur-sm">
-      <div className="mx-auto flex max-w-4xl items-center justify-between px-4 py-3">
+    <header className="no-print sticky top-0 z-50 border-b border-white/10 bg-[#070612]/80 backdrop-blur-xl">
+      <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 sm:px-6">
         <Link href="/" className="flex items-center gap-3">
-          <Mascot size="sm" />
+          <LogoMark />
           <div>
-            <p className="font-display text-lg font-bold text-violet-900">
-              Purple Ruler Workbooks
+            <p className="font-display text-base font-bold tracking-tight text-white">
+              Purple Ruler
             </p>
-            <p className="text-sm font-semibold text-fuchsia-600">
-              Your fun KS4 practice buddy 📚
-            </p>
+            <p className="text-xs text-violet-400">KS4 Workbooks</p>
           </div>
         </Link>
-        <nav className="flex gap-2 text-sm font-bold">
-          <Link href="/english" className="cartoon-btn-secondary px-3 py-1.5">
-            📖 English
+        <nav className="flex gap-2">
+          <Link href="/english" className="pr-btn-ghost px-4 py-1.5 text-xs">
+            English
           </Link>
-          <Link href="/maths" className="cartoon-btn-secondary px-3 py-1.5">
-            🔢 Maths
+          <Link href="/maths" className="pr-btn-ghost px-4 py-1.5 text-xs">
+            Maths
           </Link>
         </nav>
       </div>

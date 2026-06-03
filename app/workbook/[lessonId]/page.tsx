@@ -16,9 +16,9 @@ export default async function WorkbookPage({ params }: Props) {
     <div>
       <Link
         href={subjectHref}
-        className="no-print mb-4 inline-block text-sm text-purple-700 hover:underline"
+        className="no-print mb-6 inline-block pr-btn-ghost text-sm"
       >
-        ← Back to {lesson.subject === "english" ? "English" : "Maths"}
+        Back to {lesson.subject === "english" ? "English" : "Maths"}
       </Link>
       <WorkbookClient lesson={lesson} />
     </div>

@@ -9,26 +9,26 @@ export function LockedSectionCard({
   index: number;
 }) {
   const meta = SECTION_META[section.type] ?? {
-    emoji: "📘",
     label: section.type,
+    short: String(index + 1).padStart(2, "0"),
     cheer: "",
+    accent: "",
   };
 
   return (
     <div
-      className="flex items-center gap-4 rounded-2xl border-2 border-dashed border-violet-200 bg-violet-50/60 px-5 py-4 opacity-80"
+      className="flex items-center gap-4 rounded-2xl border border-dashed border-white/10 bg-black/20 px-5 py-4"
       aria-hidden
     >
-      <span className="text-3xl grayscale">{meta.emoji}</span>
+      <span className="font-display text-lg font-bold text-violet-600/40">
+        {meta.short}
+      </span>
       <div>
-        <p className="font-display text-sm font-bold text-violet-400">
-          Step {index + 1} — locked
+        <p className="font-display text-xs font-semibold uppercase tracking-widest text-violet-500/50">
+          Sector {index + 1} — locked
         </p>
-        <p className="font-display text-lg text-violet-500">
+        <p className="font-display text-base text-violet-400/60">
           {section.title ?? meta.label}
-        </p>
-        <p className="text-sm text-violet-400">
-          Finish the bit above to unlock this part 🔓
         </p>
       </div>
     </div>

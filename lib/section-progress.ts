@@ -3,13 +3,38 @@ import type { ItemResponse } from "./progress";
 
 export const SECTION_META: Record<
   string,
-  { emoji: string; label: string; cheer: string }
+  { label: string; short: string; cheer: string; accent: string }
 > = {
-  connect: { emoji: "👋", label: "Warm-up", cheer: "Great start — let's go!" },
-  practice: { emoji: "✏️", label: "Practice", cheer: "You're getting the hang of it!" },
-  check: { emoji: "⭐", label: "Quick check", cheer: "Nice work on that quiz!" },
-  reflect: { emoji: "💭", label: "Think it over", cheer: "Brilliant thinking!" },
-  stretch: { emoji: "🚀", label: "Super stretch", cheer: "Wow — workbook complete!" },
+  connect: {
+    label: "Warm-up",
+    short: "01",
+    cheer: "Sector clear. Continue when ready.",
+    accent: "from-violet-500 to-purple-600",
+  },
+  practice: {
+    label: "Practice",
+    short: "02",
+    cheer: "Practice complete. Unlock the next sector.",
+    accent: "from-cyan-500 to-blue-600",
+  },
+  check: {
+    label: "Quick check",
+    short: "03",
+    cheer: "Check passed. Proceed to reflection.",
+    accent: "from-emerald-500 to-teal-600",
+  },
+  reflect: {
+    label: "Think it over",
+    short: "04",
+    cheer: "Reflection logged. Final sector awaits.",
+    accent: "from-amber-500 to-orange-600",
+  },
+  stretch: {
+    label: "Super stretch",
+    short: "05",
+    cheer: "Mission complete. Full workbook cleared.",
+    accent: "from-fuchsia-500 to-pink-600",
+  },
 };
 
 export function isItemAnswered(
