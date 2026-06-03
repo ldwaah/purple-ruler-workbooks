@@ -8,10 +8,12 @@
     "start": "next start",
     "lint": "eslint",
     "validate-content": "tsx scripts/validate-content.ts",
-    "generate-workbooks": "tsx scripts/generate-workbooks.ts"
+    "generate-workbooks": "tsx scripts/generate-workbooks.ts",
+    "seed-tokens": "tsx scripts/seed-tokens.ts"
   },
   "dependencies": {
     "@react-pdf/renderer": "^4.5.1",
+    "@supabase/supabase-js": "^2.107.0",
     "js-yaml": "^4.2.0",
     "next": "16.2.7",
     "react": "19.2.4",

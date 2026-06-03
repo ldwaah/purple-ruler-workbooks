@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import { Suspense, useCallback, useEffect, useId, useState } from "react";
 import { SubjectWorkbookList } from "@/components/subject/SubjectWorkbookList";
@@ -87,6 +88,14 @@ function SubjectHubInner({ readyLessonIds }: SubjectHubProps) {
         </h1>
         <p className="mt-2 text-violet-600">
           Year {year} workbooks. Open one block at a time.
+        </p>
+        <p className="mt-3">
+          <Link
+            href="/leaderboard"
+            className="text-sm font-semibold text-violet-600 underline-offset-2 hover:text-violet-900 hover:underline"
+          >
+            My points
+          </Link>
         </p>
       </header>
 

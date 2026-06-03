@@ -6,8 +6,9 @@ import { Header } from "./Header";
 export function RouteShell({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
   const isSplash = pathname === "/";
+  const isNeedLink = pathname === "/need-link";
 
-  if (isSplash) {
+  if (isSplash || isNeedLink) {
     return <>{children}</>;
   }
 

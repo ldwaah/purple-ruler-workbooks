@@ -52,6 +52,10 @@ export function getLessonIdsForSubject(
   return CURRICULUM[subject].lessons.map((l) => l.id);
 }
 
+export function getLessonById(id: string): Lesson | null {
+  return loadLesson(id);
+}
+
 export function lessonExists(id: string): boolean {
   return loadLesson(id) !== null;
 }

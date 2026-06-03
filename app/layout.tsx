@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Fredoka, Nunito } from "next/font/google";
 import "./globals.css";
 import { RouteShell } from "@/components/layout/RouteShell";
+import { StudentSessionSync } from "@/components/session/StudentSessionSync";
 
 const fredoka = Fredoka({
   variable: "--font-fredoka",
@@ -33,6 +34,7 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col">
         <div className="pr-room-bg fixed inset-0 -z-10" aria-hidden />
+        <StudentSessionSync />
         <RouteShell>{children}</RouteShell>
       </body>
     </html>

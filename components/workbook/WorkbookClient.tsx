@@ -27,6 +27,7 @@ import { LessonMeta } from "@/components/layout/LessonMeta";
 import { SectionView } from "./SectionView";
 import { SectionStepper } from "./SectionStepper";
 import { LockedSectionCard } from "./LockedSectionCard";
+import { SubmitPanel } from "./SubmitPanel";
 
 export function WorkbookClient({ lesson }: { lesson: Lesson }) {
   const [progress, setProgress] = useState<LessonProgress | null>(null);
@@ -253,13 +254,16 @@ export function WorkbookClient({ lesson }: { lesson: Lesson }) {
         )}
 
         {isCurrent && complete && isLastSection && (
-          <div className="pr-panel-active flex flex-col items-center gap-3 p-10 text-center">
-            <p className="font-display text-2xl font-bold text-violet-900">
-              Workbook complete
-            </p>
-            <p className="max-w-sm text-sm text-violet-700">
-              You finished every step. See you at your next Purple Ruler lesson.
-            </p>
+          <div className="space-y-4">
+            <div className="pr-panel-active flex flex-col items-center gap-3 p-10 text-center">
+              <p className="font-display text-2xl font-bold text-violet-900">
+                Workbook complete
+              </p>
+              <p className="max-w-sm text-sm text-violet-700">
+                You finished every step. Hand in when you are ready.
+              </p>
+            </div>
+            <SubmitPanel lessonId={lesson.id} responses={progress.responses} />
           </div>
         )}
       </div>,
