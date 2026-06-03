@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { PILOT_LESSONS, LEARNING_JOURNEY } from "@/lib/curriculum";
+import { LogoMark } from "@/components/ui/LogoMark";
 
 export default function HomePage() {
   return (
@@ -9,6 +10,7 @@ export default function HomePage() {
           className="pointer-events-none absolute left-1/2 top-0 h-[400px] w-[400px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-violet-600/30 blur-[100px]"
           aria-hidden
         />
+        <LogoMark size={72} priority className="relative mb-6" />
         <p className="relative font-display text-xs font-semibold uppercase tracking-[0.25em] text-violet-300">
           Beyond the classroom
         </p>
