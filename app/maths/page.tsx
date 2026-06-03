@@ -1,88 +1,14 @@
-import Link from "next/link";
+import { SubjectWorkbookList } from "@/components/subject/SubjectWorkbookList";
 import { CURRICULUM } from "@/lib/curriculum";
 import { lessonExists } from "@/lib/lessons";
 
 export default function MathsPage() {
   const meta = CURRICULUM.maths;
+  const readyLessonIds = meta.lessons
+    .filter((l) => lessonExists(l.id))
+    .map((l) => l.id);
 
   return (
-    <div className="space-y-10">
-      <header className="pr-panel p-8">
-        <p className="font-display text-xs font-bold uppercase tracking-wider text-pink-500">
-          {meta.examBoard}
-        </p>
-        <h1 className="mt-2 font-display text-3xl font-bold text-violet-900">
-          {meta.label}
-        </h1>
-        <p className="mt-2 text-violet-600">
-          {meta.lessonsPerWeek} lessons per week · {meta.lessons.length}{" "}
-          workbooks
-        </p>
-      </header>
-
-      {([10, 11] as const).map((year) => {
-        const blocks = meta.byYear[`year${year}` as "year10" | "year11"];
-        const yearLessons = meta.lessons.filter((l) => l.year === year);
-        const ready = yearLessons.filter((l) => lessonExists(l.id)).length;
-
-        return (
-          <section key={year} className="space-y-6">
-            <div className="flex flex-wrap items-end justify-between gap-4">
-              <h2 className="font-display text-2xl font-bold text-violet-900">
-                Year {year}
-              </h2>
-              <p className="text-sm text-violet-600">
-                {ready} of {yearLessons.length} workbooks ready
-              </p>
-            </div>
-
-            {blocks.map((block) => (
-              <div key={`${year}-${block.block}`} className="space-y-3">
-                <h3 className="font-display text-lg font-bold text-violet-800">
-                  {block.blockTitle}
-                </h3>
-                <ul className="space-y-3">
-                  {block.lessons.map((lesson, i) => (
-                    <li key={lesson.id}>
-                      <Link
-                        href={`/workbook/${lesson.id}`}
-                        className="pr-panel group flex items-center justify-between gap-4 px-6 py-4 transition hover:-translate-y-0.5"
-                      >
-                        <div className="flex items-start gap-4">
-                          <span className="font-display text-xl font-bold text-violet-300">
-                            {String(i + 1).padStart(2, "0")}
-                          </span>
-                          <div>
-                            <p className="font-display font-bold text-violet-900">
-                              {lesson.title}
-                            </p>
-                            <p className="mt-1 text-sm text-violet-600">
-                              Lesson {lesson.lessonUnits}
-                            </p>
-                          </div>
-                        </div>
-                        <span
-                          className={`shrink-0 rounded-2xl px-4 py-2 font-display text-xs font-bold ${
-                            lessonExists(lesson.id)
-                              ? "pr-btn-primary"
-                              : "border-2 border-violet-100 text-violet-400"
-                          }`}
-                        >
-                          {lessonExists(lesson.id) ? "Open" : "Soon"}
-                        </span>
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </section>
-        );
-      })}
-
-      <Link href="/start" className="pr-btn-ghost inline-block text-sm">
-        Back
-      </Link>
-    </div>
+    <SubjectWorkbookList subject="maths" readyLessonIds={readyLessonIds} />
   );
 }
