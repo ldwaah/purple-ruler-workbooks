@@ -57,7 +57,8 @@ export function SubjectWorkbookList({
                     {block.blockTitle}
                   </span>
                   <span
-                    className={`shrink-0 font-display text-2xl font-bold text-violet-300 transition-transform ${isOpen ? "rotate-180" : ""}`}
+                    className="pr-accordion-chevron shrink-0 font-display text-2xl font-bold text-violet-300"
+                    data-open={isOpen ? "true" : "false"}
                     aria-hidden
                   >
                     ▾
@@ -68,10 +69,11 @@ export function SubjectWorkbookList({
                 id={panelId}
                 role="region"
                 aria-labelledby={`${panelId}-trigger`}
-                hidden={!isOpen}
-                className={isOpen ? "border-t-2 border-violet-100" : undefined}
+                aria-hidden={!isOpen}
+                className={`pr-accordion-body border-violet-100 ${isOpen ? "border-t-2" : ""}`}
+                data-open={isOpen ? "true" : "false"}
               >
-                {isOpen ? (
+                <div className="pr-accordion-inner">
                   <ul className="space-y-2 p-4 pt-3">
                     {block.lessons.map((lesson) => {
                       const isReady = readySet.has(lesson.id);
@@ -100,7 +102,7 @@ export function SubjectWorkbookList({
                       );
                     })}
                   </ul>
-                ) : null}
+                </div>
               </div>
             </div>
           );

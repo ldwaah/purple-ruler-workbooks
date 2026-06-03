@@ -146,11 +146,13 @@ function SubjectHubInner({ readyLessonIds }: SubjectHubProps) {
             className="focus:outline-none"
           >
             {selected ? (
-              <SubjectWorkbookList
-                subject={key}
-                year={year}
-                readyLessonIds={readyLessonIds[key]}
-              />
+              <div key={key} className="pr-tab-fade">
+                <SubjectWorkbookList
+                  subject={key}
+                  year={year}
+                  readyLessonIds={readyLessonIds[key]}
+                />
+              </div>
             ) : null}
           </div>
         );

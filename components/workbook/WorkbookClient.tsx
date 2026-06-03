@@ -271,7 +271,7 @@ export function WorkbookClient({ lesson }: { lesson: Lesson }) {
   });
 
   return (
-    <div className="space-y-8">
+    <div className="pr-page-enter space-y-8">
       <div className="relative overflow-hidden rounded-3xl pr-panel-active px-6 py-10 sm:px-10">
         <div
           className="pointer-events-none absolute -right-20 -top-20 h-64 w-64 rounded-full bg-fuchsia-500/20 blur-3xl"
@@ -314,7 +314,7 @@ export function WorkbookClient({ lesson }: { lesson: Lesson }) {
               </div>
               <div className="mt-2 h-3 overflow-hidden rounded-full border-2 border-violet-100 bg-violet-50">
                 <div
-                  className="h-full rounded-full bg-gradient-to-r from-violet-500 to-pink-500 transition-all duration-700"
+                  className="pr-progress-fill h-full rounded-full bg-gradient-to-r from-violet-500 to-pink-500"
                   style={{ width: `${sectorPercent}%` }}
                 />
               </div>

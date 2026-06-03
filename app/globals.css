@@ -119,6 +119,183 @@ body {
     0 6px 16px rgba(124, 58, 237, 0.15);
 }
 
+/* Calm motion (SEMH-friendly). Disabled when user prefers reduced motion. */
+:root {
+  --pr-ease-soft: cubic-bezier(0.22, 1, 0.36, 1);
+  --pr-duration-fast: 0.25s;
+  --pr-duration-normal: 0.45s;
+  --pr-duration-slow: 0.7s;
+}
+
+@keyframes pr-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes pr-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pr-scale-in-soft {
+  from {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes pr-help-gentle {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.04);
+  }
+}
+
+.pr-page-enter {
+  animation: pr-fade-in var(--pr-duration-normal) var(--pr-ease-soft) both;
+}
+
+.pr-tab-fade {
+  animation: pr-fade-in var(--pr-duration-fast) var(--pr-ease-soft) both;
+}
+
+.pr-welcome-fade {
+  animation: pr-fade-in var(--pr-duration-slow) var(--pr-ease-soft) both;
+}
+
+.pr-submit-success {
+  animation: pr-fade-in var(--pr-duration-normal) var(--pr-ease-soft) both;
+}
+
+.pr-splash-image-in {
+  animation: pr-scale-in-soft 0.9s var(--pr-ease-soft) both;
+}
+
+.pr-help-idle {
+  animation: pr-help-gentle 4s ease-in-out infinite;
+}
+
+.pr-help-interactive {
+  transition:
+    transform var(--pr-duration-fast) var(--pr-ease-soft),
+    border-color var(--pr-duration-fast) ease,
+    box-shadow var(--pr-duration-fast) ease;
+}
+
+.pr-help-interactive:hover {
+  transform: scale(1.06);
+}
+
+.pr-help-interactive:active {
+  transform: scale(0.96);
+}
+
+.pr-help-backdrop-in {
+  animation: pr-fade-in var(--pr-duration-fast) ease both;
+}
+
+.pr-help-panel-in {
+  animation: pr-fade-up var(--pr-duration-normal) var(--pr-ease-soft) both;
+}
+
+.pr-accordion-chevron {
+  transition: transform var(--pr-duration-normal) var(--pr-ease-soft);
+}
+
+.pr-accordion-chevron[data-open="true"] {
+  transform: rotate(180deg);
+}
+
+.pr-accordion-body {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows var(--pr-duration-normal) var(--pr-ease-soft);
+}
+
+.pr-accordion-body[data-open="true"] {
+  grid-template-rows: 1fr;
+}
+
+.pr-accordion-inner {
+  overflow: hidden;
+}
+
+.pr-accordion-body:not([data-open="true"]) .pr-accordion-inner {
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.pr-progress-fill {
+  transition: width var(--pr-duration-slow) var(--pr-ease-soft);
+}
+
+.pr-leaderboard-stagger {
+  animation: pr-fade-up var(--pr-duration-normal) var(--pr-ease-soft) both;
+}
+
+.pr-leaderboard-stagger-0 {
+  animation-delay: 0.05s;
+}
+.pr-leaderboard-stagger-1 {
+  animation-delay: 0.12s;
+}
+.pr-leaderboard-stagger-2 {
+  animation-delay: 0.19s;
+}
+.pr-leaderboard-stagger-3 {
+  animation-delay: 0.26s;
+}
+.pr-leaderboard-stagger-4 {
+  animation-delay: 0.33s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pr-page-enter,
+  .pr-tab-fade,
+  .pr-welcome-fade,
+  .pr-submit-success,
+  .pr-splash-image-in,
+  .pr-help-idle,
+  .pr-help-backdrop-in,
+  .pr-help-panel-in,
+  .pr-leaderboard-stagger {
+    animation: none;
+  }
+
+  .pr-help-interactive:hover,
+  .pr-help-interactive:active {
+    transform: none;
+  }
+
+  .pr-accordion-body,
+  .pr-accordion-chevron,
+  .pr-progress-fill {
+    transition: none;
+  }
+
+  .pr-btn-primary:hover,
+  .pr-btn-primary:active {
+    transform: none;
+  }
+}
+
 @media print {
   body {
     background: white;

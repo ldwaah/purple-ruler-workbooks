@@ -27,7 +27,7 @@ export function YearPicker() {
     <div className="mx-auto max-w-lg space-y-10 py-4">
       <header className="text-center">
         {studentName ? (
-          <p className="font-display text-lg font-semibold text-violet-800">
+          <p className="pr-welcome-fade font-display text-lg font-semibold text-violet-800">
             Welcome, {studentName}
           </p>
         ) : null}

@@ -18,7 +18,10 @@ export function RouteShell({ children }: { children: React.ReactNode }) {
   return (
     <>
       <Header />
-      <main className="relative mx-auto w-full max-w-6xl flex-1 px-4 py-8 sm:px-6">
+      <main
+        key={pathname}
+        className="pr-page-enter relative mx-auto w-full max-w-6xl flex-1 px-4 py-8 sm:px-6"
+      >
         {children}
       </main>
       {showHelp && <HelpButton />}

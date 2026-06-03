@@ -41,7 +41,7 @@ export function SplashStart() {
           width={SPLASH_WIDTH}
           height={SPLASH_HEIGHT}
           priority
-          className="relative z-10 h-auto max-h-[calc(100dvh-5rem)] w-auto max-w-full object-contain"
+          className="pr-splash-image-in relative z-10 h-auto max-h-[calc(100dvh-5rem)] w-auto max-w-full object-contain"
           sizes="(max-width: 1536px) 100vw, 1536px"
         />
       </span>

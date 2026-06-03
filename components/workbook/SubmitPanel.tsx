@@ -73,7 +73,7 @@ export function SubmitPanel({ lessonId, responses }: SubmitPanelProps) {
   return (
     <div className="pr-panel-active flex flex-col items-center gap-4 p-8 text-center">
       {state === "done" ? (
-        <>
+        <div className="pr-submit-success space-y-2">
           <p className="font-display text-xl font-bold text-violet-900">
             {message}
           </p>
@@ -82,7 +82,7 @@ export function SubmitPanel({ lessonId, responses }: SubmitPanelProps) {
               You have {totalPoints} points in total.
             </p>
           )}
-        </>
+        </div>
       ) : (
         <>
           <p className="font-display text-lg font-bold text-violet-900">

@@ -67,6 +67,11 @@ export default function LeaderboardPage() {
     );
   }
 
+  const staggerClass = (index: number) => {
+    if (index >= 5) return "";
+    return `pr-leaderboard-stagger pr-leaderboard-stagger-${index}`;
+  };
+
   return (
     <div className="mx-auto max-w-lg space-y-8">
       <header className="text-center">
@@ -95,7 +100,7 @@ export default function LeaderboardPage() {
                     isMe
                       ? "border-2 border-violet-200 bg-violet-50 font-semibold text-violet-900"
                       : "bg-white text-violet-800"
-                  }`}
+                  } ${!showAll ? staggerClass(index) : ""}`}
                 >
                   <span>
                     <span className="mr-2 text-violet-400">{index + 1}.</span>

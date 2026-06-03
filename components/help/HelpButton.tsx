@@ -39,7 +39,7 @@ export function HelpButton() {
         aria-label="Need help"
         aria-haspopup="dialog"
         aria-expanded={open}
-        className="fixed bottom-6 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full border-2 border-violet-200 bg-white shadow-[var(--shadow-bubble)] transition hover:border-pink-300 hover:shadow-lg focus:outline-none focus-visible:ring-4 focus-visible:ring-pink-300/60 sm:bottom-8 sm:right-8"
+        className={`pr-help-interactive fixed bottom-6 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full border-2 border-violet-200 bg-white shadow-[var(--shadow-bubble)] hover:border-pink-300 hover:shadow-lg focus:outline-none focus-visible:ring-4 focus-visible:ring-pink-300/60 sm:bottom-8 sm:right-8 ${open ? "" : "pr-help-idle"}`}
       >
         <Image
           src={HELP_ICON}
@@ -56,14 +56,14 @@ export function HelpButton() {
           <button
             type="button"
             aria-label="Close help"
-            className="absolute inset-0 bg-violet-950/35 backdrop-blur-[2px]"
+            className="pr-help-backdrop-in absolute inset-0 bg-violet-950/35 backdrop-blur-[2px]"
             onClick={close}
           />
           <div
             role="dialog"
             aria-modal="true"
             aria-labelledby={titleId}
-            className="relative w-full max-w-md rounded-t-3xl border-2 border-violet-100 bg-gradient-to-b from-white to-violet-50 px-6 pb-8 pt-6 shadow-[var(--shadow-card)] sm:rounded-3xl"
+            className="pr-help-panel-in relative w-full max-w-md rounded-t-3xl border-2 border-violet-100 bg-gradient-to-b from-white to-violet-50 px-6 pb-8 pt-6 shadow-[var(--shadow-card)] sm:rounded-3xl"
           >
             <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center sm:hidden">
               <span className="h-1 w-10 rounded-full bg-violet-200" aria-hidden />
