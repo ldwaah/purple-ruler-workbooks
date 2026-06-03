@@ -94,6 +94,31 @@ body {
     0 4px 12px rgba(124, 58, 237, 0.2);
 }
 
+/* Splash — white 3D room + bubbly CTA (matches brand artwork) */
+.splash-room {
+  background: linear-gradient(180deg, #ffffff 0%, #f8f7ff 45%, #f3f0ff 100%);
+}
+
+.splash-room::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 70% 50% at 50% 100%, rgba(124, 58, 237, 0.06), transparent),
+    linear-gradient(135deg, transparent 40%, rgba(0, 0, 0, 0.03) 100%);
+  pointer-events: none;
+}
+
+.splash-cta {
+  text-shadow:
+    3px 3px 0 #ffffff,
+    -2px -2px 0 #ffffff,
+    2px -2px 0 #ffffff,
+    -2px 2px 0 #ffffff,
+    0 4px 0 rgba(91, 33, 182, 0.12),
+    0 6px 16px rgba(124, 58, 237, 0.15);
+}
+
 @media print {
   body {
     background: white;
