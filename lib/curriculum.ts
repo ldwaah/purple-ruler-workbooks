@@ -495,41 +495,19 @@ export const CURRICULUM: Record<"english" | "maths", SubjectCurriculum> = {
   }
 };
 
+function learningJourneyFromCurriculum(
+  curriculum: SubjectCurriculum,
+): { year10: string[]; year11: string[] } {
+  return {
+    year10: curriculum.byYear.year10.map((block) => block.blockTitle),
+    year11: curriculum.byYear.year11.map((block) => block.blockTitle),
+  };
+}
+
+/** Strand order matches the KS4 learning journey PDFs and CURRICULUM blocks. */
 export const LEARNING_JOURNEY = {
-  english: {
-    year10: [
-      "An Inspector Calls and Paper 1 Language Skills",
-      "Power and Conflict Poetry",
-      "Paper 1, An Inspector Calls and Poetry Revision",
-      "Macbeth and Paper 2 Language Skills",
-      "Literature and Language Review",
-    ],
-    year11: [
-      "A Christmas Carol and Language: Paper 2 Skills",
-      "Power and Conflict and Unseen Poetry",
-      "Explorations in Creative Reading and Writing",
-      "Literature and Language Exam Focus",
-    ],
-  },
-  maths: {
-    year10: [
-      "Number",
-      "Algebra",
-      "Graphs, Geometry, Shapes and Functions",
-      "Equations and Inequalities",
-      "Pythagoras' Theorem and Trigonometry",
-      "Statistics",
-    ],
-    year11: [
-      "Geometry",
-      "Statistics and Probability",
-      "Graphs",
-      "Algebra",
-      "Equations and Inequalities",
-      "Pythagoras' Theorem and Trigonometry",
-      "Revision",
-    ],
-  },
+  english: learningJourneyFromCurriculum(CURRICULUM.english),
+  maths: learningJourneyFromCurriculum(CURRICULUM.maths),
 };
 
 export function getLessonsForYear(

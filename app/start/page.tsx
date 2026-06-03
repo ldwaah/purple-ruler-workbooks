@@ -2,6 +2,8 @@ import Link from "next/link";
 import { CURRICULUM, LEARNING_JOURNEY } from "@/lib/curriculum";
 import { LogoMark } from "@/components/ui/LogoMark";
 
+const SUBJECTS = ["english", "maths"] as const;
+
 export default function StartPage() {
   return (
     <div className="space-y-10">
@@ -29,7 +31,7 @@ export default function StartPage() {
       </section>
 
       <section className="grid gap-6 md:grid-cols-2">
-        {(["english", "maths"] as const).map((subject) => {
+        {SUBJECTS.map((subject) => {
           const meta = CURRICULUM[subject];
           const accent =
             subject === "english"
@@ -66,33 +68,48 @@ export default function StartPage() {
         <h2 className="font-display text-xl font-bold text-violet-900">
           Your learning journey
         </h2>
-        <div className="mt-6 grid gap-8 sm:grid-cols-2">
-          {(["english", "maths"] as const).map((subject) => (
-            <div key={subject}>
-              <h3 className="font-display font-bold text-violet-800 capitalize">
-                {subject}
-              </h3>
-              {([10, 11] as const).map((year) => (
-                <div key={year} className="mt-4">
-                  <p className="text-xs font-bold uppercase tracking-wider text-pink-500">
-                    Year {year}
-                  </p>
-                  <ul className="mt-2 space-y-2 text-sm text-violet-700">
-                    {LEARNING_JOURNEY[subject][
-                      `year${year}` as "year10" | "year11"
-                    ].map((s) => (
-                      <li
-                        key={s}
-                        className="rounded-xl border border-violet-100 bg-violet-50/80 px-3 py-2"
-                      >
-                        {s}
-                      </li>
-                    ))}
-                  </ul>
+        <p className="mt-2 text-sm text-violet-600">
+          Full GCSE pathways for Year 10 and Year 11, aligned with your
+          scheme of work.
+        </p>
+        <div className="mt-8 space-y-10">
+          {SUBJECTS.map((subject) => {
+            const meta = CURRICULUM[subject];
+            const journey = LEARNING_JOURNEY[subject];
+            return (
+              <div key={subject}>
+                <h3 className="font-display text-lg font-bold text-violet-900">
+                  {meta.label}
+                </h3>
+                <div className="mt-4 grid gap-8 sm:grid-cols-2">
+                  {([10, 11] as const).map((year) => {
+                    const strands =
+                      year === 10 ? journey.year10 : journey.year11;
+                    return (
+                      <div key={year}>
+                        <h4 className="font-display font-bold text-violet-800">
+                          Year {year}
+                        </h4>
+                        <ol className="mt-3 space-y-2 text-sm text-violet-700">
+                          {strands.map((strand, index) => (
+                            <li
+                              key={strand}
+                              className="flex gap-3 rounded-xl border border-violet-100 bg-violet-50/80 px-3 py-2"
+                            >
+                              <span className="font-display font-bold text-violet-400">
+                                {String(index + 1).padStart(2, "0")}
+                              </span>
+                              <span>{strand}</span>
+                            </li>
+                          ))}
+                        </ol>
+                      </div>
+                    );
+                  })}
                 </div>
-              ))}
-            </div>
-          ))}
+              </div>
+            );
+          })}
         </div>
       </section>
     </div>
