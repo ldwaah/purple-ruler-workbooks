@@ -12,7 +12,7 @@ export function SplashStart() {
   return (
     <button
       type="button"
-      onClick={() => router.push("/start")}
+      onClick={() => router.push("/year")}
       className="fixed inset-0 z-50 flex min-h-[100dvh] w-full cursor-pointer items-center justify-center bg-gradient-to-br from-[#7c3aed] via-[#6d28d9] to-[#5b21b6] p-4 focus:outline-none focus-visible:ring-4 focus-visible:ring-pink-300 sm:p-6"
       aria-label="Touch the screen to start"
     >

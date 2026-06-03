@@ -10,15 +10,16 @@ export default async function WorkbookPage({ params }: Props) {
   const lesson = loadLesson(lessonId);
   if (!lesson) notFound();
 
-  const subjectHref = lesson.subject === "english" ? "/english" : "/maths";
+  const subjectTab = lesson.subject === "english" ? "english" : "maths";
+  const hubHref = `/hub?tab=${subjectTab}`;
 
   return (
     <div>
       <Link
-        href={subjectHref}
+        href={hubHref}
         className="no-print mb-6 inline-block pr-btn-ghost text-sm"
       >
-        Back to {lesson.subject === "english" ? "English" : "Maths"} list
+        Back to {lesson.subject === "english" ? "English" : "Maths"}
       </Link>
       <WorkbookClient lesson={lesson} />
     </div>
